@@ -2,7 +2,9 @@ $icon_size: $extra_large_font;
 $height   : $top_bar_height;
 
 .app-bar{
-  height: $height;
+  height  : $height;
+  padding : $padding;
+  background-color: $app_bar_color;
 
   .logo{
     height: 100%;
@@ -18,7 +20,7 @@ $height   : $top_bar_height;
     float : right;
     height: 100%;
     > li {
-      line-height: $height;
+      line-height: $height - 2*$padding;
       font-size  : $icon_size;
       float      : left;
       padding    : 0px 2*$padding;

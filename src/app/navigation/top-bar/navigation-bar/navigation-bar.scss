@@ -1,0 +1,15 @@
+$button_width: 150px;
+
+ul.navigation-bar{
+  @extend .undo-list;
+  height: $navigation_bar_height;
+  color            : $navigation_bar_text;
+  background-color: $navigation_bar_color;
+
+  > li {
+    float: left;
+    width: $button_width;
+    line-height: $navigation_bar_height;
+    text-align: center;
+  }
+}
