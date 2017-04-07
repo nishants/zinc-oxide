@@ -2,9 +2,11 @@
 @import "components/typograhy";
 @import "components/vars";
 @import "components/colors";
-@import "navigation/navigation";
 
 body{
   background: $body_color;
   font-family: $font_family;
 }
+
+@import "navigation/navigation";
+@import "profile-bar/profile-bar";

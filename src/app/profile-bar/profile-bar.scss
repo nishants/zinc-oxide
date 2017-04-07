@@ -1,0 +1,45 @@
+$image_size: 100px;
+
+$score_value_size: 21px;
+$score_label_size: 16px;
+
+#profile-bar{
+  width: $profile_bar_width;
+  float: left;
+  background: $profile_bar_bg;
+
+  .heading{
+    background: $profile_bar_heading_bg;
+    padding   : $padding;
+    .picture{
+      margin  : auto;
+      height  : $image_size;
+      width   : $image_size;
+      > img{
+        display : block;
+        height  : 100%;
+        width   : 100%;
+        border-radius: 50%;
+      }
+    }
+    .title{
+      padding-top   : $padding;
+      text-align: center;
+    }
+  }
+
+  ul.score-card{
+    @extend .undo-list;
+    text-align: center;
+    > li{
+      padding: 2*$padding ;
+      .value{
+        font-size: $score_value_size;
+        color    : $profile_bar_value_color;
+      }
+      .label{
+        font-size: $score_label_size;
+      }
+    }
+  }
+}
