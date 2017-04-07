@@ -41,6 +41,11 @@ $wizard_min_height: 300px;
 $home_max_width: 500px;
 $widget_top_offset: 56px;
 
+@import "components/base";
+@import "components/typograhy";
+@import "components/vars";
+@import "components/colors";
+
 #main-content{
   position: relative;
   overflow: hidden;
@@ -71,5 +76,5 @@ $widget_top_offset: 56px;
   }
 }
 
-@import "components/background";
+@import "navigation/navigation";
 
