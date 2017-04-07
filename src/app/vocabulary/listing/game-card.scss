@@ -1,0 +1,31 @@
+$picture-size: $round_image_size;
+.game.card{
+  float: left;
+  width: $card_width;
+  padding: $padding;
+  background: $card_color;
+  .picture{
+    margin  : auto;
+    height  : $image_size;
+    width   : $image_size;
+    > img{
+      display : block;
+      height  : 100%;
+      width   : 100%;
+      border-radius: 50%;
+    }
+  }
+  .title{}
+  .by{}
+  .description{}
+  .words{
+    text-align: center;
+    .quote{
+      display: block;
+      text-align: left;
+    }
+    .quote.right{
+      text-align: right;
+    }
+  }
+}

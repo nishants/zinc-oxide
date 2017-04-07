@@ -55,4 +55,9 @@ ul.tab-buttons > li:hover, ul.tab-buttons > li.selected{
   height: 100%;
   width: 100%;
   border-top: $highlight_border;
+  ul.deck{
+    @extend .undo-list;
+    @extend .resize-container;
+    padding: $padding;
+  }
 }
