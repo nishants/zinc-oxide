@@ -2,15 +2,24 @@ $logo_green : #8db352;
 $contrast_color: #EEE;
 $very_light: rgba(0, 0, 0, 0.1);
 $light     : rgba(0, 0, 0, 0.2);
+$white : rgba(255, 255, 255, 0.9);
+
+$very_light_border: 1px solid $very_light;
+$highlight_border: 1px solid  $logo_green;
 
 $app_bar_color: white;
 $navigation_bar_color: black;
-$navigation_bar_text: rgba(255, 255, 255, 0.9);
+$navigation_bar_text: $white;
 $navigation_bar_select_bg: $logo_green;
 $navigation_bar_select_text: $logo_green;
 
 $profile_bar_bg: white;
 $profile_bar_heading_bg: $contrast_color;
 $profile_bar_value_color: $logo_green;
+
+
+$tab_button_color : $contrast_color;
+$tab_highlight_color : $logo_green;
+$tab_highlight_text : $white;
 
 $body_color: #fbfbfb;

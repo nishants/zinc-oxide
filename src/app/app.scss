@@ -6,7 +6,16 @@
 body{
   background: $body_color;
   font-family: $font_family;
+  #content{
+    padding: $padding;
+    #section{
+      float: left;
+      width: calc(100% - (#{$profile_bar_width}));
+      padding: $padding;
+    }
+  }
 }
 
 @import "navigation/navigation";
 @import "profile-bar/profile-bar";
+@import "vocabulary/vocabulary";

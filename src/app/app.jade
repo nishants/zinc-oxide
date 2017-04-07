@@ -1,6 +1,10 @@
 #app(ng-app='galaxy', ng-init='ui.showHelp = true')
   #top-bar
     include navigation/top-bar/top-bar
-  #profile-bar
-    include profile-bar/profile-bar
+  #content
+    #profile-bar
+      include profile-bar/profile-bar
+    #section
+      #vocabulary
+        include vocabulary/listing/listing
 
