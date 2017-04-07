@@ -1,17 +1,7 @@
 $mobile_at      : 750px;
-
-$weight_normal: 400;
-$weight_bold: 500;
-$weight_light: 300;
-
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:#{$weight_normal}i,#{$weight_normal},#{$weight_bold}');
-$font_family: 'Ubuntu', sans-serif;
-
 body{
   margin    : 0px;
-  font-family: $font_family;
 }
-
 @import "app/app";
 
 @media screen and (max-width: $mobile_at) {

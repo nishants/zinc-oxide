@@ -1,6 +1,11 @@
+$logo_green : #8db352;
 $very_light: rgba(0, 0, 0, 0.1);
 $light     : rgba(0, 0, 0, 0.2);
 
 $app_bar_color: white;
 $navigation_bar_color: black;
-$navigation_bar_text: white;
+$navigation_bar_text: rgba(255, 255, 255, 0.9);
+$navigation_bar_select_bg: $logo_green;
+$navigation_bar_select_text: $logo_green;
+
+$body_color: #fbfbfb;

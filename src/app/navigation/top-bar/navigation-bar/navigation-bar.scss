@@ -7,9 +7,26 @@ ul.navigation-bar{
   background-color: $navigation_bar_color;
 
   > li {
-    float: left;
-    width: $button_width;
-    line-height: $navigation_bar_height;
-    text-align: center;
+    float       : left;
+    width       : $button_width;
+    line-height : $navigation_bar_height;
+    text-align  : center;
+    cursor      : pointer;
+    font-weight : $weight_bold;
   }
+
+  > li.selected{
+    cursor: default;
+    background-color: $navigation_bar_select_bg;
+  }
+
+  >li:hover{
+    background-color: $navigation_bar_select_bg;
+  }
+}
+
+ul.navigation-bar:hover > li.selected{
+  cursor: default;
+  color : $navigation_bar_select_text;
+  background-color: inherit;
 }
