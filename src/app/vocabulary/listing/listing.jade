@@ -1,15 +1,17 @@
 ul.tab-buttons
   li.active.selected
     .tab-shape
-    .label Active
+    .label My Sets
   li.completed
     .tab-shape
-    .label Completed
-  li.explore
-    .tab-shape
-    .label Explore
+    .label All Sets
+  //li.explore
+  //  .tab-shape
+  //  .label Explore
 
 .tab-body
+  .tab-filters
+
   ul.deck
     li(ng-repeat='game in [{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212}]')
       .game.card
@@ -25,7 +27,7 @@ ul.tab-buttons
           span.word(ng-bind='game.words')
           .quote.right.fa.fa-quote-right
 
-        button.open View
+        button.open Continue
 
 
 

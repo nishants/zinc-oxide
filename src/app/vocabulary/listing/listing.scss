@@ -46,6 +46,7 @@ ul.tab-buttons > li:hover, ul.tab-buttons > li.selected{
   color: $tab_highlight_text;
   .tab-shape{
     background-color: $tab_highlight_color;
+    box-shadow: $shadow_horizontal;
   }
 }
 
@@ -57,11 +58,17 @@ ul.tab-buttons > li:hover, ul.tab-buttons > li.selected{
   width: 100%;
   border-top: 2px solid  $logo_green;
   box-shadow: $shadow;
-  padding: 2*$padding 2*$padding 5*$padding;
+
+  .tab-filters{
+    background-color: $tab_highlight_color;
+    min-height: 200px;
+  }
 
   ul.deck{
     @extend .undo-list;
     @extend .resize-container;
+    padding: 2*$padding 2*$padding 5*$padding;
+
     > li{
       float: left;
       padding: $padding;
