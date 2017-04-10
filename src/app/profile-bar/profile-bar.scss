@@ -7,6 +7,8 @@ $score_label_size: 16px;
   width: $profile_bar_width;
   float: left;
   background: $profile_bar_bg;
+  border : $very_light_border;
+  box-shadow: $shadow_horizontal;
 
   .heading{
     background: $profile_bar_heading_bg;

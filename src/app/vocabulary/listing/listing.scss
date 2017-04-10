@@ -1,6 +1,7 @@
-$tab_width   : 150px;
+$tab_width   : 200px;
 $tab_height  : 50px;
-$perspective_adjustment: 10px;
+$perspective_adjustment: 14px;
+
 
 ul.tab-buttons{
   @extend .undo-list;
@@ -17,11 +18,11 @@ ul.tab-buttons{
     .tab-shape,{
       position: absolute;
       top     : 0;
-      left    : 0;
       height: 100%;
       width: 100%;
       border-top-left-radius: $padding/2;
       border-top-right-radius: $padding/2;
+      box-shadow: $shadow_horizontal;
     }
     .tab-shape{
       background: $tab_button_color;
@@ -55,9 +56,11 @@ ul.tab-buttons > li:hover, ul.tab-buttons > li.selected{
   height: 100%;
   width: 100%;
   border-top: $highlight_border;
+  box-shadow: $shadow;
+  padding: $padding;
+
   ul.deck{
     @extend .undo-list;
     @extend .resize-container;
-    padding: $padding;
   }
 }

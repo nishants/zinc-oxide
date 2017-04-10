@@ -33,6 +33,7 @@ $picture-size: $round_image_size;
     font-weight: $weight_bold;
     background-color: $card_highlight_bg_color;
     padding: $padding;
+    margin: $padding 0px;
     color: $card_text_color;
 
     .quote{
@@ -47,6 +48,7 @@ $picture-size: $round_image_size;
   }
   button{
     display: block;
+    margin-top: 2*$padding ;
     width: 100%;
     border: $highlight_border;
     padding: $padding;
@@ -54,7 +56,6 @@ $picture-size: $round_image_size;
     color: $card_button_color;
     outline: none;
     font-weight: $weight_bold;
-
   }
   button:hover{
     background: $card_button_color;

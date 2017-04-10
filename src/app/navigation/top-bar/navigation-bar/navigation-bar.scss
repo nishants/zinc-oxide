@@ -5,6 +5,7 @@ ul.navigation-bar{
   height: $navigation_bar_height;
   color            : $navigation_bar_text;
   background-color: $navigation_bar_color;
+  box-shadow      : $shadow;
 
   > li {
     float       : left;

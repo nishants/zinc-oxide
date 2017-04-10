@@ -2,6 +2,7 @@
 @import "components/typograhy";
 @import "components/vars";
 @import "components/colors";
+@import "components/material";
 
 body{
   background: $body_color;
@@ -9,7 +10,7 @@ body{
   font-size  : $normal_font;
   line-height: $large_font;
   #content{
-    padding: $padding;
+    padding: 2*$padding $padding;
     #section{
       float: left;
       width: calc(100% - (#{$profile_bar_width}));
