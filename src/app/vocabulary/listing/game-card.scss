@@ -6,6 +6,8 @@ $picture-size: $round_image_size;
   background: $card_color;
   line-height: $line_height;
   border: $very_light_border;
+  border-radius: $border_radius;
+
   .picture{
     margin  : auto;
     height  : $image_size;
@@ -18,7 +20,7 @@ $picture-size: $round_image_size;
     }
   }
   .title{
-    padding-top: $padding;
+    padding-top: 2*$padding;
     font-weight: $weight_bold;
   }
   .by{
@@ -51,14 +53,21 @@ $picture-size: $round_image_size;
     margin-top: 2*$padding ;
     width: 100%;
     border: $highlight_border;
-    padding: $padding;
+    height: 4*$padding;
+    line-height: 4*$padding;
+    padding: 0px;
     background: transparent;
     color: $card_button_color;
     outline: none;
     font-weight: $weight_bold;
+    border-radius: $border_radius;
   }
   button:hover{
     background: $card_button_color;
     color: $white;
   }
+}
+
+.game.card:hover{
+  box-shadow: $shadow;
 }

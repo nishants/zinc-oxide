@@ -1,2 +1,7 @@
 @import "listing/listing";
 @import "listing/game-card";
+
+#vocabulary{
+  position: relative;
+  top: -$padding/2;
+}

@@ -10,11 +10,11 @@ body{
   font-size  : $normal_font;
   line-height: $large_font;
   #content{
-    padding: 2*$padding $padding;
+    padding: 5*$padding 2*$padding;
     #section{
       float: left;
       width: calc(100% - (#{$profile_bar_width}));
-      padding: $padding;
+      padding: 0px 2*$padding;
     }
   }
 }
