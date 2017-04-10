@@ -5,6 +5,8 @@ $input_height : 4*$padding;
   height: $input_height;
   line-height: $input_height;
   outline: none;
+  border-radius: $border_radius;
+  color: $black_text;
   @include transition($transition);
 }
 
@@ -14,7 +16,9 @@ $input_height : 4*$padding;
 
 .input-component{
   @extend .form-component;
+  border: $very_light_border;
   background: $input_bg;
+  padding: 0px $padding*5;
 }
 
 .form-component:hover{
@@ -22,7 +26,33 @@ $input_height : 4*$padding;
 }
 
 .drop-down{
-  @extend .input-component;
+  position: relative;
+  z-index: 1;
+  height: $input_height;
+  overflow: hidden;
+
+  .current{
+    @extend .input-component;
+  }
+  ul.options{
+    @extend .undo-list;
+    @extend .resize-container;
+    box-shadow: $button_shadow;
+    background: white;
+    > li{
+      @extend .input-component;
+      display: block;
+      border: 1px solid transparent;
+    }
+  }
+}
+
+.drop-down.active{
+  overflow: visible;
+}
+
+.drop-down:hover{
+  @extend .active;
 }
 
 button.outline{

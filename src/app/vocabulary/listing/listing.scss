@@ -56,12 +56,20 @@ ul.tab-buttons > li:hover, ul.tab-buttons > li.selected{
   background: $tab_body_color;
   height: 100%;
   width: 100%;
-  border-top: 2px solid  $logo_green;
   box-shadow: $shadow;
 
   .tab-filters{
     background-color: $tab_highlight_color;
-    min-height: 200px;
+    padding: $padding;
+    border-top-right-radius: $border_radius;
+
+    > ul {
+      @extend .resize-container;
+      > li {
+        float: left;
+        $padding: 0px $padding;
+      }
+    }
   }
 
   ul.deck{

@@ -14,7 +14,18 @@ ul.tab-buttons
     ul.undo-list
       li
         div.drop-down(value='vocabulary.filters.status.value',options='vocabulary.filters.status.options')
-        div.drop-down(value='vocabulary.filters.assigned.value',options='vocabulary.filters.assigned.options')
+          .current
+            label Status
+            .caret.fa.fa-chevron-down
+          ul.options
+            li
+              span Bonus
+            li
+              span Locked
+            li
+              span Completed
+            li
+              span Not Opened
 
   ul.deck
     li(ng-repeat='game in [{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212}]')
