@@ -7,6 +7,8 @@ $picture-size: $round_image_size;
   line-height: $line_height;
   border: $very_light_border;
   border-radius: $border_radius;
+  box-shadow: $card_shadow;
+  @include transition($shadow_transition);
 
   .picture{
     margin  : auto;
@@ -61,13 +63,18 @@ $picture-size: $round_image_size;
     outline: none;
     font-weight: $weight_bold;
     border-radius: $border_radius;
+    @include transition($transition);
   }
-  button:hover{
+  button.active{
     background: $card_button_color;
     color: $white;
+    box-shadow: $button_shadow;
   }
 }
 
 .game.card:hover{
-  box-shadow: $shadow;
+  box-shadow: $card_elevated_shadow;
+  button{
+    @extend .active;
+  }
 }

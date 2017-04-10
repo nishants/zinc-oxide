@@ -57,7 +57,7 @@ ul.tab-buttons > li:hover, ul.tab-buttons > li.selected{
   width: 100%;
   border-top: 2px solid  $logo_green;
   box-shadow: $shadow;
-  padding: 2*$padding;
+  padding: 2*$padding 2*$padding 5*$padding;
 
   ul.deck{
     @extend .undo-list;

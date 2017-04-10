@@ -1,0 +1,8 @@
+$transition: ease;
+
+$shadow_transition_function : cubic-bezier(.25,.8,.25,1);
+
+$transition_time: 300ms;
+
+$transition : all $transition_time cubic-bezier(.25,.8,.25,1);
+$shadow_transition : $transition;
