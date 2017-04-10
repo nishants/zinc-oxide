@@ -50,24 +50,9 @@ $picture-size: $round_image_size;
     }
   }
   button{
-    display: block;
+    @extend .outline;
     margin-top: 2*$padding ;
     width: 100%;
-    border: $highlight_border;
-    height: 4*$padding;
-    line-height: 4*$padding;
-    padding: 0px;
-    background: transparent;
-    color: $card_button_color;
-    outline: none;
-    font-weight: $weight_bold;
-    border-radius: $border_radius;
-    @include transition($transition);
-  }
-  button.active{
-    background: $card_button_color;
-    color: $white;
-    box-shadow: $button_shadow;
   }
 }
 

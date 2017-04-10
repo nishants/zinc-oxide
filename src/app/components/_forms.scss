@@ -1,0 +1,42 @@
+$input_height : 4*$padding;
+
+.form-component{
+  display: block;
+  height: $input_height;
+  line-height: $input_height;
+  outline: none;
+  @include transition($transition);
+}
+
+.form-component.active{
+  box-shadow: $button_shadow;
+}
+
+.input-component{
+  @extend .form-component;
+  background: $input_bg;
+}
+
+.form-component:hover{
+  @extend .active;
+}
+
+.drop-down{
+  @extend .input-component;
+}
+
+button.outline{
+  @extend .form-component;
+  border: $highlight_border;
+  padding: 0px;
+  background: transparent;
+  color: $button_color;
+  font-weight: $weight_bold;
+  border-radius: $border_radius;
+}
+
+button.outline.active{
+  background: $button_color;
+  color: $white;
+  @extend .form-component.active;
+}
