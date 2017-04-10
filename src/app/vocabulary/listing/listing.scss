@@ -62,5 +62,9 @@ ul.tab-buttons > li:hover, ul.tab-buttons > li.selected{
   ul.deck{
     @extend .undo-list;
     @extend .resize-container;
+    > li{
+      float: left;
+      padding: $padding;
+    }
   }
 }
