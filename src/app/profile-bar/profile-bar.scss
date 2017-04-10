@@ -1,7 +1,7 @@
 $image_size: $round_image_size;
 
-$score_value_size: 21px;
-$score_label_size: 16px;
+$score_value_size: $extra_large_font;
+$score_label_size: $large_font;
 
 #profile-bar{
   width: $profile_bar_width;
@@ -26,6 +26,8 @@ $score_label_size: 16px;
     }
     .title{
       padding-top   : $padding;
+      font-size: $large_font;
+      line-height: $large_font;
       text-align: center;
     }
   }
@@ -37,10 +39,13 @@ $score_label_size: 16px;
       padding: 2*$padding ;
       .value{
         font-size: $score_value_size;
+        line-height: $score_value_size;
         color    : $profile_bar_value_color;
       }
       .label{
-        font-size: $score_label_size;
+        color: $light_text;
+        //font-size: $score_label_size;
+        //line-height: $score_label_size;
       }
     }
   }
