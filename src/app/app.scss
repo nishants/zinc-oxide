@@ -6,6 +6,8 @@
 body{
   background: $body_color;
   font-family: $font_family;
+  font-size  : $normal_font;
+  line-height: $large_font;
   #content{
     padding: $padding;
     #section{

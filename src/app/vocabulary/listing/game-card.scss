@@ -2,8 +2,10 @@ $picture-size: $round_image_size;
 .game.card{
   float: left;
   width: $card_width;
-  padding: $padding;
+  padding: $padding*3 $padding $padding;
   background: $card_color;
+  line-height: $line_height;
+  border: $very_light_border;
   .picture{
     margin  : auto;
     height  : $image_size;
@@ -15,17 +17,47 @@ $picture-size: $round_image_size;
       border-radius: 50%;
     }
   }
-  .title{}
-  .by{}
-  .description{}
+  .title{
+    padding-top: $padding;
+    font-weight: $weight_bold;
+  }
+  .by{
+    font-size: $extra_small_font;
+  }
+  .description{
+    padding: $padding 0px;
+    font-size: $small_font;
+  }
   .words{
     text-align: center;
+    font-weight: $weight_bold;
+    background-color: $card_highlight_bg_color;
+    padding: $padding;
+    color: $card_text_color;
+
     .quote{
       display: block;
       text-align: left;
+      font-weight: $weight_light;
+      font-size :$small_font;
     }
     .quote.right{
       text-align: right;
     }
+  }
+  button{
+    display: block;
+    width: 100%;
+    border: $highlight_border;
+    padding: $padding;
+    background: transparent;
+    color: $card_button_color;
+    outline: none;
+    font-weight: $weight_bold;
+
+  }
+  button:hover{
+    background: $card_button_color;
+    color: $white;
   }
 }

@@ -11,17 +11,21 @@ ul.tab-buttons
 
 .tab-body
   ul.deck
-    li(ng-repeat='game in [{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one two three four", status: "bonus", time: 1212}]')
+    li(ng-repeat='game in [{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212}]')
       .game.card
         .picture
           img(src="assets/images/vocab.eg.jpg")
         .title(ng-bind="game.title")
-        .by(ng-bind="game.by")
+        .by
+          span By &nbsp;
+          span(ng-bind="game.by")
         .description(ng-bind="game.description")
         .words
           .quote.fa.fa-quote-left
           span.word(ng-bind='game.words')
           .quote.right.fa.fa-quote-right
+
+        button.open View
 
 
 

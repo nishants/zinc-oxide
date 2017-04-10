@@ -3,6 +3,7 @@ $contrast_color: #EEE;
 $very_light: rgba(0, 0, 0, 0.1);
 $light     : rgba(0, 0, 0, 0.2);
 $white : rgba(255, 255, 255, 0.9);
+$black_text : rgba(0, 0, 0, 0.7);
 
 $very_light_border: 1px solid $very_light;
 $highlight_border: 1px solid  $logo_green;
@@ -19,10 +20,16 @@ $profile_bar_value_color: $logo_green;
 
 
 $tab_button_color : $contrast_color;
+$tab_body_color   : white;
 $tab_highlight_color : $logo_green;
 $tab_highlight_text : $white;
 
 
-$card_color: white;
+$card_color: #fbfbfb;
+$card_light_color: $light;
+$card_highlight_bg_color: white;
+$card_text_color: $black_text;
+$card_button_color: $logo_green;
+
 
 $body_color: #fbfbfb;
