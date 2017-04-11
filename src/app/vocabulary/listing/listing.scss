@@ -1,54 +1,6 @@
-$tab_width   : 200px;
-$tab_height  : 50px;
-$perspective_adjustment: 14px;
-$filter_width: 200px;
+@import "tab-buttons";
 
-ul.tab-buttons{
-  @extend .undo-list;
-  @extend .resize-container;
-  width: 100%;
 
-  >li {
-    float   : left;
-    height  : $tab_height;
-    width   : $tab_width;
-    position: relative;
-    left: $perspective_adjustment;
-
-    .tab-shape,{
-      position: absolute;
-      top     : 0;
-      height: 100%;
-      width: 100%;
-      border-top-left-radius: $padding/2;
-      border-top-right-radius: $padding/2;
-      box-shadow: $shadow_horizontal;
-    }
-    .tab-shape{
-      background: $tab_button_color;
-      border    : $very_light_border;
-      @include transform(perspective(100px) rotateX(30deg));
-    }
-    .label{
-      position: relative;
-      line-height: $tab_height;
-      text-align: center;
-    }
-  }
-  li.explore{
-    float: right;
-    left: -$perspective_adjustment;
-  }
-}
-
-ul.tab-buttons > li:hover, ul.tab-buttons > li.selected{
-  z-index: 1;
-  color: $tab_highlight_text;
-  .tab-shape{
-    background-color: $tab_highlight_color;
-    box-shadow: $shadow_horizontal;
-  }
-}
 
 .tab-body{
   position: relative;
