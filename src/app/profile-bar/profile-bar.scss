@@ -5,6 +5,7 @@ $score_label_size: $large_font;
 
 #profile-bar{
   width: $profile_bar_width;
+  margin-top: $padding*5;
   float: left;
   background: $profile_bar_bg;
   border : $very_light_border;

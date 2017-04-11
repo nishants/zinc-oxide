@@ -38,6 +38,7 @@ $picture-size: $round_image_size;
     padding: $padding;
     margin: $padding 0px;
     color: $card_text_color;
+    border-radius: $border_radius;
 
     .quote{
       display: block;
