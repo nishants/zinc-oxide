@@ -14,6 +14,11 @@ ul.navigation-bar{
     text-align  : center;
     cursor      : pointer;
     //font-weight : $weight_bold;
+    a{
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
   }
 
   > li.selected{

@@ -32,7 +32,7 @@
     "js": "browserify src/index.js | uglifyjs > dist/index.js",
 
     "copy-public": "rm -rf dist/assets && cp -r src/app/assets dist/assets",
-    "copy-templates": "jade --pretty -r src/app/assets/tempates dist/assets/templates",
+    "copy-templates": "jade --pretty -H src/app/assets/templates -o dist/assets/templates",
 
     "package": " npm run test-once && npm run js && npm run lint && npm run scss && npm run jade && npm run copy-public && npm run copy-templates",
     "compile": " npm run js && npm run scss && npm run jade && npm run copy-public && npm run copy-templates",
