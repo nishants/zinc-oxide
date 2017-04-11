@@ -33,12 +33,19 @@ $input_height : 4*$padding;
 
   .current{
     @extend .input-component;
+    > label{
+      padding: 0px $padding;
+    }
+    .placeholder, .caret{
+      color: $placeholder_color;
+    }
   }
   ul.options{
     @extend .undo-list;
     @extend .resize-container;
     box-shadow: $button_shadow;
     background: white;
+    cursor: pointer;
     > li{
       @extend .input-component;
       display: block;
@@ -49,10 +56,6 @@ $input_height : 4*$padding;
 
 .drop-down.active{
   overflow: visible;
-}
-
-.drop-down:hover{
-  @extend .active;
 }
 
 button.outline{
