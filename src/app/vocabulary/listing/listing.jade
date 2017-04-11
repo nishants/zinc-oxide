@@ -25,6 +25,7 @@ ul.tab-buttons
   ul.deck
     li(ng-repeat='game in [{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212}]')
       .game.card
+        .rubber_stamp Assigned
         .picture
           img(src="assets/images/vocab.eg.jpg")
         .title(ng-bind="game.title")
@@ -32,12 +33,12 @@ ul.tab-buttons
           span By &nbsp;
           span(ng-bind="game.by")
         .description(ng-bind="game.description")
-        .words
-          .quote.fa.fa-quote-left
-          span.word(ng-bind='game.words')
-          .quote.right.fa.fa-quote-right
+        //.words
+        //  .quote.fa.fa-quote-left
+        //  span.word(ng-bind='game.words')
+        //  .quote.right.fa.fa-quote-right
 
-        button.open Continue
+        button.open Open
 
 
 
