@@ -1,4 +1,4 @@
-app.directive("dropDown", [function () {
+angular.module("zinc").directive("dropDown", [function () {
 
 	return {
 		restrict: "C",

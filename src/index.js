@@ -1,4 +1,5 @@
-require("./app/app.js");
-require("./app/variables.js");
-require("./app/config.js");
+require("./app/app");
+require("./app/variables");
+require("./app/config");
+require("./app/routes");
 require("./app/components/drop-down");

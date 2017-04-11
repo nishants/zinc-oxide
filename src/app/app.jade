@@ -1,10 +1,11 @@
-#app(ng-app='galaxy', ng-init='ui.showHelp = true')
+#app(ng-app='zinc', ng-init='ui.showHelp = true')
   #top-bar
     include navigation/top-bar/top-bar
   #content
-    #profile-bar
-      include profile-bar/profile-bar
-    #section
-      #vocabulary
-        include vocabulary/listing/listing
+    div(ui-view)
+      #profile-bar
+        include profile-bar/profile-bar
+      #section
+        #vocabulary
+          include vocabulary/listing/listing
 

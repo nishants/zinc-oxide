@@ -32,9 +32,10 @@
     "js": "browserify src/index.js | uglifyjs > dist/index.js",
 
     "copy-public": "rm -rf dist/assets && cp -r src/app/assets dist/assets",
+    "copy-templates": "jade --pretty -r src/app/assets/tempates dist/assets/templates",
 
-    "package": " npm run test-once && npm run js && npm run lint && npm run scss && npm run jade && npm run copy-public",
-    "compile": " npm run js && npm run scss && npm run jade && npm run copy-public",
+    "package": " npm run test-once && npm run js && npm run lint && npm run scss && npm run jade && npm run copy-public && npm run copy-templates",
+    "compile": " npm run js && npm run scss && npm run jade && npm run copy-public && npm run copy-templates",
     "test": "karma start karma.conf.js",
     "test-once": "karma start karma.conf.js --single-run",
     "start": "http-server -a localhost -p 8000 -c-1 ./dist",

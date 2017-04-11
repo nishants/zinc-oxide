@@ -1,1 +1,1 @@
-window.app = angular.module("galaxy", []);
+window.app = angular.module("zinc", ['ui.router']);
