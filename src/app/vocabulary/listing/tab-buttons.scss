@@ -1,7 +1,7 @@
 $tab_width   : 200px;
 $tab_height  : 50px;
-$perspective_adjustment: 14px;
 $filter_width: 200px;
+$button_border_radius: $border_radius;
 
 ul.tab-buttons{
   @extend .undo-list;
@@ -13,40 +13,33 @@ ul.tab-buttons{
     height  : $tab_height;
     width   : $tab_width;
     position: relative;
-    left: $perspective_adjustment;
-    max-width: calc(50% - #{$perspective_adjustment});
-
-    .tab-shape,{
-      position: absolute;
-      top     : 0;
-      height: 100%;
-      width: 100%;
-      border-top-left-radius: $padding/2;
-      border-top-right-radius: $padding/2;
-      box-shadow: $shadow_horizontal;
-    }
-    .tab-shape{
-      background: $tab_button_color;
-      border    : $very_light_border;
-      @include transform(perspective(100px) rotateX(30deg));
-    }
+    //margin-right: $padding;
+    max-width: calc(50% - #{$padding});
+    background: $tab_body_color;
+    border-top-left-radius: $button_border_radius;
+    border-top-right-radius: $button_border_radius;
+    border: $very_light_border;
+    border-bottom: none;
+    @include transition($transition);
     .label{
       position: relative;
       line-height: $tab_height;
       text-align: center;
     }
   }
-  li.explore{
-    float: right;
-    left: -$perspective_adjustment;
-  }
 }
 
-ul.tab-buttons > li:hover, ul.tab-buttons > li.selected{
-  z-index: 1;
+ul.tab-buttons > li.selected{
   color: $tab_highlight_text;
-  .tab-shape{
-    background-color: $tab_highlight_color;
-    box-shadow: $shadow_horizontal;
+  background-color: $tab_highlight_color;
+  font-weight: $weight_bold;
+  box-shadow: $bar_shadow;
+  border: $highlight_border;
+}
+
+ul.tab-buttons:hover{
+  > li:not(.selected):hover{
+    color: $tab_highlight_color;
+    border: $highlight_border;
   }
 }
