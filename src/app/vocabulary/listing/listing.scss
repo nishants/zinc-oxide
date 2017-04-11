@@ -1,7 +1,7 @@
 $tab_width   : 200px;
 $tab_height  : 50px;
 $perspective_adjustment: 14px;
-
+$filter_width: 200px;
 
 ul.tab-buttons{
   @extend .undo-list;
@@ -60,14 +60,18 @@ ul.tab-buttons > li:hover, ul.tab-buttons > li.selected{
 
   .tab-filters{
     background-color: $tab_highlight_color;
-    padding: $padding;
     border-top-right-radius: $border_radius;
+    padding: $padding;
+    box-shadow: $bar_shadow;
 
     > ul {
       @extend .resize-container;
       > li {
         float: left;
-        $padding: 0px $padding;
+        padding: $padding;
+        .drop-down{
+          min-width: $filter_width;
+        }
       }
     }
   }

@@ -13,19 +13,14 @@ ul.tab-buttons
   .tab-filters
     ul.undo-list
       li
-        div.drop-down(name='Status', value='',options='[{value: "Bonus"}, {value: "Locked"}, {value: "Completed"}, {value: "Not Opened"}, {value: "All"}]')
-          .current
-            label Status
-            .caret.fa.fa-chevron-down
-          ul.options
-            li
-              span Bonus
-            li
-              span Locked
-            li
-              span Completed
-            li
-              span Not Opened
+        div.status.drop-down(name='Status', reset='All',value='',options='[{value: "Bonus"}, {value: "Locked"}, {value: "Completed"}, {value: "Not Opened"}]')
+      li
+        div.assigned.drop-down(name='Assigned', reset='All', value='',options='[{value: "Assigned"}, {value: "Not Assigned"}]')
+      li
+        div.pre-reading.drop-down(name='Type', reset='"All"', value='',options='[{value: "Pre Reading"}, {value: "Not Pre Reading"}]')
+
+      li
+        div.sort.drop-down(name='Sort', reset='Clear', value='',options='[{value: "Date Started"}, {value: "Last Played"}]')
 
   ul.deck
     li(ng-repeat='game in [{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212},{title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212}]')

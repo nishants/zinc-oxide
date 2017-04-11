@@ -3,11 +3,12 @@ app.directive("dropDown", [function () {
 	return {
 		restrict: "C",
 		scope   : true,
-		template: "<div class='current' ng-click='dropdown.show(true)'><label ng-bind='dropdown.current.value' ng-show='dropdown.current.value'></label> <label class='placeholder' ng-bind='dropdown.name' ng-hide='dropdown.current.value'></label><div class='caret fa fa-chevron-down'></div></div><ul class='options'><li ng-repeat='option in dropdown.options' ng-bind='option.value' ng-click='dropdown.select(option)'></li></ul>",
+		template: "<div class='dropdown-inner' ng-mouseleave='dropdown.show(false)' ng-mouseenter='dropdown.show(true)'><div class='current' ><label class='value' ng-bind='dropdown.current.value' ng-show='dropdown.current.value'></label> <label class='placeholder' ng-bind='dropdown.name' ng-hide='dropdown.current.value'></label><div class='caret fa fa-chevron-down'></div></div><ul class='options'><li ng-repeat='option in dropdown.options' ng-bind='option.value' ng-click='dropdown.select(option)'></li><li ng-click='dropdown.clear()' ng-show='dropdown.reset' ng-bind='dropdown.reset'></li></ul></div>",
 		link    : function (scope, element, attrs) {
 			var dropdown = {
 				name: attrs.name,
 				active: false,
+				reset: scope.$eval(attrs.reset) || attrs.reset,
 				current: {
 					value: scope.$eval(attrs.value)
 				},
@@ -19,9 +20,14 @@ app.directive("dropDown", [function () {
 				show: function(value){
 					dropdown.active = value;
 					value ? element.addClass("active") : element.removeClass("active");
-				}}
-			;
+				},
+				clear: function(){
+					dropdown.current = {value: null};
+					dropdown.show(false);
+				}
+			};
 			scope.dropdown = dropdown;
+
 		}
 	};
 }]);

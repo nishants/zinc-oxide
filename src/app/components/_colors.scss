@@ -5,6 +5,7 @@ $light     : rgba(0, 0, 0, 0.2);
 $white : rgba(255, 255, 255, 0.9);
 $black_text : rgba(0, 0, 0, 0.7);
 $light_text : rgba(0, 0, 0, 0.5);
+$very_light_text : rgba(0, 0, 0, 0.3);
 
 $very_light_border: 1px solid $very_light;
 $highlight_border: 1px solid  $logo_green;
@@ -35,5 +36,5 @@ $body_color: #fbfbfb;
 
 
 $button_color: $logo_green;
-$placeholder_color: $light_text;
+$placeholder_color: $very_light_text;
 $input_bg: $white;

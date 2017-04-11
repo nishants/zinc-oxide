@@ -33,11 +33,18 @@ $input_height : 4*$padding;
 
   .current{
     @extend .input-component;
-    > label{
-      padding: 0px $padding;
-    }
+    padding: 0px 2*$padding;
+
     .placeholder, .caret{
       color: $placeholder_color;
+      font-weight: $weight_light;
+    }
+    label.value{
+      font-weight: $weight_bold;
+    }
+    .caret{
+      line-height: inherit;
+      float: right;
     }
   }
   ul.options{
@@ -46,8 +53,10 @@ $input_height : 4*$padding;
     box-shadow: $button_shadow;
     background: white;
     cursor: pointer;
+    text-align: left;
     > li{
       @extend .input-component;
+      padding: 0px 0px 0px 2*$padding;
       display: block;
       border: 1px solid transparent;
     }
