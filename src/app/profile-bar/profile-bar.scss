@@ -39,7 +39,7 @@ $score_label_size: $large_font;
       padding: 2*$padding ;
       .value{
         font-size: $score_value_size;
-        line-height: $score_value_size;
+        line-height: $score_value_size + $padding/2;
         color    : $profile_bar_value_color;
       }
       .label{

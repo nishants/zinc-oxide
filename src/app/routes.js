@@ -39,5 +39,4 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 		//enabled: true,
 		//requireBase: false
 	});
-
 }]);
