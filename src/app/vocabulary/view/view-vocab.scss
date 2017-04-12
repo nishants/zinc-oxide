@@ -1,12 +1,34 @@
+$assigned_by_width: 200px;
+$image_width: 100px;
+
 .vocabset.card{
   border-radius: $border_radius;
   .assigned{
+    @extend .resize-container;
     padding: $padding;
     background-color: $vocab_assigned_bg;
     border-radius: inherit;
-    .date{
-      text-align: center;
+    text-align: center;
+
+    .assigned-date{
       padding: $padding 0px;
+    }
+    .assigned-by, .assigned-message{
+      float: left;
+    }
+    .assigned-by{
+      width: $assigned_by_width;
+      .picture{
+        width: 100%;
+        > img{
+          display: block;
+          height: $image_width;
+          width : $image_width;
+          margin: auto;
+          border-radius: 50%;
+        }
+      }
+
     }
   }
 }

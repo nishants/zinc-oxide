@@ -1,3 +1,8 @@
 .vocabset.card
   .assigned(ng-if='vocabset.assigned')
-    .date Assigned on {{vocabset.assigned.date}}
+    .assigned-date Assigned on {{vocabset.assigned.date}}
+    .assigned-by
+      .picture
+        img(ng-src='{{vocabset.assigned.by.picture}}')
+      .name(ng-bind='vocabset.assigned.by.name')
+    .assigned-message(ng-bind='vocabset.assigned.message')
