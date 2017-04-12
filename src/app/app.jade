@@ -3,3 +3,4 @@
     include navigation/top-bar/top-bar
   #content
     div(ui-view)
+  #state-loader(ng-class="{'loading' : state.loading}")
