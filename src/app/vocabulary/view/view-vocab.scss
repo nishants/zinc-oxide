@@ -82,6 +82,8 @@ $message_speak_size: 15px;
   }
 
   .cover-image{
+    border-radius: $border_radius;
+    overflow: hidden;
     img{
       width: 100%;
     }
@@ -98,6 +100,12 @@ $message_speak_size: 15px;
       font-size  : $normal_font;
       line-height: $normal_font;
     }
+  }
+}
+
+.vocabset.card.single-deck{
+  .cover-image{
+    border-radius: 0px;
   }
 }
 
