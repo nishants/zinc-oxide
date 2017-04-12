@@ -6,10 +6,6 @@
     "status": "bonus",
     "time": 1212,
     "image": "assets/images/article-cover.jpg",
-    "reader": {
-      "headline": "Dak Prescott believes his racial background brings cowboys together.",
-      "text"    : "Vocabulary words for Dak Prescott believes his racial background brings cowboys together."
-    },
     "decks" : [
       {
         "id"       : 148671,
