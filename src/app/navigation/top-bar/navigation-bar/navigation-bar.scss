@@ -3,8 +3,9 @@ $height   : $top_bar_height;
 
 
 .navigation-bar{
-  height  : $navigation_bar_height;
+  height  : $navigation_bar_height + 2*$padding;
   line-height  : $navigation_bar_height;
+  padding : $padding;
   color   : $navigation_bar_text;
 
   box-shadow      : $shadow;
@@ -13,8 +14,10 @@ $height   : $top_bar_height;
   .logo{
     height: 100%;
     float : left;
+    width : $profile_bar_width;
     > img{
       display: block;
+      margin: auto;
       height : 100%;
     }
   }
@@ -27,6 +30,13 @@ $height   : $top_bar_height;
       font-size  : $icon_size;
       float      : left;
       padding    : 0px 2*$padding;
+      cursor     : pointer;
     }
   }
+
+  ul.actions > li:hover{
+    color : $navigation_bar_select_text;
+    background-color: $navigation_bar_select_bg;
+  }
 }
+

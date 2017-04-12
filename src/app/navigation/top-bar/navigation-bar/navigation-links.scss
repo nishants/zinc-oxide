@@ -1,12 +1,12 @@
-$button_width: 150px;
 
 ul.navigation-links{
   @extend .undo-list;
   @extend .resize-container;
   float           : left;
+  padding-left    : $padding*2;
   > li {
     float       : left;
-    width       : $button_width;
+    padding     : 0px $padding*2;
     line-height : $navigation_bar_height;
     text-align  : center;
     cursor      : pointer;
@@ -20,16 +20,12 @@ ul.navigation-links{
 
   > li.selected{
     cursor: default;
+    color : $navigation_bar_select_text;
     background-color: $navigation_bar_select_bg;
   }
 
   >li:hover{
+    color : $navigation_bar_select_text;
     background-color: $navigation_bar_select_bg;
   }
-}
-
-ul.navigation-links:hover > li.selected{
-  cursor: default;
-  color : $navigation_bar_select_text;
-  background-color: inherit;
 }
