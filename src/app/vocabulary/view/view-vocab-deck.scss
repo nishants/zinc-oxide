@@ -51,6 +51,10 @@ $connector_thickness: 2px;
             cursor: pointer;
             box-shadow: $button_shadow;
             background-color: $vocab_exposure_highlight_state_bg;
+            @include transition($transition);
+          }
+          .state.playable:hover{
+            box-shadow: $card_elevated_shadow;
           }
           .state.completed{
             color : $vocab_exposure_completed_color;
