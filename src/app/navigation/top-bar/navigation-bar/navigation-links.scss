@@ -1,0 +1,35 @@
+$button_width: 150px;
+
+ul.navigation-links{
+  @extend .undo-list;
+  @extend .resize-container;
+  float           : left;
+  > li {
+    float       : left;
+    width       : $button_width;
+    line-height : $navigation_bar_height;
+    text-align  : center;
+    cursor      : pointer;
+    //font-weight : $weight_bold;
+    a{
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  > li.selected{
+    cursor: default;
+    background-color: $navigation_bar_select_bg;
+  }
+
+  >li:hover{
+    background-color: $navigation_bar_select_bg;
+  }
+}
+
+ul.navigation-links:hover > li.selected{
+  cursor: default;
+  color : $navigation_bar_select_text;
+  background-color: inherit;
+}
