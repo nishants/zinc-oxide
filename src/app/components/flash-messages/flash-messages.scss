@@ -3,7 +3,6 @@ ul#flash-messages{
   position: fixed;
   top: $flash_messsage_position + $padding;
   right: $padding;
-  display: none;
   > li {
     @extend .resize-container;
     padding   : $padding;
@@ -17,8 +16,15 @@ ul#flash-messages{
       float  : left;
       padding: 0px $padding/2;
     }
+  }
+  li.state{
     .icon{
       color: $logo_green;
+    }
+  }
+  li.state-error{
+    .icon{
+      color: $error_highlight;
     }
   }
 }

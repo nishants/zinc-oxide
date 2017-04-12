@@ -14,20 +14,15 @@
       }
     },
     {
-      "id" :1,
+      "id" :2,
       "title": "Fun Words",
       "by": "Zinc",
       "description": "Fun Words to learn this summer.",
       "status": "bonus",
-      "time": 1212,
-      "assigned" : {
-        "by": "Tamara Oslon",
-        "date": "02 April 2017",
-        "message": "Study these words before Tuesday class."
-      }
+      "time": 1212
     },
     {
-      "id" :1,
+      "id" :2,
       "title": "Fun Words",
       "by": "Zinc",
       "description": "Fun Words to learn this summer.",
@@ -48,7 +43,7 @@
       }
     },
     {
-      "id" :1,
+      "id" :2,
       "title": "Fun Words",
       "by": "Zinc",
       "description": "Fun Words to learn this summer.",
@@ -56,7 +51,7 @@
       "time": 1212
     },
     {
-      "id" :1,
+      "id" :2,
       "title": "Fun Words",
       "by": "Zinc",
       "description": "Fun Words to learn this summer.",
@@ -65,7 +60,7 @@
       "time": 1212
     },
     {
-      "id" :1,
+      "id" :2,
       "title": "Fun Words",
       "by": "Zinc",
       "description": "Fun Words to learn this summer.",

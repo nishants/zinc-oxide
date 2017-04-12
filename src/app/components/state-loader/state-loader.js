@@ -3,14 +3,21 @@ angular.module("zinc").run(["$rootScope", "stateMessages" ,function($rootScope, 
 			name				: "",
 			loading     : null,
 			message     : "Welcome Onboard !",
+			error     	: null,
 			loadingNext	: function(name, message){
 				state.message = message;;
 				state.loading = name;
+				state.error   = null;
 			},
 			done   			: function(stateName){
 				state.loading = null;
 				state.message = null;
 				state.name    = stateName;
+			},
+			failed: function(error){
+				state.loading = null;
+				state.message = null;
+				state.error   = error;
 			}
 		},
 		nameFor = function(state){
@@ -22,11 +29,11 @@ angular.module("zinc").run(["$rootScope", "stateMessages" ,function($rootScope, 
 	});
 
 	$rootScope.$on('$stateNotFound', function(event, unfoundState, fromState, fromParams){
-		state.done("state-error");
+		state.failed("Unknown Error");
 	});
 
 	$rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error){
-		state.done("state-error");
+		state.failed("Unknown Error");
 	});
 
 	$rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
