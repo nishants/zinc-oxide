@@ -128,6 +128,41 @@
         ]
       },
       {
+        "id"       : 148671,
+        "title"    : "Word Wars - Deck 1",
+        "status"   : "in_bonus",
+        "enable_at": null,
+        "words": "one, two, three, four",
+
+        "exposures": [
+          {
+            "id": 1,
+            "status": "completed", "completed": true
+          },
+          {
+            "id": 2,
+            "status": "completed", "completed": true
+          },
+          {
+            "id": 3,
+            "status": "current",
+            "playable" : true
+          },
+          {
+            "id": 4,
+            "status": "locked", "pending": true
+          },
+          {
+            "id": 5,
+            "status": "locked", "pending": true
+          },
+          {
+            "id": 6,
+            "status": "locked", "pending": true
+          }
+        ]
+      },
+      {
         "id"       : 148672,
         "title"    : "Word Wars - Deck 2",
         "status"   : "in_bonus",

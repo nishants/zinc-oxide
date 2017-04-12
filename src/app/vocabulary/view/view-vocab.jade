@@ -14,7 +14,7 @@
     .headline(ng-bind='vocabset.reader.headline')
     .text(ng-bind='vocabset.reader.text')
   .deck(ng-repeat='deck in vocabset.decks')
-
+    label.deck-title Deck-{{$index+1}}
     ul.exposures
       .connector
       li(ng-repeat='exposure in deck.exposures')

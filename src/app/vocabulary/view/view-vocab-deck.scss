@@ -11,12 +11,33 @@ $marker_speak_size: 10px;
 $current_exposure_bottom: $exposure_current_size/2 + $exposure_size/2 - $padding/2;
 $speak_bottom: $padding*1.5 + $exposure_current_size + $marker_speak_size;
 
+$title_height: 50px;
+$title_max_width: 90px;
+
 .vocabset.card{
   .deck{
     position: relative;
     border: $very_light_border;
-    padding: 4*$padding 2*$padding;
-    margin : 4*$padding 2*$padding;
+    padding: 2*$padding 2*$padding 4*$padding;
+    margin : $padding 2*$padding 4*$padding;
+    border-radius: $border_radius;
+
+    label.deck-title{
+      display     : block;
+      position    : absolute;
+      top         : -$title_height/2;
+      left        : calc(50% - #{$title_max_width/2});
+      line-height : $title_height;
+      height      : $title_height;
+      margin      : auto;
+
+      padding     : 0px $padding;
+      text-align  : center;
+      background  : $vocab_card_bg;
+      font-size   : $large_font;
+      letter-spacing: 1px;
+      color       : $very_light_text;
+    }
     .words{
       text-align: center;
       font-weight: $weight_bold;
