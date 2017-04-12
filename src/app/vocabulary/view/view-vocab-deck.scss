@@ -53,8 +53,8 @@ $connector_thickness: 2px;
     .connector{
       position: absolute;
       bottom  : $exposure_current_size + $padding*2;
-      left    : $padding*4;
-      width: calc(100% - #{$max_exposure_count*$padding*2});
+      left    : $padding*2;
+      width: calc(100% - #{$padding}*2 - 100%/#{$max_exposure_count} + #{$exposure_size/2});
       height: $connector_thickness;
       background-color: $vocab_exposure_connector_color;
     }

@@ -12,7 +12,7 @@ $message_roundness: 5px;
 
   .assigned{
     @extend .resize-container;
-    padding: $padding;
+    padding: 2*$padding;
     background-color: $vocab_assigned_bg;
     border-radius: inherit;
     text-align: center;
@@ -60,14 +60,16 @@ $message_roundness: 5px;
   }
 
   .reader{
-    padding: $padding;
+    padding: 2*$padding;
+
     .headline{
-      padding    : $padding*2 0px;
       line-height: $larger_font;
       font-size  : $larger_font;
       font-weight: $weight_bold;
+      padding-bottom : $padding;
     }
     .text{
+      padding-bottom : 2*$padding;
       font-size  : $normal_font;
       line-height: $normal_font;
     }
