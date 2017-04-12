@@ -4,11 +4,11 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 	$stateProvider
 			.state('home', {
 				url: '/home',
-				templateUrl: 'assets/templates/home.html'
+				templateUrl: 'assets/templates/home-template.html'
 			})
 			.state('vocab', {
 				url: '/vocab',
-				templateUrl: 'assets/templates/vocab.html',
+				templateUrl: 'assets/templates/vocab-list-template.html',
 				resolve : {
 					list: ["VocabService", function(VocabService){
 						return VocabService.fetchMySets();
@@ -20,7 +20,7 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 			})
 			.state('vocab.view', {
 				url: '/:id/view',
-				templateUrl: 'assets/templates/vocab-view.html',
+				templateUrl: 'assets/templates/vocab-view-template.html',
 				resolve: {
 					vocabset: [
 						"$stateParams",
