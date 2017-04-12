@@ -15,7 +15,7 @@ ul.tab-buttons{
     position: relative;
     //margin-right: $padding;
     max-width: calc(50% - #{$padding});
-    background: $tab_body_color;
+    background: transparent;
     border-top-left-radius: $button_border_radius;
     border-top-right-radius: $button_border_radius;
     border: $very_light_border;
@@ -35,6 +35,10 @@ ul.tab-buttons > li.selected{
   font-weight: $weight_bold;
   box-shadow: $bar_shadow;
   border: $highlight_border;
+}
+
+ul.tab-buttons > li:not(.selected){
+  cursor: pointer;
 }
 
 ul.tab-buttons:hover{
