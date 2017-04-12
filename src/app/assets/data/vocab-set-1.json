@@ -25,20 +25,36 @@
 
         "exposures": [
           {
-            "id": 657304,
+            "id": 1,
             "words": "one, two, three, four",
-            "status": "completed"
+            "status": "completed", "completed": true
           },
           {
-            "id": 657304,
+            "id": 2,
             "words": "five, six, seven, eight",
             "status": "current",
+            "playable" : true,
             "end_bonus_at": "2017-04-13T10:54:09.044-04:00"
           },
           {
-            "id": 657304,
+            "id": 3,
             "words": "nine, ten, eleven, twelve",
-            "status": "locked"
+            "status": "locked", "pending": true
+          },
+          {
+            "id": 4,
+            "words": "one, two, three, four",
+            "status": "locked", "pending": true
+          },
+          {
+            "id": 5,
+            "words": "five, six, seven, eight",
+            "status": "locked", "pending": true
+          },
+          {
+            "id": 6,
+            "words": "nine, ten, eleven, twelve",
+            "status": "locked", "pending": true
           }
         ]
       },
@@ -50,20 +66,37 @@
         "end_bonus_at": null,
         "exposures": [
           {
-            "id": 657304,
+            "id": 7,
             "words": "one, two, three, four",
-            "status": "completed"
+            "status": "completed",
+            "completed": true
           },
           {
-            "id": 657304,
+            "id": 8,
             "words": "five, six, seven, eight",
-            "status": "current",
-            "end_bonus_at": "2017-04-13T10:54:09.044-04:00"
+            "status": "completed",
+            "completed": true
           },
           {
-            "id": 657304,
+            "id": 9,
             "words": "nine, ten, eleven, twelve",
-            "status": "locked"
+            "status": "locked",
+            "waiting" : true
+          },
+          {
+            "id": 10,
+            "words": "one, two, three, four",
+            "status": "locked", "pending": true
+          },
+          {
+            "id": 11,
+            "words": "five, six, seven, eight",
+            "status": "locked", "pending": true
+          },
+          {
+            "id": 12,
+            "words": "nine, ten, eleven, twelve",
+            "status": "locked", "pending": true
           }
         ]
       }

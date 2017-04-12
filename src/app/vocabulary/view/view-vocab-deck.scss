@@ -1,0 +1,46 @@
+$exposure_size: 25px;
+$exposure_current_size: 45px;
+$max_exposure_count: 6;
+
+.vocabset.card{
+  .deck{
+    border-top: $very_light_border;
+    padding: 2*$padding $padding;
+    .words{}
+    ul.exposures{
+      @extend .undo-list;
+      @extend .resize-container;
+      width: 100%;
+      > li {
+        float: left;
+        width: calc(100%/#{$max_exposure_count});
+        .exposure{
+          width     : 100%;
+          padding   : 0px $padding;
+          height    : $exposure_current_size + 2*$padding;
+          position  : relative;
+          .state{
+            position      : absolute;
+            margin        : auto;
+            border        : $very_light_border;
+            border-radius : 50%;
+            overflow      : hidden;
+            text-align    : center;
+          }
+          .state:not(.current){
+            width       : $exposure_size;
+            height      : $exposure_size;
+            line-height : $exposure_size;
+            bottom      : $exposure_current_size/2 + $exposure_size/2;
+          }
+          .state.current{
+            width       : $exposure_current_size;
+            height      : $exposure_current_size;
+            line-height : $exposure_current_size;
+            bottom      : $exposure_current_size/2;
+          }
+        }
+      }
+    }
+  }
+}

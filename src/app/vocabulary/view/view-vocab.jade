@@ -11,3 +11,19 @@
   .reader(ng-if='vocabset.reader')
     .headline(ng-bind='vocabset.reader.headline')
     .text(ng-bind='vocabset.reader.text')
+  .deck(ng-repeat='deck in vocabset.decks')
+    .words
+      label(ng-bind='deck.words')
+    ul.exposures
+      li(ng-repeat='exposure in deck.exposures')
+        .exposure
+          .marker(ng-class='')
+          //.state(ng-class='{"locked" : exposure.locked, "completed" : exposure.completed, "play-now" : exposure.playable, "wait-now" : exposure.waiting}')
+          .state.pending(ng-if='exposure.pending')
+            .fa.fa-lock
+          .state.completed(ng-if='exposure.completed')
+            .fa.fa-check
+          .state.current.playable(ng-if='exposure.playable')
+            .fa.fa-play
+          .state.current.waiting(ng-if='exposure.waiting')
+            .fa.fa-lock
