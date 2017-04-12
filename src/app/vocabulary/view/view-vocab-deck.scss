@@ -1,9 +1,11 @@
-$exposure_size: 25px;
+$exposure_size: 30px;
 $exposure_current_size: 45px;
 $max_exposure_count: 6;
+$connector_thickness: 2px;
 
 .vocabset.card{
   .deck{
+    position: relative;
     border-top: $very_light_border;
     padding: 2*$padding $padding;
     .words{}
@@ -11,6 +13,8 @@ $max_exposure_count: 6;
       @extend .undo-list;
       @extend .resize-container;
       width: 100%;
+      position: relative;
+      z-index: 2;
       > li {
         float: left;
         width: calc(100%/#{$max_exposure_count});
@@ -26,12 +30,13 @@ $max_exposure_count: 6;
             border-radius : 50%;
             overflow      : hidden;
             text-align    : center;
+            background-color: $vocab_exposure_state_bg;
           }
           .state:not(.current){
             width       : $exposure_size;
             height      : $exposure_size;
             line-height : $exposure_size;
-            bottom      : $exposure_current_size/2 + $exposure_size/2;
+            bottom      : $exposure_current_size/2 + $exposure_size/2 - $padding/2;
           }
           .state.current{
             width       : $exposure_current_size;
@@ -39,8 +44,19 @@ $max_exposure_count: 6;
             line-height : $exposure_current_size;
             bottom      : $exposure_current_size/2;
           }
+          .state.playable{
+            background-color: $vocab_exposure_highlight_state_bg;
+          }
         }
       }
+    }
+    .connector{
+      position: absolute;
+      bottom  : $exposure_current_size + $padding*2;
+      left    : $padding*4;
+      width: calc(100% - #{$max_exposure_count*$padding*2});
+      height: $connector_thickness;
+      background-color: $vocab_exposure_connector_color;
     }
   }
 }
