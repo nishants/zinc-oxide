@@ -26,7 +26,6 @@ $connector_thickness: 2px;
           .state{
             position      : absolute;
             margin        : auto;
-            border        : $very_light_border;
             border-radius : 50%;
             overflow      : hidden;
             text-align    : center;
@@ -43,9 +42,21 @@ $connector_thickness: 2px;
             height      : $exposure_current_size;
             line-height : $exposure_current_size;
             bottom      : $exposure_current_size/2;
+            border      : $very_light_border;
+
+            max-width   : calc(100% - #{$padding}/2);
+            margin      : auto;
           }
           .state.playable{
+            cursor: pointer;
+            box-shadow: $button_shadow;
             background-color: $vocab_exposure_highlight_state_bg;
+          }
+          .state.completed{
+            color : $vocab_exposure_completed_color;
+          }
+          .state.waiting{
+            cursor : not-allowed;
           }
         }
       }
