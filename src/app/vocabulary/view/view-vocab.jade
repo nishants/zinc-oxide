@@ -10,8 +10,12 @@
       .speak
   .cover-image
     img(ng-src='{{vocabset.image}}')
+  .author
+    .title(ng-bind="vocabset.title")
+    .by By {{vocabset.by}}
+    .description(ng-bind='vocabset.description')
   .reader(ng-if='vocabset.reader')
-    .headline(ng-bind='vocabset.reader.headline')
+    .headline.title(ng-bind='vocabset.reader.headline')
     .text(ng-bind='vocabset.reader.text')
   .deck(ng-repeat='deck in vocabset.decks')
     label.deck-title Deck-{{$index+1}}

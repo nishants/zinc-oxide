@@ -10,6 +10,26 @@ $message_speak_size: 15px;
   box-shadow: $card_elevated_shadow;
   border: $very_light_border;
   background-color: $vocab_card_bg;
+  .title{
+    line-height: $larger_font;
+    font-size  : $larger_font;
+    font-weight: $weight_bold;
+  }
+
+  .author{
+    padding: 2*$padding;
+    .title{
+      margin-bottom: 0px;
+      padding:  $padding/2 0px;
+    }
+    .by{
+      color:  $very_light_text;
+      font-size: $extra_small_font;
+    }
+    .description{
+      padding: 2*$padding 0px;
+    }
+  }
 
   .assigned{
     @extend .resize-container;
@@ -71,9 +91,6 @@ $message_speak_size: 15px;
     padding: 2*$padding;
 
     .headline{
-      line-height: $larger_font;
-      font-size  : $larger_font;
-      font-weight: $weight_bold;
       padding-bottom : $padding;
     }
     .text{
