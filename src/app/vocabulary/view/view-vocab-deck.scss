@@ -1,7 +1,10 @@
+$exposure_container_height: 150px;
 $exposure_size: 30px;
 $exposure_current_size: 45px;
 $max_exposure_count: 6;
 $connector_thickness: 2px;
+$marker_width: 300px;
+$marker_height: 50px;
 
 .vocabset.card{
   .deck{
@@ -21,8 +24,22 @@ $connector_thickness: 2px;
         .exposure{
           width     : 100%;
           padding   : 0px $padding;
-          height    : $exposure_current_size + 2*$padding;
+          height    : $exposure_container_height;
           position  : relative;
+          .marker{
+            position    : absolute;
+            height      : $marker_height;
+            line-height : $marker_height;
+            width       : $marker_width;
+            border-radius: $message_border_radius;
+            text-align: center;
+          }
+          .marker.bonus{
+            background-color: $vocab_exposure_highlight_state_bg;
+          }
+          .marker.waiting{
+            background-color: $vocab_exposure_connector_color;
+          }
           .state{
             position      : absolute;
             margin        : auto;

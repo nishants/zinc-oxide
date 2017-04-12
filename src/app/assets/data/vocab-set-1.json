@@ -81,6 +81,7 @@
             "id": 9,
             "words": "nine, ten, eleven, twelve",
             "status": "locked",
+            "enable_at": "2017-04-17T11:11:27.159-04:00",
             "waiting" : true
           },
           {

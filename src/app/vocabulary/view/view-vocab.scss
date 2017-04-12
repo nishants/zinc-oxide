@@ -1,7 +1,7 @@
 $vocab_card_max_width: 550px;
 $assigned_by_width: 120px;
 $image_size: 60px;
-$message_roundness: 5px;
+$message_roundness: $message_border_radius;
 $message_speak_size: 15px;
 
 .vocabset.card{
