@@ -1,0 +1,15 @@
+.game.card:hover{
+  box-shadow: $card_elevated_shadow;
+  .picture{
+    > img{
+      @include transform(scale(1.1));
+    }
+  }
+  .title, .by, .description{
+    @include transform(translateX($padding));
+  }
+  button{
+    @include activate();
+    @include activateOutline();
+  }
+}

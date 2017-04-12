@@ -1,0 +1,6 @@
+ul.tab-buttons:hover{
+  > li:not(.selected):hover{
+    color: $tab_highlight_color;
+    border: $highlight_border;
+  }
+}

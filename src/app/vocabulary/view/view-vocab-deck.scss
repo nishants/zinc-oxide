@@ -126,9 +126,7 @@ $title_max_width: 90px;
             background-color: $vocab_exposure_highlight_state_bg;
             @include transition($transition);
           }
-          .state.playable:hover{
-            box-shadow: $card_elevated_shadow;
-          }
+
           .state.completed{
             color : $vocab_exposure_completed_color;
           }
@@ -168,7 +166,6 @@ $title_max_width: 90px;
       background-color: $vocab_exposure_connector_color;
     }
     button.study-words{
-      @extend .outline;
       margin-top: 2*$padding ;
       width: 100%;
     }

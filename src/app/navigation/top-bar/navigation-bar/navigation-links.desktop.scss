@@ -26,3 +26,8 @@ ul.navigation-links{
     }
   }
 }
+
+ul.actions > li:hover{
+  color : $navigation_bar_select_text;
+  background-color: $navigation_bar_select_bg;
+}

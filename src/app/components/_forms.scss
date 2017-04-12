@@ -1,5 +1,13 @@
 $input_height : 4.5*$padding;
 
+@mixin activate(){
+  box-shadow: $button_shadow;
+}
+@mixin activateOutline(){
+  background: $button_color;
+  color: $white;
+}
+
 .form-component{
   display: block;
   height: $input_height;
@@ -11,7 +19,7 @@ $input_height : 4.5*$padding;
 }
 
 .form-component.active{
-  box-shadow: $button_shadow;
+  @include activate();
 }
 
 .input-component{
@@ -22,7 +30,7 @@ $input_height : 4.5*$padding;
 }
 
 .form-component:hover{
-  @extend .active;
+  @include activate();
 }
 
 button.outline{
@@ -34,7 +42,7 @@ button.outline{
   font-weight: $weight_bold;
   border-radius: $border_radius;
 }
-
+button.outline:hover,
 button.outline.active{
   background: $button_color;
   color: $white;
