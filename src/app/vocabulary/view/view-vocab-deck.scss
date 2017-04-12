@@ -1,4 +1,4 @@
-$exposure_container_height: 150px;
+$exposure_container_height: 115px;
 $exposure_size: 30px;
 $exposure_current_size: 45px;
 $max_exposure_count: 6;
@@ -14,8 +14,9 @@ $speak_bottom: $padding*1.5 + $exposure_current_size + $marker_speak_size;
 .vocabset.card{
   .deck{
     position: relative;
-    border-top: $very_light_border;
-    padding: 2*$padding $padding;
+    border: $very_light_border;
+    padding: 4*$padding 2*$padding;
+    margin : 4*$padding 2*$padding;
     .words{
       text-align: center;
       font-weight: $weight_bold;
@@ -121,17 +122,17 @@ $speak_bottom: $padding*1.5 + $exposure_current_size + $marker_speak_size;
         left: 0px;
       }
     }
-    ul.exposures > li:nth-child(#{$max_exposure_count}) > .exposure{
+    ul.exposures > li:nth-child(#{$max_exposure_count + 1}) > .exposure{
       .marker{
         left: calc(100% - #{$marker_width});
       }
     }
-    ul.exposures > li:nth-child(#{$max_exposure_count - 1}) > .exposure{
+    ul.exposures > li:nth-child(#{$max_exposure_count - 1 +1}) > .exposure{
       .marker{
         left: calc(100% - #{$marker_width} + 100%/#{$max_exposure_count});
       }
     }
-    ul.exposures > li:nth-child(#{$max_exposure_count - 2}) > .exposure{
+    ul.exposures > li:nth-child(#{$max_exposure_count - 2 +1}) > .exposure{
       .marker{
         left: -50%;
       }
@@ -139,11 +140,16 @@ $speak_bottom: $padding*1.5 + $exposure_current_size + $marker_speak_size;
 
     .connector{
       position: absolute;
-      bottom  : $exposure_current_size + $padding*2;
+      bottom  : $exposure_current_size;
       left    : $padding*2;
       width: calc(100% - #{$padding}*2 - 100%/#{$max_exposure_count} + #{$exposure_size/2});
       height: $connector_thickness;
       background-color: $vocab_exposure_connector_color;
+    }
+    button.study-words{
+      @extend .outline;
+      margin-top: 2*$padding ;
+      width: 100%;
     }
   }
 }

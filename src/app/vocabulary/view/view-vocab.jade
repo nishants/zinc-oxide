@@ -14,11 +14,9 @@
     .headline(ng-bind='vocabset.reader.headline')
     .text(ng-bind='vocabset.reader.text')
   .deck(ng-repeat='deck in vocabset.decks')
-    .words
-      .quote.fa.fa-quote-left
-      span.text(ng-bind='deck.words')
-      .quote.right.fa.fa-quote-right
+
     ul.exposures
+      .connector
       li(ng-repeat='exposure in deck.exposures')
         .exposure
           .marker.bonus(ng-if='exposure.end_bonus_at')
@@ -35,4 +33,9 @@
             .fa.fa-play
           .state.current.waiting(ng-if='exposure.waiting')
             .fa.fa-lock
-    .connector
+    .words
+      .quote.fa.fa-quote-left
+      span.text(ng-bind='deck.words')
+      .quote.right.fa.fa-quote-right
+
+    button.study-words Study Words
