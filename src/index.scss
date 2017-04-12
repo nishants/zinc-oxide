@@ -1,8 +1,17 @@
-$mobile_at      : 750px;
+$mobile_at       : 750px;
+$desktop_at      : 900px;
+
 body{
   margin    : 0px;
 }
 @import "app/app";
+
+@media screen and (min-width: $desktop_at) {
+  @import "app/app.desktop";
+  .no-mobile{
+    display: none !important;
+  }
+}
 
 @media screen and (max-width: $mobile_at) {
   @import "app/app.mobile";

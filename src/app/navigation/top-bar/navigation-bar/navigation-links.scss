@@ -17,15 +17,4 @@ ul.navigation-links{
       text-decoration: none;
     }
   }
-
-  > li.selected{
-    cursor: default;
-    color : $navigation_bar_select_text;
-    background-color: $navigation_bar_select_bg;
-  }
-
-  >li:hover{
-    color : $navigation_bar_select_text;
-    background-color: $navigation_bar_select_bg;
-  }
 }

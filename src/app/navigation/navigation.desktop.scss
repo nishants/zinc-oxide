@@ -1,0 +1,13 @@
+#top-bar{
+  position: fixed;
+  z-index : $top_bar_layer;
+  top     : 0;
+  left    : 0;
+  width   : 100vw;
+}
+
+#content{
+  margin-top: $navigation_bar_height + $padding*5;
+}
+
+@import "top-bar/navigation-bar/navigation-links.desktop";
