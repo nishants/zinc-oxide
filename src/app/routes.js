@@ -8,7 +8,15 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 			})
 			.state('vocab', {
 				url: '/vocab',
-				templateUrl: 'assets/templates/vocab.html'
+				templateUrl: 'assets/templates/vocab.html',
+				resolve : {
+					vocabset: ["VocabService", function(VocabService){
+						return VocabService.fetchMySets();
+					}]
+				},
+				controller: ["$scope", "vocabset", function($scope, vocabset){
+					$scope.games = vocabset;
+				}]
 			})
 			.state('vocab.view', {
 				url: '/:id/view',

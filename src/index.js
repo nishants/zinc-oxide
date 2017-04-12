@@ -3,3 +3,4 @@ require("./app/variables");
 require("./app/config");
 require("./app/routes");
 require("./app/components/drop-down");
+require("./app/vocabulary/vocab-service");
