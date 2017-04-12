@@ -56,11 +56,7 @@ $message_speak_size: 15px;
         position: absolute;
         top: $image_size/2 - $padding;
         left: -$message_speak_size;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: $message_speak_size/2 $message_speak_size $message_speak_size/2 0;
-        border-color: transparent $white transparent transparent;
+        @include speak-left($message_speak_size, $message_speak_size, $white);
       }
     }
   }

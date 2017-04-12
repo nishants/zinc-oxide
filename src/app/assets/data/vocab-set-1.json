@@ -32,7 +32,48 @@
           {
             "id": 2,
             "words": "five, six, seven, eight",
+            "status": "completed", "completed": true
+          },
+          {
+            "id": 3,
+            "words": "nine, ten, eleven, twelve",
             "status": "current",
+            "playable" : true,
+            "end_bonus_at": "2017-04-13T10:54:09.044-04:00"
+          },
+          {
+            "id": 4,
+            "words": "one, two, three, four",
+            "status": "locked", "pending": true
+          },
+          {
+            "id": 5,
+            "words": "five, six, seven, eight",
+            "status": "locked", "pending": true
+          },
+          {
+            "id": 6,
+            "words": "nine, ten, eleven, twelve",
+            "status": "locked", "pending": true
+          }
+        ]
+      },
+      {
+        "id"       : 148671,
+        "title"    : "Word Wars - Deck 1",
+        "status"   : "in_bonus",
+        "enable_at": null,
+        "end_bonus_at": "2017-04-13T10:54:09.044-04:00",
+
+        "exposures": [
+          {
+            "id": 1,
+            "words": "one, two, three, four",
+            "status": "completed", "completed": true
+          },
+          {
+            "id": 2,
+            "words": "five, six, seven, eight",
             "playable" : true,
             "end_bonus_at": "2017-04-13T10:54:09.044-04:00"
           },
@@ -66,6 +107,48 @@
         "end_bonus_at": null,
         "exposures": [
           {
+            "id": 2,
+            "words": "five, six, seven, eight",
+            "status": "current",
+            "playable" : true,
+            "end_bonus_at": "2017-04-13T10:54:09.044-04:00"
+          },
+          {
+            "id": 3,
+            "words": "nine, ten, eleven, twelve",
+            "status": "locked", "pending": true
+          },
+          {
+            "id": 4,
+            "words": "one, two, three, four",
+            "status": "locked", "pending": true
+          },
+          {
+            "id": 5,
+            "words": "five, six, seven, eight",
+            "status": "locked", "pending": true
+          },
+          {
+            "id": 6,
+            "words": "nine, ten, eleven, twelve",
+            "status": "locked", "pending": true
+          },
+          {
+            "id": 7,
+            "words": "nine, ten, eleven, twelve",
+            "status": "locked", "pending": true
+          }
+
+        ]
+      },
+      {
+        "id"       : 148672,
+        "title"    : "Word Wars - Deck 2",
+        "status"   : "in_bonus",
+        "enable_at": "2017-04-17T11:11:27.159-04:00",
+        "end_bonus_at": null,
+        "exposures": [
+          {
             "id": 7,
             "words": "one, two, three, four",
             "status": "completed",
@@ -78,29 +161,124 @@
             "completed": true
           },
           {
+            "id": 10,
+            "words": "one, two, three, four",
+            "status": "completed",
+            "completed": true
+          },
+          {
+            "id": 11,
+            "words": "five, six, seven, eight",
+            "status": "completed",
+            "completed": true
+          },
+          {
+            "id": 12,
+            "words": "nine, ten, eleven, twelve",
+            "status": "completed",
+            "completed": true
+          },
+          {
             "id": 9,
             "words": "nine, ten, eleven, twelve",
             "status": "locked",
             "enable_at": "2017-04-17T11:11:27.159-04:00",
             "waiting" : true
+          }
+
+        ]
+      },
+      {
+        "id"       : 148672,
+        "title"    : "Word Wars - Deck 2",
+        "status"   : "in_bonus",
+        "enable_at": "2017-04-17T11:11:27.159-04:00",
+        "end_bonus_at": null,
+        "exposures": [
+          {
+            "id": 7,
+            "words": "one, two, three, four",
+            "status": "completed",
+            "completed": true
+          },
+          {
+            "id": 8,
+            "words": "five, six, seven, eight",
+            "status": "completed",
+            "completed": true
           },
           {
             "id": 10,
             "words": "one, two, three, four",
-            "status": "locked", "pending": true
+            "status": "completed",
+            "completed": true
           },
           {
             "id": 11,
             "words": "five, six, seven, eight",
-            "status": "locked", "pending": true
+            "status": "completed",
+            "completed": true
           },
           {
             "id": 12,
             "words": "nine, ten, eleven, twelve",
-            "status": "locked", "pending": true
+            "enable_at": "2017-04-17T11:11:27.159-04:00",
+            "waiting" : true
+          },
+          {
+            "id": 9,
+            "words": "nine, ten, eleven, twelve",
+            "status": "locked", "pending" : true
           }
+
+        ]
+      },
+      {
+        "id"       : 148672,
+        "title"    : "Word Wars - Deck 2",
+        "status"   : "in_bonus",
+        "enable_at": "2017-04-17T11:11:27.159-04:00",
+        "end_bonus_at": null,
+        "exposures": [
+          {
+            "id": 7,
+            "words": "one, two, three, four",
+            "status": "completed",
+            "completed": true
+          },
+          {
+            "id": 8,
+            "words": "five, six, seven, eight",
+            "status": "completed",
+            "completed": true
+          },
+          {
+            "id": 10,
+            "words": "one, two, three, four",
+            "status": "completed",
+            "completed": true
+          },
+          {
+            "id": 11,
+            "words": "five, six, seven, eight",
+            "enable_at": "2017-04-17T11:11:27.159-04:00",
+            "waiting" : true
+          },
+          {
+            "id": 12,
+            "words": "nine, ten, eleven, twelve",
+            "status": "locked", "pending" : true
+          },
+          {
+            "id": 9,
+            "words": "nine, ten, eleven, twelve",
+            "status": "locked", "pending" : true
+          }
+
         ]
       }
+
+
 
     ]
   }

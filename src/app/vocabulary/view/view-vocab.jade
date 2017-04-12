@@ -19,8 +19,12 @@
     ul.exposures
       li(ng-repeat='exposure in deck.exposures')
         .exposure
-          .marker.bonus(ng-if='exposure.end_bonus_at') Bonus expires in 21:12:21 hours.
-          .marker.waiting(ng-if='exposure.enable_at') Available in 21:12:21 hours.
+          .marker.bonus(ng-if='exposure.end_bonus_at')
+            span Bonus expires in 21:12:21 hours.
+          .marker.waiting(ng-if='exposure.enable_at')
+            span Available in 21:12:21 hours.
+          .speak.waiting(ng-if='exposure.enable_at')
+          .speak.bonus(ng-if='exposure.end_bonus_at')
           .state.pending(ng-if='exposure.pending')
             .fa.fa-lock
           .state.completed(ng-if='exposure.completed')

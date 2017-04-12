@@ -3,9 +3,12 @@ $exposure_size: 30px;
 $exposure_current_size: 45px;
 $max_exposure_count: 6;
 $connector_thickness: 2px;
-$marker_width: 300px;
+$marker_width: 250px;
 $marker_height: 50px;
 
+$marker_speak_size: 15px;
+
+$current_exposure_bottom: $exposure_current_size/2 + $exposure_size/2 - $padding/2;
 .vocabset.card{
   .deck{
     position: relative;
@@ -28,17 +31,31 @@ $marker_height: 50px;
           position  : relative;
           .marker{
             position    : absolute;
+            top         : $padding*1.5;
+            left        : -$padding;
             height      : $marker_height;
             line-height : $marker_height;
             width       : $marker_width;
             border-radius: $message_border_radius;
             text-align: center;
+
           }
           .marker.bonus{
             background-color: $vocab_exposure_highlight_state_bg;
           }
           .marker.waiting{
             background-color: $vocab_exposure_connector_color;
+          }
+          .speak{
+            position: absolute;
+            bottom: $padding + $exposure_current_size + $marker_speak_size;
+            left: $exposure_current_size/2;
+          }
+          .speak.waiting{
+            @include speak-bottom($marker_speak_size, $marker_speak_size, $vocab_exposure_connector_color);
+          }
+          .speak.bonus{
+            @include speak-bottom($marker_speak_size, $marker_speak_size, $vocab_exposure_highlight_state_bg);
           }
           .state{
             position      : absolute;
@@ -82,6 +99,27 @@ $marker_height: 50px;
         }
       }
     }
+    ul.exposures > li:nth-child(1) > .exposure{
+      .marker{
+        left: 0px;
+      }
+    }
+    ul.exposures > li:nth-child(#{$max_exposure_count}) > .exposure{
+      .marker{
+        left: calc(100% - #{$marker_width});
+      }
+    }
+    ul.exposures > li:nth-child(#{$max_exposure_count - 1}) > .exposure{
+      .marker{
+        left: calc(100% - #{$marker_width} + 100%/#{$max_exposure_count});
+      }
+    }
+    ul.exposures > li:nth-child(#{$max_exposure_count - 2}) > .exposure{
+      .marker{
+        left: -50%;
+      }
+    }
+
     .connector{
       position: absolute;
       bottom  : $exposure_current_size + $padding*2;
