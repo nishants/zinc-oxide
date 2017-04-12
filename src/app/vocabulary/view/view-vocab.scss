@@ -1,0 +1,12 @@
+.vocabset.card{
+  border-radius: $border_radius;
+  .assigned{
+    padding: $padding;
+    background-color: $vocab_assigned_bg;
+    border-radius: inherit;
+    .date{
+      text-align: center;
+      padding: $padding 0px;
+    }
+  }
+}
