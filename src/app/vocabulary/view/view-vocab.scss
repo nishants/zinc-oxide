@@ -8,6 +8,8 @@ $message_roundness: 5px;
   border-radius: $border_radius;
   box-shadow: $card_elevated_shadow;
   border: $very_light_border;
+  background-color: $vocab_card_bg;
+
   .assigned{
     @extend .resize-container;
     padding: $padding;
@@ -54,6 +56,20 @@ $message_roundness: 5px;
   .cover-image{
     img{
       width: 100%;
+    }
+  }
+
+  .reader{
+    padding: $padding;
+    .headline{
+      padding    : $padding*2 0px;
+      line-height: $larger_font;
+      font-size  : $larger_font;
+      font-weight: $weight_bold;
+    }
+    .text{
+      font-size  : $normal_font;
+      line-height: $normal_font;
     }
   }
 }

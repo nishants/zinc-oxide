@@ -8,3 +8,6 @@
     .assigned-message(ng-bind='vocabset.assigned.message')
   .cover-image
     img(ng-src='{{vocabset.image}}')
+  .reader(ng-if='vocabset.reader')
+    .headline(ng-bind='vocabset.reader.headline')
+    .text(ng-bind='vocabset.reader.text')
