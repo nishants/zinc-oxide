@@ -10,12 +10,12 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 				url: '/vocab',
 				templateUrl: 'assets/templates/vocab.html',
 				resolve : {
-					vocabset: ["VocabService", function(VocabService){
+					list: ["VocabService", function(VocabService){
 						return VocabService.fetchMySets();
 					}]
 				},
-				controller: ["$scope", "vocabset", function($scope, vocabset){
-					$scope.games = vocabset;
+				controller: ["$scope", "list", function($scope, list){
+					$scope.games = list;
 				}]
 			})
 			.state('vocab.view', {
@@ -24,10 +24,12 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 				resolve: {
 					vocabset: [
 						"$stateParams",
-						function($stateParams){
-							return {id: $stateParams.id,title: "Fun Words", by: "Zinc", description: "Fun Words to learn this summer.", words: "one, two, three, four", status: "bonus", time: 1212, assigned: {by : {name: 'Tamara Oslon', image: 'assets/images/teacher.jpg'} , on:'Dec 12 2016'}};
+						"VocabService",
+						function($stateParams, VocabService){
+							return VocabService.getById($stateParams.id);
 						}
-					]				},
+					]
+				},
 				controller: ["$scope", "vocabset", function($scope, vocabset){
 					$scope.vocabset = vocabset;
 				}]
