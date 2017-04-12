@@ -1,6 +1,9 @@
 $picture-size: $round_image_size;
 .game.card{
+  display: block;
   position: relative;
+  text-decoration: none ;
+  color: inherit;
   width: $card_width;
   padding: $padding*3 2*$padding 2*$padding;
   background: $card_color;

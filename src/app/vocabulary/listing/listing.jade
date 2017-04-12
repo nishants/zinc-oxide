@@ -20,7 +20,7 @@ ul.tab-buttons
 
   ul.deck
     li(ng-repeat='game in games')
-      .game.card
+      a.game.card(ui-sref="vocab.view({id: 1})")
         .rubber_stamp Assigned
         .picture
           img(src="assets/images/vocab.eg.jpg")
