@@ -1,4 +1,4 @@
-.vocabset.card
+.vocabset.card(ng-class="{'single-deck' : vocabset.decks.length==1}")
   .assigned(ng-if='vocabset.assigned')
     .assigned-date Assigned on {{vocabset.assigned.date}}
     .assigned-by

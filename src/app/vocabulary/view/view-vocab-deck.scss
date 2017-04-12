@@ -174,3 +174,16 @@ $title_max_width: 90px;
     }
   }
 }
+
+
+.vocabset.card.single-deck{
+  .deck{
+    position: relative;
+    padding: 0px 2*$padding $padding;
+    margin : 0px 2*$padding $padding;
+    border : 1px solid transparent;
+    label.deck-title{
+    display: none;
+    }
+  }
+}
