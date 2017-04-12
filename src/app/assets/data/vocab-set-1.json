@@ -5,6 +5,7 @@
     "description": "Fun Words to learn this summer.",
     "status": "bonus",
     "time": 1212,
+    "image": "assets/images/article-cover.jpg",
     "assigned" : {
       "by": {"name": "Serverus Snape","picture":"assets/images/teacher.jpg"},
       "date": "02 April 2017",

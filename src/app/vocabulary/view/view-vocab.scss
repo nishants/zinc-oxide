@@ -1,11 +1,13 @@
-$vocab_card_max_width: 450px;
-$assigned_by_width: 200px;
-$image_size: 75px;
+$vocab_card_max_width: 550px;
+$assigned_by_width: 120px;
+$image_size: 60px;
 $message_roundness: 5px;
 
 .vocabset.card{
   max-width: $vocab_card_max_width;
   border-radius: $border_radius;
+  box-shadow: $card_elevated_shadow;
+  border: $very_light_border;
   .assigned{
     @extend .resize-container;
     padding: $padding;
@@ -35,6 +37,7 @@ $message_roundness: 5px;
       }
       .name{
         padding: $padding;
+        font-size: $small_font;
       }
     }
     .assigned-message{
@@ -45,6 +48,12 @@ $message_roundness: 5px;
       padding: $padding*2;
       margin-top: $padding;
       border-radius: $message_roundness;
+    }
+  }
+
+  .cover-image{
+    img{
+      width: 100%;
     }
   }
 }
