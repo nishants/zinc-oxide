@@ -1,12 +1,15 @@
-angular.module("zinc").run(["$rootScope",function($rootScope){
+angular.module("zinc").run(["$rootScope", "stateMessages" ,function($rootScope, stateMessages){
 	var state = {
 			name				: "",
-			loading     : true,
-			loadingNext	: function(){
-				state.loading = true;
+			loading     : null,
+			message     : "Welcome Onboard !",
+			loadingNext	: function(name, message){
+				state.message = message;;
+				state.loading = name;
 			},
 			done   			: function(stateName){
-				state.loading = false;
+				state.loading = null;
+				state.message = null;
 				state.name    = stateName;
 			}
 		},
@@ -15,7 +18,7 @@ angular.module("zinc").run(["$rootScope",function($rootScope){
 		};
 
 	$rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams, options){
-		state.loadingNext(nameFor(toState.name));
+		state.loadingNext(nameFor(toState.name), stateMessages[toState.name]);
 	});
 
 	$rootScope.$on('$stateNotFound', function(event, unfoundState, fromState, fromParams){

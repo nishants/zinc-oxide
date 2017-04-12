@@ -1,0 +1,6 @@
+li.state(ng-show="state.message")
+  .icon
+    .fa.fa-spinner.fa-pulse.fa-fw
+  label(ng-bind="state.message")
+  .close(ng-click="state.message=null")
+    .fa.fa-times
