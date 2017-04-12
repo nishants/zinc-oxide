@@ -40,25 +40,7 @@ $picture-size: $round_image_size;
     font-size: $small_font;
     @include transition(transform $transition_time $transition_function);
   }
-  .words{
-    text-align: center;
-    font-weight: $weight_bold;
-    background-color: $card_highlight_bg_color;
-    padding: $padding;
-    margin: $padding 0px;
-    color: $card_text_color;
-    border-radius: $border_radius;
 
-    .quote{
-      display: block;
-      text-align: left;
-      font-weight: $weight_light;
-      font-size :$small_font;
-    }
-    .quote.right{
-      text-align: right;
-    }
-  }
   button{
     @extend .outline;
     margin-top: 2*$padding ;

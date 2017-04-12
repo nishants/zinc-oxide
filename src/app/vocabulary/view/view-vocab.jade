@@ -15,7 +15,9 @@
     .text(ng-bind='vocabset.reader.text')
   .deck(ng-repeat='deck in vocabset.decks')
     .words
-      label(ng-bind='deck.words')
+      .quote.fa.fa-quote-left
+      span.text(ng-bind='deck.words')
+      .quote.right.fa.fa-quote-right
     ul.exposures
       li(ng-repeat='exposure in deck.exposures')
         .exposure

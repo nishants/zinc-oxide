@@ -16,7 +16,26 @@ $speak_bottom: $padding*1.5 + $exposure_current_size + $marker_speak_size;
     position: relative;
     border-top: $very_light_border;
     padding: 2*$padding $padding;
-    .words{}
+    .words{
+      text-align: center;
+      font-weight: $weight_bold;
+      padding: $padding;
+      margin: $padding 0px;
+      .quote{
+        position: relative;
+        top: -$padding;
+        padding: 0px $padding;
+        text-align: left;
+        font-weight: $weight_light;
+        font-size :$small_font;
+        color: $very_light_text;
+      }
+      .text{
+        font-size: $large_font;
+        word-spacing: $padding/2;
+        text-transform: capitalize;
+      }
+    }
     ul.exposures{
       @extend .undo-list;
       @extend .resize-container;
