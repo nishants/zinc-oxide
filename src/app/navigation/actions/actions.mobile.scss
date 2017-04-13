@@ -4,14 +4,21 @@ $actions_size_mobile: $mobile_min_action_space;
   ul.actions{
     float : none;
     width: 100%;
+    background-color: $mobile_menu_bar_bg;
+    color   : $mobile_menu_bar_text_color;
+    border-top: 1px solid $mobile_menu_bar_border_color;
+    border-bottom: 1px solid $mobile_menu_bar_border_color;
+
     > li {
       float      : left;
       display    : block;
       width      : 33%;
       font-size  : $normal_font;
       padding    : 0px $padding*4;
-      color: $very_light_text;
       text-align: center;
+    }
+    > li:not(:last-child){
+      border-right: 1px solid $mobile_menu_bar_border_color;
     }
   }
 }

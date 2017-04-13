@@ -6,6 +6,7 @@ $white_shade: #fbfbfb;
 $very_light: rgba(0, 0, 0, 0.1);
 $light     : rgba(0, 0, 0, 0.2);
 $white : rgba(255, 255, 255, 0.9);
+$dim_white : rgba(255, 255, 255, 0.3);
 $black_text : rgba(0, 0, 0, 0.7);
 $light_text : rgba(0, 0, 0, 0.5);
 $very_light_text : rgba(0, 0, 0, 0.3);
@@ -54,3 +55,5 @@ $vocab_exposure_connector_color: $contrast_color;
 $vocab_exposure_completed_color: $logo_green;
 
 $mobile_menu_bar_bg: black;
+$mobile_menu_bar_text_color: $white;
+$mobile_menu_bar_border_color: $dim_white;

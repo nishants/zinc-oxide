@@ -3,33 +3,13 @@ ul.navigation-links{
   padding : 0px;
   box-shadow      : $shadow;
   border: none;
-  background-color: $contrast_color;
-  margin: $padding $padding $padding*2;
-
-
+  background-color: $mobile_menu_bar_bg;
+  color : $mobile_menu_bar_text_color;
   > li {
     float        : none;
+    padding-left : $padding*4;
+    text-align   : left;
     display      : block;
-    color        : $black_text !important;
     font-weight  : $weight_bold ;
   }
-
-  > li.current{
-    text-transform: capitalize;
-  }
-}
-
-ul.navigation-links:not(.expand){
-  > li:not(.current) {
-    display: none;
-  }
-  > li.current{
-    border: $highlight_border;
-    color: $navigation_bar_select_bg !important;
-    background: $navigation_bar_color;
-  }
-}
-
-ul.navigation-links > li{
-
 }
