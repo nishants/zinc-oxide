@@ -1,1 +1,28 @@
 @import "tab/tab-buttons.mobile";
+@import "game-card.mobile";
+
+.tab-body{
+  box-shadow: none;
+  .tab-filters{
+    padding: $padding;
+    box-shadow: none;
+    > ul {
+      > li {
+        float: none;
+        padding: $padding;
+        .drop-down{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  ul.deck{
+    padding: 0px;
+    > li{
+      float: none;
+      margin: auto;
+      padding: $padding*2;
+    }
+  }
+}
