@@ -1,0 +1,38 @@
+@mixin selected(){
+  cursor: default;
+  color : $navigation_bar_select_text;
+  background-color: $navigation_bar_select_bg;
+}
+
+.state.vocab,
+.state.vocab-view{
+  ul.navigation-links{
+    > li.vocabulary{
+      @include selected();
+    }
+  }
+}
+
+.state.home{
+  ul.navigation-links{
+    > li.home{
+      @include selected();
+    }
+  }
+}
+
+.state.articles{
+  ul.navigation-links{
+    > li.articles{
+      @include selected();
+    }
+  }
+}
+
+.state.reports{
+  ul.navigation-links{
+    > li.reports{
+      @include selected();
+    }
+  }
+}

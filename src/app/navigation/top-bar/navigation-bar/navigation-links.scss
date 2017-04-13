@@ -10,6 +10,7 @@ ul.navigation-links{
     line-height : $navigation_bar_height;
     text-align  : center;
     cursor      : pointer;
+    @include transition($transition);
     //font-weight : $weight_bold;
     a{
       display: block;
