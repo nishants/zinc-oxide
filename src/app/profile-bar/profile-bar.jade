@@ -1,17 +1,20 @@
-.heading
-  .picture
-    img(src="assets/images/user.jpg")
-  .title Nishant Singh
-ul.score-card
-  li
-    .value  #2
-    .label  Tamara Oslon's Class
-  li
-    .value  #12
-    .label  Serverus Snape's Class
-  li
-    .value  178
-    .label  Vocabulary Points
-  li
-    .value  9
-    .label  Words Learned
+#profile-bar(ng-class='{"expand": profile.expand}')
+  .heading
+    .picture
+      img(src="assets/images/user.jpg")
+    .title Nishant Singh
+  .show-score.mobile-only(ng-click='profile.expand = !profile.expand')
+    .fa.fa-ellipsis-h
+  ul.score-card
+    li
+      .value  #2
+      .label  Tamara Oslon's Class
+    li
+      .value  #12
+      .label  Serverus Snape's Class
+    li
+      .value  178
+      .label  Vocabulary Points
+    li
+      .value  9
+      .label  Words Learned

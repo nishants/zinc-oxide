@@ -1,22 +1,26 @@
+$image_size_on_mobile: $round_image_size_mobile;
 
 #profile-bar{
   width: 100%;
   float: none;
   box-shadow: none;
-
+  .show-score{
+    line-height: $mobile_min_action_space;
+    padding : 0px $padding*2;
+    text-align: right;
+    font-size: $extra_large_font;
+  }
   .heading{
+    padding: 2*$padding;
     .picture{
-      > img{
-      }
-    }
-    .title{
+      height  : $image_size_on_mobile;
+      width   : $image_size_on_mobile;
     }
   }
+}
 
-  ul.score-card{
-    > li{
-      .label{
-      }
-    }
+#profile-bar:not(.expand){
+  .score-card{
+    display: none;
   }
 }
