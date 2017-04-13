@@ -1,6 +1,7 @@
 .vocabset.card{
   box-shadow: none;
   border: none;
+  max-width: 100%;
   .deck {
     padding: 2*$padding $padding 4*$padding;
     margin : $padding $padding 4*$padding;
