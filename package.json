@@ -1,9 +1,9 @@
 {
-  "name": "star-wars",
+  "name": "zinc",
   "private": true,
   "version": "0.0.0",
-  "description": "A gaming app with HTML5 and CSS3",
-  "repository": "https://github.com/nishants/star-wars",
+  "description": "A prototype for Zinc.",
+  "repository": "https://github.com/nishants/zinc-oxide",
   "license": "WTFPL",
   "devDependencies": {
     "bower": "^1.7.7",
