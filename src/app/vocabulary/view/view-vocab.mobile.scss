@@ -1,0 +1,15 @@
+.vocabset.card{
+  box-shadow: none;
+  border: none;
+  .deck {
+    padding: 2*$padding $padding 4*$padding;
+    margin : $padding $padding 4*$padding;
+
+  }
+}
+
+.vocabset.card.single-deck{
+  .deck{
+    margin: 0px;
+  }
+}
