@@ -1,17 +1,4 @@
-@import "components/flash-messages/flash-messages.mobile";
-
-body{
-  background-color: $mobile_bg_color;
-  #content{
-    padding: 0px;
-    #section{
-      float: none;
-      width: 100%;
-      padding: 0px;
-    }
-  }
-}
-
+@import "app.mobile-tablet";
 @import "vocabulary/vocabulary.mobile";
-@import "navigation/navigation.mobile";
-@import "profile-bar/profile-bar.mobile";
+
+
