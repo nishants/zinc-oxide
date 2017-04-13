@@ -1,0 +1,16 @@
+$icon_size: $larger_font;
+.navigation-bar{
+  ul.actions{
+    @extend .undo-list;
+    float : right;
+    height: 100%;
+    > li {
+      font-size  : $icon_size;
+      float      : left;
+      padding    : 0px 2*$padding;
+      cursor     : pointer;
+    }
+  }
+
+}
+

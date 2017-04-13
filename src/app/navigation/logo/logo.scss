@@ -1,0 +1,11 @@
+.navigation-bar{
+  .logo{
+    height: 100%;
+    float : left;
+    > img{
+      display: block;
+      margin: auto;
+      height : 100%;
+    }
+  }
+}

@@ -1,3 +1,6 @@
-@import "top-bar/navigation-bar/navigation-bar";
-@import "top-bar/navigation-bar/navigation-links";
-@import "top-bar/navigation-bar/navigation-links.states";
+@import "navigation-links/navigation-links";
+@import "navigation-links/navigation-links.states";
+@import "actions/actions";
+@import "logo/logo";
+
+@import "navigation-bar/navigation-bar";
