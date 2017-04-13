@@ -1,1 +1,12 @@
+body{
+  #content{
+    padding: 0px;
+    #section{
+      float: none;
+      width: 100%;
+      padding: 0px;
+    }
+  }
+}
+
 @import "navigation/navigation.mobile";
