@@ -4,10 +4,10 @@ $actions_size_mobile: $mobile_min_action_space;
   ul.actions{
     float : none;
     width: 100%;
-    background-color: $mobile_menu_bar_bg;
-    color   : $mobile_menu_bar_text_color;
+    background-color: $navigation_bar_color;
     border-top: 1px solid $mobile_menu_bar_border_color;
     border-bottom: 1px solid $mobile_menu_bar_border_color;
+    box-shadow: $shadow;
 
     > li {
       float      : left;

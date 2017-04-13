@@ -3,8 +3,7 @@ ul.navigation-links{
   padding : 0px;
   box-shadow      : $shadow;
   border: none;
-  background-color: $mobile_menu_bar_bg;
-  color : $mobile_menu_bar_text_color;
+  background-color: $navigation_bar_color;
   > li {
     float        : none;
     padding-left : $padding*4;
