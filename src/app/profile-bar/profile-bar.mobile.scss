@@ -7,11 +7,15 @@ $image_size_on_mobile: $round_image_size_mobile;
   .show-score{
     line-height: $mobile_min_action_space;
     padding : 0px $padding*2;
-    text-align: right;
+    text-align: center;
     font-size: $extra_large_font;
+    background: $profile_bar_heading_bg;
   }
   .heading{
     padding: 2*$padding;
+    padding-bottom: 0px;
+    border-bottom: $very_light_border;
+    margin-bottom: $padding/2;
     .picture{
       height  : $image_size_on_mobile;
       width   : $image_size_on_mobile;
