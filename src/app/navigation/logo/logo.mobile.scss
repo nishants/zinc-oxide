@@ -5,8 +5,9 @@
     width: 100%;
     padding: $padding*2;
     > img{
-      height : auto;
-      width  : 100%;
+      height : $logo_height_on_mobile;
+      width  : auto;
+      margin: auto;
     }
   }
 }
