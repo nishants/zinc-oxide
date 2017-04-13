@@ -2,8 +2,10 @@ $icon_size: $larger_font;
 .navigation-bar{
   ul.actions{
     @extend .undo-list;
+    @extend .resize-container;
     float : right;
     height: 100%;
+    margin-botttom: $padding*2;
     > li {
       font-size  : $icon_size;
       float      : left;
