@@ -5,7 +5,7 @@ ul.tab-buttons{
     max-width   : 50%;
     border-radius: 0px;
     border: none;
-    box-shadow: none;
+    //box-shadow: none;
     font-weight: $weight_light;
     .label{
 
@@ -13,5 +13,9 @@ ul.tab-buttons{
   }
   >li:not(.selected){
     background-color: $tab_button_color;
+  }
+  > li.selected{
+    box-shadow: $shadow_horizontal;
+    z-index: 1;
   }
 }
