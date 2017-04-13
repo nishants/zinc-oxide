@@ -1,0 +1,22 @@
+
+#profile-bar{
+  width: 100%;
+  float: none;
+  box-shadow: none;
+
+  .heading{
+    .picture{
+      > img{
+      }
+    }
+    .title{
+    }
+  }
+
+  ul.score-card{
+    > li{
+      .label{
+      }
+    }
+  }
+}
