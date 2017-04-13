@@ -2,9 +2,9 @@ ul.navigation-links{
   float   : none;
   padding : 0px;
   box-shadow      : $shadow;
-  margin-bottom: $padding*2;
   border: none;
   background-color: $contrast_color;
+  margin: $padding $padding $padding*2;
 
 
   > li {
@@ -24,7 +24,9 @@ ul.navigation-links:not(.expand){
     display: none;
   }
   > li.current{
-    background-color: $navigation_bar_select_bg;
+    border: $highlight_border;
+    color: $navigation_bar_select_bg !important;
+    background: $navigation_bar_color;
   }
 }
 

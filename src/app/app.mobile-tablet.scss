@@ -11,5 +11,9 @@ body{
     }
   }
 }
+.coming-up{
+  padding: $padding *2;
+}
+
 @import "profile-bar/profile-bar.mobile";
 @import "navigation/navigation.mobile";
