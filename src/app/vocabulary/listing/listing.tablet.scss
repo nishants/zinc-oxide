@@ -1,1 +1,17 @@
-@import "listing.mobile";
+@import "tab/tab-buttons.mobile";
+
+.tab-body{
+  .tab-filters{
+    padding: $padding;
+    box-shadow: none;
+    > ul {
+      > li {
+        width: 50%;
+        margin: auto;
+        .drop-down{
+          margin: auto;
+        }
+      }
+    }
+  }
+}
