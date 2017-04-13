@@ -1,12 +1,19 @@
 ul.navigation-links{
   float   : none;
   padding : 0px;
+  box-shadow: $card_elevated_shadow;
+  margin-bottom: $padding*2;
+  border: none;
+  background-color: $contrast_color;
+
+
   > li {
     float        : none;
     display      : block;
-    padding-left : $padding*2;
-    text-align   : left ;
+    color        : $black_text !important;
+    font-weight  : $weight_bold ;
   }
+
   > li.current{
     text-transform: capitalize;
   }
@@ -16,4 +23,11 @@ ul.navigation-links:not(.expand){
   > li:not(.current) {
     display: none;
   }
+  > li.current{
+    background-color: $navigation_bar_select_bg;
+  }
+}
+
+ul.navigation-links > li{
+
 }
