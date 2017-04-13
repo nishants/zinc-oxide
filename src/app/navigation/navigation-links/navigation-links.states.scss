@@ -36,3 +36,9 @@
     }
   }
 }
+
+ul.navigation-links:not(.expand){
+  > li.current{
+    @include selected();
+  }
+}

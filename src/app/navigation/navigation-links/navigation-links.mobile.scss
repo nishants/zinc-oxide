@@ -1,0 +1,19 @@
+ul.navigation-links{
+  float   : none;
+  padding : 0px;
+  > li {
+    float        : none;
+    display      : block;
+    padding-left : $padding*2 0px;
+    text-align   :left ;
+  }
+  > li.current{
+    text-transform: capitalize;
+  }
+}
+
+ul.navigation-links:not(.expand){
+  > li:not(.current) {
+    display: none;
+  }
+}

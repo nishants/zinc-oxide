@@ -1,4 +1,7 @@
-ul.navigation-links
+ul.navigation-links(ng-class='{"expand": nav.expand}', ng-click='nav.expand = !nav.expand')
+  li.current.mobile-only
+    label.name(ng-bind='state.name')
+    .fa.fa-chevron-down
   li.home
     a(ui-sref="home") Dashboard
   li.articles
