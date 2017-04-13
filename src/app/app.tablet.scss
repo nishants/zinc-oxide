@@ -1,2 +1,13 @@
 @import "app.mobile-tablet";
 @import "vocabulary/vocabulary.tablet";
+
+body{
+  #content {
+    margin: $padding;
+    padding: 0px;
+    width: calc(100% - #{2*$padding});
+    box-shadow: $card_elevated_shadow;
+    border-radius: $border_radius;
+    overflow: hidden;
+  }
+}
