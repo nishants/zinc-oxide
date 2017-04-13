@@ -4,6 +4,7 @@ body{
   background-color: $mobile_bg_color;
   #content{
     padding: 0px;
+    margin-top: $padding*4;
     #section{
       float: none;
       width: 100%;

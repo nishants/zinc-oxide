@@ -1,4 +1,4 @@
-ul.actions
+ul.actions(ng-class='{"expand": state._expand_menu}', ng-click='state._expand_menu = !state._expand_menu')
   li.user
     span.fa.fa-user
   li.nofifications

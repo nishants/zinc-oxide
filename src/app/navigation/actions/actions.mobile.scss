@@ -21,5 +21,8 @@ $actions_size_mobile: $mobile_min_action_space;
       border-right: 1px solid $mobile_menu_bar_border_color;
     }
   }
+  ul.actions:not(.expand){
+    display: none;
+  }
 }
 

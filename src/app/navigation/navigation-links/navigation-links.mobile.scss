@@ -13,3 +13,6 @@ ul.navigation-links{
     font-weight  : $weight_bold ;
   }
 }
+ul.navigation-links:not(.expand) {
+  display: none;
+}

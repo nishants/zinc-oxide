@@ -1,4 +1,4 @@
-ul.navigation-links(ng-class='{"expand": nav.expand}', ng-click='nav.expand = !nav.expand')
+ul.navigation-links(ng-class='{"expand": state._expand_menu}', ng-click='state._expand_menu = !state._expand_menu')
   li.home
     a(ui-sref="home") Dashboard
   li.articles
