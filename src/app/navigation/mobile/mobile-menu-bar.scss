@@ -1,0 +1,11 @@
+.mobile-menu-bar{
+  height      : $navigation_bar_height;
+  line-height : $navigation_bar_height;
+
+  padding     : 0px $padding;
+  box-shadow  : $shadow;
+  color       : $white;
+  background-color: $mobile_menu_bar_bg;
+  font-size: $extra_large_font;
+  text-align: right;
+}
