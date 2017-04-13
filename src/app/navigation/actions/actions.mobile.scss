@@ -1,12 +1,25 @@
+$actions_size_mobile: $mobile_min_action_space;
+
 .navigation-bar{
   ul.actions{
     float : none;
     width: 100%;
     text-align: center;
+    padding : $padding*2;
+    border-top: $very_light_border;
+    background: $action_mobile_contrast;
     > li {
       float      : none;
-      display: inline-block;
-      padding    : 0px 2*$padding;
+      display    : inline-block;
+      width      : $actions_size_mobile;
+      height     : $actions_size_mobile;
+      line-height: $actions_size_mobile;
+      border-radius: 50%;
+      padding    : 0px;
+      border: $very_light_border;
+      color: $very_light_text;
+      text-align: center;
+      margin: 0px 2*$padding;
     }
   }
 }

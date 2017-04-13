@@ -4,8 +4,8 @@ ul.navigation-links{
   > li {
     float        : none;
     display      : block;
-    padding-left : $padding*2 0px;
-    text-align   :left ;
+    padding-left : $padding*2;
+    text-align   : left ;
   }
   > li.current{
     text-transform: capitalize;
