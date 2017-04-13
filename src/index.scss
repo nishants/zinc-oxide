@@ -8,7 +8,7 @@ body{
 
 @media screen and (min-width: $desktop_at) {
   @import "app/app.desktop";
-  .no-mobile{
+  .mobile-only{
     display: none !important;
   }
 }
@@ -16,12 +16,6 @@ body{
 @media screen and (max-width: $mobile_at) {
   @import "app/app.mobile";
   .no-mobile{
-    display: none !important;
-  }
-}
-
-@media screen and (min-width: $mobile_at) {
-  .mobile-only{
     display: none !important;
   }
 }

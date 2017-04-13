@@ -1,0 +1,13 @@
+.navigation-bar{
+  ul.actions{
+    float : none;
+    width: 100%;
+    text-align: center;
+    > li {
+      float      : none;
+      display: inline-block;
+      padding    : 0px 2*$padding;
+    }
+  }
+}
+
