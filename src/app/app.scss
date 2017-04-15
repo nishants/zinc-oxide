@@ -9,6 +9,7 @@
 @import "components/speak";
 @import "components/flash-messages/flash-messages";
 @import "components/state-loader/state-loader";
+@import "components/animations/fade-in";
 
 body{
   background: $body_color;
