@@ -43,14 +43,14 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 				}]
 			})
 			.state('vocab.play', {
-				url: '/:vocab_id/deck/:deck_id/play',
+				url: '/:vocabId/deck/:deckId/play',
 				templateUrl: 'assets/templates/game-play-template.html',
 				resolve: {
 					deckParticipation: [
 						"$stateParams",
 						"VocabService",
 						function($stateParams, VocabService){
-							return  VocabService.getGamePlanFor($stateParams.vocab_id, $stateParams.deck_id );
+							return  VocabService.getGamePlanFor($stateParams.vocabId, $stateParams.deckId );
 						}
 					]
 				},

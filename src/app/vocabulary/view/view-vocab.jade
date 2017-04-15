@@ -34,7 +34,7 @@
           .state.completed(ng-if='exposure.completed')
             .fa.fa-check
           .state.current.playable(ng-if='exposure.playable')
-            .fa.fa-play
+            a(ui-sref='vocab.play({vocabId: 1,deckId: 1})').fa.fa-play
           .state.current.waiting(ng-if='exposure.waiting')
             .fa.fa-lock
     .words

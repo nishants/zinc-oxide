@@ -125,6 +125,10 @@ $title_max_width: 90px;
             box-shadow: $button_shadow;
             background-color: $vocab_exposure_highlight_state_bg;
             @include transition($transition);
+            a{
+              @extend .undo-link;
+              display: block;
+            }
           }
 
           .state.completed{

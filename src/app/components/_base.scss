@@ -88,6 +88,16 @@ ul.undo-list{
   display: block;
 }
 
+a.undo-link{
+  text-decoration: none;
+  line-height: inherit;
+}
+
+a.undo-link:active{
+  background-color: inherit;
+  color: inherit;
+}
+
 [ng-click]{
   cursor: pointer;
 }
