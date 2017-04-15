@@ -6,3 +6,8 @@
   include synonym-game
 .game-mode.image(ng-if='mode.image')
   include image-game
+.skip(ng-show='mode')
+  button.outline
+    a
+      span Skip
+      .icon.fa.fa-reply
