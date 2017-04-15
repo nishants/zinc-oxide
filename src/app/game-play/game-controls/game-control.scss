@@ -1,0 +1,13 @@
+.game-controls{
+  @extend .resize-container;
+
+  > ul.key-value-list {
+    @extend .resize-container;
+    > li {
+      float: right;
+      .value{
+        color: $game_play_hightlight_color;
+      }
+    }
+  }
+}
