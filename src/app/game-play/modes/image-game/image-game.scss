@@ -1,5 +1,29 @@
+$word_height: 100px;
+$target_height: calc(50% - #{$word_height/2});
+$target_width : 50%;
+
 .game-mode.image{
-  h1 {
-    color: green;
+  text-align: center;
+  font-size: $very_large_font;
+
+  .targets{
+    height: $target_height;
+    @extend .resize-container;
+    .target{
+      position: relative;
+      float: left;
+      height: 100%;
+      width : $target_width;
+      border: $very_light_border;
+      label{
+        position: absolute;
+        top: calc(50% - #{$very_large_font});
+      }
+    }
+  }
+  .word{
+    height: $word_height;
+    line-height: $word_height;
+    width: 100%;
   }
 }
