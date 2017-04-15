@@ -1,0 +1,30 @@
+$game_header_image_size: 60px;
+
+.game-header{
+  border: $very_light_border;
+  .vocabset{
+    @extend .resize-container;
+    padding: $padding;
+
+    .title, .picture{
+      float: left;
+    }
+    .title{
+      font-size  : $large_font;
+      font-weight: $weight_bold;
+      line-height: $game_header_image_size;
+      margin-left: $padding;
+    }
+
+    .picture{
+      height: $game_header_image_size;
+      width : $game_header_image_size;
+      overflow: hidden;
+      img{
+        display: block;
+        height: 100%;
+        margin: auto;
+      }
+    }
+  }
+}
