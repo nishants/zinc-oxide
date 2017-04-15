@@ -9,7 +9,7 @@ $score_label_size: $large_font;
   background: $profile_bar_bg;
   border : $very_light_border;
   box-shadow: $shadow_horizontal;
-  @include transition(transform $slow_time $transition_function);
+  @include transition(transform $state_transition_time $state_transition_function);
 
   .heading{
     background: $profile_bar_heading_bg;
