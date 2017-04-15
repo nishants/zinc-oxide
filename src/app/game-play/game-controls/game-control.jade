@@ -6,3 +6,10 @@
     li.points
       .value(ng-bind='user.points')
       .key Points
+    li.sound(ng-click='volume.off = !volume.off')
+      .value
+        .fa.fa-volume-up(ng-show='!volume.off')
+        .fa.fa-volume-off(ng-show='volume.off')
+      .key
+        span(ng-show='!volume.off') Sound On&nbsp;
+        span(ng-show='volume.off') Sound Off
