@@ -9,3 +9,8 @@ $shadow_transition_function : $transition_function;
 
 $state_transition_function: $transition_function;
 $state_transition_time    : $slow_time;
+
+[ui-view]{
+  @include animation(fadein $transition_time);
+  @include animationFunction($transition_function);
+}

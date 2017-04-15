@@ -25,10 +25,7 @@ body{
     }
   }
 }
-[ui-view]{
-  @include animation(fadein $transition_time);
-  @include animationFunction($transition_function);
-}
+
 
 @import "navigation/navigation";
 @import "profile-bar/profile-bar";
