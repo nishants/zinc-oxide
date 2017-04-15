@@ -9,4 +9,16 @@
   height: 100%;
   width: 100%;
   background-color: $gameplay_bg;
+  .skip{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: $padding*2;
+    button{
+      width: $button_width;
+      .icon{
+        @include transform(rotateY(180deg));
+      }
+    }
+  }
 }
