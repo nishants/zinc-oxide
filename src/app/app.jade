@@ -1,4 +1,4 @@
-#app.state(ng-app='zinc', ng-class="state.name")
+#app.state(ng-app='zinc', ng-class='{"unloading" : state.loading}', class='{{state.name}}')
   #navigation
     .navigation-bar
       include navigation/navigation
