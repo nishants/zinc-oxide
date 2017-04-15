@@ -1,0 +1,10 @@
+@import 'game-play-navigation.state';
+.gameplay{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: $top_bar_layer;
+  height: 100%;
+  width: 100%;
+  background-color: $gameplay_bg;
+}

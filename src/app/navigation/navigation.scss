@@ -4,3 +4,7 @@
 @import "logo/logo";
 
 @import "navigation-bar/navigation-bar";
+
+#navigation{
+  @include transition(transform $transition_time $transition_function);
+}

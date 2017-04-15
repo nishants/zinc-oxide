@@ -1,0 +1,8 @@
+.state.vocab-play{
+  #navigation{
+    @include transform(translateY(-100%));
+  }
+  #profile-bar{
+    @include transform(translateX(-100%));
+  }
+}
