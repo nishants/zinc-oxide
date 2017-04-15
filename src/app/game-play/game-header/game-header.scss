@@ -1,10 +1,14 @@
 $game_header_image_size: 60px;
+$game_header_padding: $padding;
+$header_height:  $game_header_image_size + 2*$game_header_padding;
 
 .game-header{
+  @extend .resize-container;
   border: $very_light_border;
   .vocabset{
     @extend .resize-container;
-    padding: $padding;
+    padding: $game_header_padding;
+    float: left;
 
     .title, .picture{
       float: left;
@@ -13,12 +17,14 @@ $game_header_image_size: 60px;
       font-size  : $large_font;
       font-weight: $weight_bold;
       line-height: $game_header_image_size;
-      margin-left: $padding;
+      margin-left: $game_header_padding;
+      text-transform: capitalize;
     }
 
     .picture{
       height: $game_header_image_size;
       width : $game_header_image_size;
+      border-radius: 50%;
       overflow: hidden;
       img{
         display: block;
@@ -26,5 +32,13 @@ $game_header_image_size: 60px;
         margin: auto;
       }
     }
+  }
+  .exit-game{
+    display: block;
+    float: right;
+    line-height: 40px;
+    width: 200px;
+    height: $game_header_image_size;
+    margin: $game_header_padding;
   }
 }
