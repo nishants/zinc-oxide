@@ -41,6 +41,23 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 				controller: ["$scope", "vocabset", function($scope, vocabset){
 					$scope.vocabset = vocabset;
 				}]
+			})
+			.state('vocab.play', {
+				url: '/:vocab_id/deck/:deck_id/play',
+				templateUrl: 'assets/templates/game-play-template.html',
+				resolve: {
+					deckParticipation: [
+						"$stateParams",
+						"VocabService",
+						function($stateParams, VocabService){
+							return  VocabService.getGamePlanFor($stateParams.vocab_id, $stateParams.deck_id );
+						}
+					]
+				},
+				controller: ["$scope", "deckParticipation", function($scope, deckParticipation){
+					$scope.gameplan = deckParticipation.gameplan;
+					$scope.deck     = deckParticipation.deck;
+				}]
 			});
 
 	$locationProvider.html5Mode({
