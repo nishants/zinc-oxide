@@ -1,11 +1,12 @@
 $word_height: 100px;
+$word_label_width: 300px;
 $target_height: calc(50% - #{$word_height/2});
 $target_width : 50%;
 
+
 .game-mode.image{
   text-align: center;
-  font-size: $very_large_font;
-
+  font-size: $sub_giant_font;
   .targets{
     height: $target_height;
     @extend .resize-container;
@@ -17,13 +18,16 @@ $target_width : 50%;
       border: $very_light_border;
       label{
         position: absolute;
-        top: calc(50% - #{$very_large_font});
+        top: calc(50% - #{$sub_giant_font/2});
+        width: $word_label_width;
+        left: calc(50% - #{$word_label_width/2});
       }
     }
   }
   .word{
     height: $word_height;
     line-height: $word_height;
+    font-size: $giant_font ;
     width: 100%;
   }
 }
