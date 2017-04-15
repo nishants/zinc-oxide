@@ -57,6 +57,7 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 				controller: ["$scope", "deckParticipation", function($scope, deckParticipation){
 					$scope.gameplan = deckParticipation.gameplan;
 					$scope.deck     = deckParticipation.deck;
+					$scope.vocabset    = {id: 1};
 				}]
 			});
 

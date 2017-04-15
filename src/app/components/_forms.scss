@@ -42,6 +42,7 @@ button.outline{
   font-weight: $weight_bold;
   border-radius: $border_radius;
 }
+
 button.outline:hover,
 button.outline.active{
   background: $button_color;

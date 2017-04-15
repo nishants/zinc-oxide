@@ -91,6 +91,8 @@ ul.undo-list{
 a.undo-link{
   text-decoration: none;
   line-height: inherit;
+  color: inherit;
+  display: block;
 }
 
 a.undo-link:active{
