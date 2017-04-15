@@ -1,6 +1,5 @@
-@import 'game-header/game-header';
-@import 'game-controls/game-control';
-@import 'game-play-navigation.state';
+$gamelpay_padding: $padding*2;
+
 .gameplay{
   position: fixed;
   top: 0px;
@@ -22,3 +21,7 @@
     }
   }
 }
+@import 'game-header/game-header';
+@import 'game-controls/game-control';
+@import 'game-play-navigation.state';
+@import 'modes/game-mode';
