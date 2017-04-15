@@ -36,9 +36,9 @@ $header_height:  $game_header_image_size + 2*$game_header_padding;
   .exit-game{
     display: block;
     float: right;
-    line-height: 40px;
     width: 200px;
     height: $game_header_image_size;
+    line-height: $game_header_image_size;
     margin: $game_header_padding;
   }
 }
