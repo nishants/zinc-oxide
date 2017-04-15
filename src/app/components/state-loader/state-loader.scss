@@ -23,9 +23,7 @@ $slow_load_time     : 7s;
 
 #state-loader.loading{
   opacity: 1;
-  -webkit-animation: loading-state $max_load_time;
-  -o-animation    : loading-state $max_load_time;
-  animation     : loading-state $max_load_time;
+  @include animation(loading-state $max_load_time);
 }
 
 @keyframes loading-state {
