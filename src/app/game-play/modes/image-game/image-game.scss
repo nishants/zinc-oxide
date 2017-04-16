@@ -15,12 +15,16 @@ $target_width : 50%;
       float: left;
       height: 100%;
       width : $target_width;
-      border: $very_light_border;
+      overflow: hidden;
       label{
         position: absolute;
-        top: calc(50% - #{$sub_giant_font/2});
-        width: $word_label_width;
-        left: calc(50% - #{$word_label_width/2});
+        top: calc(50% - #{$sub_giant_font/2 + $padding*7});
+        left: $padding*2;
+        width: calc(100% - #{$padding*4});
+        background-color: $input_dull_bg;
+        padding: $padding*7 0px;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
   }
