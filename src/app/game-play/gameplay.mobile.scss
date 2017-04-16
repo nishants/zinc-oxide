@@ -1,0 +1,11 @@
+.gameplay {
+  .skip {
+    width: 100%;
+    button {
+      width: 100%;
+      border: none;
+    }
+  }
+}
+
+@import 'game-controls/game-control.mobile';
