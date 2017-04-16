@@ -1,4 +1,4 @@
 .game-progress
   ul
     li(ng-repeat='game in gameplan.games',style='width: {{100/gameplan.games.length}}%')
-      span.progress
+      .progress(ng-class='{"playing" : game.playing}', style='animation:  expand {{timer.timeLimit}} linear')

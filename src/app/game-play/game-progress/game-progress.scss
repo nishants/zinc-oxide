@@ -6,7 +6,13 @@
     > li {
       float: left;
       height: $game_progress_height;
-      background-color: $game_progress_color;
+      .progress{
+        height: 100%;
+        width: 100%;
+        background-color: $game_progress_color;
+        @include transformOrigin(0 0);
+        @include animation(expand);
+      }
     }
   }
 }
