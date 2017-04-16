@@ -1,4 +1,4 @@
 .game-progress
   ul
-    li(ng-repeat='game in gameplan.games',style='width: {{100/gameplan.games.length}}%')
-      .progress(ng-class='{"playing" : game.playing}', style='animation:  expand {{timer.timeLimit}} linear')
+    li(ng-repeat='word in deck.words',ng-class='{"current" : word.current, "done" : word.done}' style='width: calc({{100/deck.words.length}}% - 3px); margin-right: 3px;')
+      .progress(style='animation:  expand {{timer.timeLimit}} linear')

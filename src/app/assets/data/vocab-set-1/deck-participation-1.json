@@ -60,6 +60,7 @@
       "quiz_title": null,
       "words": [
         {
+          "done": true,
           "example_sentence": "Critics universally considered the new play to be a ____ and thoughtless comment on poverty in America.",
           "id": 34,
           "priority": 1,
@@ -101,6 +102,7 @@
           "valid_word_forms": []
         },
         {
+          "done": true,
           "example_sentence": "The ____ of talent made it hard to find a drummer good enough for the band",
           "id": 193,
           "priority": 1,
@@ -142,6 +144,7 @@
           "valid_word_forms": []
         },
         {
+          "current": true,
           "example_sentence": "Since he was speaking at the National Convention for Persons with Hearing Problems, Julio had to ____ and speak loudly.",
           "id": 1410,
           "priority": 6,

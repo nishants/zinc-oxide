@@ -6,13 +6,34 @@
     > li {
       float: left;
       height: $game_progress_height;
+      background-color: $game_progress_bg_color;
+
       .progress{
         height: 100%;
         width: 100%;
         background-color: $game_progress_color;
         @include transformOrigin(0 0);
-        @include animation(expand);
       }
+      .progress:not(.playing){
+        @include transform(scaleX(1) !important) ;
+      }
+    }
+
+    > li:not(.current){
+      .progress{
+        display: none;
+      }
+    }
+    > li.done{
+      background-color: $game_progress_color;
+    }
+    > li:first-child{
+      border-top-left-radius: $game_progress_roundness;
+      border-bottom-left-radius: $game_progress_roundness;
+    }
+    > li:last-child{
+      border-top-right-radius: $game_progress_roundness;
+      border-bottom-right-radius: $game_progress_roundness;
     }
   }
 }
