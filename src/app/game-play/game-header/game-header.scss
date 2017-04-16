@@ -3,7 +3,6 @@ $header_height:  $game_header_image_size + 2*$game_header_padding;
 
 .game-header{
   @extend .resize-container;
-  border: $very_light_border;
   .vocabset{
     @extend .resize-container;
     padding: $game_header_padding;

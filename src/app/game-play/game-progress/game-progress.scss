@@ -1,0 +1,12 @@
+.game-progress{
+  padding: 0px $padding;
+  > ul{
+    @extend .undo-list;
+    @extend .resize-container;
+    > li {
+      float: left;
+      height: $game_progress_height;
+      background-color: $game_progress_color;
+    }
+  }
+}
