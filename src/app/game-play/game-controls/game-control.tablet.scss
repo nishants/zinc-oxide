@@ -1,0 +1,16 @@
+.game-controls{
+  > ul.key-value-list {
+    width: 100%;
+    text-align: center;
+    > li {
+      float: none;
+      display: inline-block;
+      .value{
+        color: $game_play_hightlight_color;
+      }
+      .key{
+        font-size: $extra_small_font;
+      }
+    }
+  }
+}
