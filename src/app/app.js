@@ -1,1 +1,1 @@
-window.app = angular.module("zinc", ['ui.router']);
+window.app = angular.module("zinc", ['ui.router', 'ngDraggable']);

@@ -7,6 +7,8 @@ $target_width : 50%;
 .game-mode.image{
   text-align: center;
   font-size: $sub_giant_font;
+  //@include userSelect(none);
+
   .targets{
     height: $target_height;
     @extend .resize-container;
@@ -33,5 +35,33 @@ $target_width : 50%;
     line-height: $word_height;
     font-size: $giant_font ;
     width: 100%;
+  }
+
+  [ng-drag] {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: move;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  [ng-drop] {
+    background: rgba(0, 255, 0, 0.5);
+    text-align: center;
+    width: 600px;
+    height: 200px;
+    padding-top: 90px;
+    display: block;
+    margin: 20px auto;
+    position: relative;
   }
 }

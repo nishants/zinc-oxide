@@ -1,14 +1,10 @@
 .targets
-  .target
-    label receive
-  .target
-    label solidity
+  .target(ng-repeat='target in current.options.slice(0,2)', ng-drop='true', ng-drop-success='onDrop(target)')
+    label {{target.name}}
 
-.word accept
+.word
+  label(ng-drag='true', data-allow-transform='true', draggable='false') {{current.word.name}}
 
 .targets
-  .target
-    label block
-  .target
-    label divel
-
+  .target(ng-repeat='target in current.options.slice(2,4)', ng-drop='true', ng-drop-success='onDrop(target)')
+    label {{target.name}}

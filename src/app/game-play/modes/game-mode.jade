@@ -4,7 +4,7 @@
   include definition-game
 .game-mode.synonym(ng-if='mode.synonym')
   include synonym-game
-.game-mode.image(ng-if='mode.image')
+.game-mode.image(ng-controller='ImageGameController', ng-if='mode.image')
   include image-game/image-game
 .skip(ng-show='mode')
   button.outline

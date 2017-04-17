@@ -80,6 +80,12 @@ input{
   background: -webkit-linear-gradient($value); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient($value); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+@mixin userSelect($value){
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
 
 ul.undo-list{
   list-style: none;
