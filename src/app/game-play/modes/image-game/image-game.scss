@@ -41,10 +41,10 @@ $target_width : 50%;
       @include userSelect(none);
     }
     .can-drop, .moving{
-      font-size: 24px;
+      font-size: $larger_font;
       position: relative;
       vertical-align: super;
-      color: rgba(0, 0, 0, 0.33);
+      color: $light_text;
       display: none;
     }
   }
