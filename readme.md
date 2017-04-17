@@ -2,7 +2,7 @@
 > with AngularJS and SCSS and Jade.
 
  
-[Link to app : nishants.site/lab/star-wars](http://nishants.site/zinc/re-imagine/)
+[Link to app : nishants.site/zinc/re-imagine](http://nishants.site/zinc/re-imagine/)
 
 
 ### Running App
