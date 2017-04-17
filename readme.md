@@ -1,12 +1,11 @@
-# Gaming Experience and Alien Theme Design 
-> with AngularJS and SCSS.
+# A Zinc Experience
+> with AngularJS and SCSS and Jade.
 
-![UI](https://raw.githubusercontent.com/nishants/star-wars/master/doc/demo/ui-hd-min.gif)
  
-[Link to app : nishants.site/lab/star-wars](http://nishants.site/lab/star-wars)
+[Link to app : nishants.site/lab/star-wars](http://nishants.site/zinc/re-imagine/)
+
 
 ### Running App
-- Open dist/index.html in browser
 - Or, run through an http server with npm 
 ```bash
 npm install
@@ -14,8 +13,10 @@ npm run start
 ```
 
 ### External Depependecies
-- AngularJS(1.5.7)
+- AngularJS(1.6.1)
+- AngularUIRouter(0.4.2)
 - Fontawesome(4.7.0)
+- NgDraggable(0.1.11)
 
 ### Devlopment Depependecies 
 - scss
@@ -27,11 +28,17 @@ npm run start
 npm install
 ```
 
-### Run Tests and Compile Source Code
+### Quick Compile without Uglification
+```bash
+npm run compile
+```
+
+### Run Tests, Compile and Uglify
 ```bash
 npm run package
 ```
 Compiled files are place in *dist/* dir.
+
 
 ### Run Tests Once
 ```bash
