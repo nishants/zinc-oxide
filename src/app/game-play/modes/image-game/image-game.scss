@@ -7,7 +7,6 @@ $target_width : 50%;
 .game-mode.image{
   text-align: center;
   font-size: $sub_giant_font;
-  //@include userSelect(none);
 
   .targets{
     height: $target_height;
@@ -38,9 +37,20 @@ $target_width : 50%;
     line-height: $word_height;
     font-size: $giant_font ;
     width: 100%;
+    >label{
+      @include userSelect(none);
+    }
+    .can-drop, .moving{
+      font-size: 24px;
+      position: relative;
+      vertical-align: super;
+      color: rgba(0, 0, 0, 0.33);
+      display: none;
+    }
   }
 
   [ng-drag] {
+    @include userSelect(none);
     cursor: move;
     display: inline-block;
   }
@@ -50,7 +60,21 @@ $target_width : 50%;
     background-color: $game_play_hightlight_color;
   }
 
-  [ng-drag].drag-over {
-    //border: solid 1px $game_play_hightlight_color;
+
+
+  [ng-drag].dragging {
+    .moving{
+      display: inline-block;
+    }
   }
+
+  [ng-drag].drag-over.dragging {
+    .can-drop{
+      display: inline-block;
+    }
+    .moving{
+      display: none;
+    }
+  }
+
 }
