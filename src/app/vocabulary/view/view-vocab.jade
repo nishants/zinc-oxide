@@ -18,28 +18,4 @@
     .headline.title(ng-bind='vocabset.reader.headline')
     .text(ng-bind='vocabset.reader.text')
   .deck(ng-repeat='deck in vocabset.decks')
-    label.deck-title Deck-{{$index+1}}
-    ul.exposures
-      .connector
-      li(ng-repeat='exposure in deck.exposures')
-        .exposure
-          .marker.bonus(ng-if='exposure.end_bonus_at')
-            span Bonus expires in 21:12:21 hours.
-          .marker.waiting(ng-if='exposure.enable_at')
-            span Available in 21:12:21 hours.
-          .speak.waiting(ng-if='exposure.enable_at')
-          .speak.bonus(ng-if='exposure.end_bonus_at')
-          .state.pending(ng-if='exposure.pending')
-            .fa.fa-lock
-          .state.completed(ng-if='exposure.completed')
-            .fa.fa-check
-          .state.current.playable(ng-if='exposure.playable')
-            a(ui-sref='vocab.play({vocabId: 1,deckId: 1})').fa.fa-play
-          .state.current.waiting(ng-if='exposure.waiting')
-            .fa.fa-lock
-    .words
-      .quote.fa.fa-quote-left
-      span.text(ng-bind='deck.words')
-      .quote.right.fa.fa-quote-right
-
-    button.outline.study-words Study Words
+    include view-vocab-deck/view-vocab-deck
