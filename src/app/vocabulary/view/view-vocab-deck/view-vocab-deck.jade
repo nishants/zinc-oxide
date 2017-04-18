@@ -1,14 +1,12 @@
-label.deck-title Deck-{{$index+1}}
+.words-and-progress
+  .words(ng-bind='deck.words')
   ul.exposures
-    .connector
     li(ng-repeat='exposure in deck.exposures')
       .exposure
         .state.pending(ng-if='exposure.pending')
         .state.completed(ng-if='exposure.completed')
         .state.current.playable(ng-if='exposure.playable')
         .state.current.waiting(ng-if='exposure.waiting')
-  .words
-    .quote.fa.fa-quote-left
-    span.text(ng-bind='deck.words')
-    .quote.right.fa.fa-quote-right
+.deck-actions
   button.outline.study-words Study Words
+  button.outline.play Play
