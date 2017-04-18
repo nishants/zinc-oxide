@@ -8,4 +8,5 @@
       .state.current.waiting(ng-if='exposure.waiting')
 .deck-actions
   button.outline.study Study
-  button.outline.play.cta Play
+  button.outline.play.cta
+    a(ui-sref='vocab.play({vocabId: 1, deckId: 1})') Play

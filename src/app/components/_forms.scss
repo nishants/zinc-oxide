@@ -41,6 +41,9 @@ button.outline{
   color: $button_color;
   font-weight: $weight_bold;
   border-radius: $border_radius;
+  a{
+    @extend .undo-link;
+  }
 }
 
 button.outline.cta{
