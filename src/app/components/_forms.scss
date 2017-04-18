@@ -43,9 +43,22 @@ button.outline{
   border-radius: $border_radius;
 }
 
+button.outline.cta{
+  color: $white;
+  border:  $very_light_border;
+  background-color:  $highlight_button_color;
+}
+
 button.outline:hover,
 button.outline.active{
   background: $button_color;
+  color: $white;
+  @extend .form-component.active;
+}
+
+button.outline.cta:hover,
+button.outline.cta.active{
+  background: $highlight_button_color;
   color: $white;
   @extend .form-component.active;
 }
