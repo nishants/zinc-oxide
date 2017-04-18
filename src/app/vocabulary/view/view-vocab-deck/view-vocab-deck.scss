@@ -31,6 +31,8 @@ $state_indicator-size: 5px;
           }
           .state.playable{
             background-color: $vocab_exposure_playable;
+            @include animation(blink $slow_time infinite);
+            @include animationFunction($transition);
           }
         }
       }
