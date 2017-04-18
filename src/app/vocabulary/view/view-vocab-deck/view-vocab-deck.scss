@@ -1,0 +1,49 @@
+$actions_width: 200px;
+$state_indicator-size: 5px;
+
+.vocabset.card {
+  .deck {
+    position  : relative;
+    border-top    : $very_light_border;
+    padding   : 2*$padding;
+    border-radius: $border_radius;
+
+    @extend .resize-container;
+    .words-and-progress{
+      float   :left;
+      width: calc(100% - #{$actions_width});
+      ul.exposures{
+        @extend .resize-container;
+        @extend .undo-list;
+        > li {
+          float: left;
+          padding: $padding/2;
+          .state{
+            height: $state_indicator-size;
+            width: $state_indicator-size;
+            border-radius: 50%;
+          }
+          .state.pending, .state.waiting{
+            background-color: $vocab_exposure_locked_color;
+          }
+          .state.completed{
+            background-color: $vocab_exposure_completed_color;
+          }
+          .state.playable{
+            background-color: $vocab_exposure_playable;
+          }
+        }
+      }
+    }
+    .deck-actions{
+      @extend .resize-container;
+      float: right;
+      width: $actions_width;
+      button{
+        float: right;
+        width: 50%;
+      }
+    }
+
+  }
+}
