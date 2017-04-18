@@ -89,6 +89,7 @@
         "title"    : "Word Wars - Deck 2",
         "status"   : "in_bonus",
         "enable_at": "2017-04-17T11:11:27.159-04:00",
+        "locked": true,
         "end_bonus_at": null,
         "words": "nine, ten, eleven, twelve",
 
@@ -162,6 +163,8 @@
         "title"    : "Word Wars - Deck 2",
         "status"   : "in_bonus",
         "enable_at": "2017-04-17T11:11:27.159-04:00",
+        "locked": true,
+
         "end_bonus_at": null,
         "words": "nine, ten, eleven, twelve",
 
@@ -205,6 +208,7 @@
         "title"    : "Word Wars - Deck 2",
         "status"   : "in_bonus",
         "enable_at": "2017-04-17T11:11:27.159-04:00",
+        "locked": true,
         "end_bonus_at": null,
         "words": "one, two, three, four",
         "exposures": [
@@ -245,6 +249,7 @@
         "title"    : "Word Wars - Deck 2",
         "status"   : "in_bonus",
         "enable_at": "2017-04-17T11:11:27.159-04:00",
+        "locked": true,
         "words": "one, two, three, four",
         "end_bonus_at": null,
         "exposures": [

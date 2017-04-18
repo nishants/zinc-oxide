@@ -46,7 +46,7 @@ $word_line_height: 30px;
       @extend .resize-container;
       float: right;
       width: $actions_width;
-      button{
+      button, label{
         float: left;
         width: calc(50% - #{$padding/2});
       }
@@ -54,7 +54,13 @@ $word_line_height: 30px;
         border: none;
         margin-right: $padding;
       }
+      label.locked{
+        line-height: $input_height;
+        cursor: not-allowed;
+        text-align: center;
+        color: $very_light;
+        font-size: $larger_font;
+      }
     }
-
   }
 }

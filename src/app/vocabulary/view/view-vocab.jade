@@ -17,5 +17,5 @@
   .reader(ng-if='vocabset.reader')
     .headline.title(ng-bind='vocabset.reader.headline')
     .text(ng-bind='vocabset.reader.text')
-  .deck(ng-repeat='deck in vocabset.decks')
+  .deck(ng-repeat='deck in vocabset.decks',ng-class='{"locked" : deck.locked}')
     include view-vocab-deck/view-vocab-deck
