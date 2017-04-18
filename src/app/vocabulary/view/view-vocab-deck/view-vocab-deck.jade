@@ -1,3 +1,6 @@
+.bonus-message(ng-if='deck.bonus')
+  label Bonus expires in 22:01 hours
+  .speak
 .words-and-progress
   .words(ng-bind='deck.words')
   ul.exposures
@@ -11,3 +14,4 @@
   button.outline.play.cta(ng-if='!deck.locked')
     a(ui-sref='vocab.play({vocabId: 1, deckId: 1})') Play
   label.locked.fa.fa-lock(ng-if='deck.locked')
+    .timer 24:21

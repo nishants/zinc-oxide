@@ -14,8 +14,8 @@
     .title(ng-bind="vocabset.title")
     .by By {{vocabset.by}}
     .description(ng-bind='vocabset.description')
-  .reader(ng-if='vocabset.reader')
-    .headline.title(ng-bind='vocabset.reader.headline')
-    .text(ng-bind='vocabset.reader.text')
-  .deck(ng-repeat='deck in vocabset.decks',ng-class='{"locked" : deck.locked}')
+  //.reader(ng-if='vocabset.reader')
+  //  .headline.title(ng-bind='vocabset.reader.headline')
+  //  .text(ng-bind='vocabset.reader.text')
+  .deck(ng-repeat='deck in vocabset.decks',ng-class='{"locked" : deck.locked, "bonus" : deck.bonus}')
     include view-vocab-deck/view-vocab-deck
