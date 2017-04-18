@@ -1,5 +1,6 @@
 $actions_width: 200px;
 $state_indicator-size: 5px;
+$word_line_height: 30px;
 
 .vocabset.card {
   .deck {
@@ -12,6 +13,9 @@ $state_indicator-size: 5px;
     .words-and-progress{
       float   :left;
       width: calc(100% - #{$actions_width});
+      .words{
+        line-height: $word_line_height;
+      }
       ul.exposures{
         @extend .resize-container;
         @extend .undo-list;
@@ -42,8 +46,11 @@ $state_indicator-size: 5px;
       float: right;
       width: $actions_width;
       button{
-        float: right;
+        float: left;
         width: 50%;
+      }
+      button.study{
+        border: none;
       }
     }
 
