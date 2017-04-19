@@ -1,4 +1,6 @@
-angular.module('zinc').controller('GamePlayController', ["$scope", "deckParticipation", function($scope, deckParticipation){
+angular.module('zinc').controller('GamePlayController', ["$scope", "deckParticipation", "GamePlayService", function($scope, deckParticipation, GamePlayService){
+			$scope.gamePlay = GamePlayService.create(deckParticipation);
+
 			$scope.gameplan = deckParticipation.gameplan;
 			$scope.deck     = deckParticipation.deck;
 			$scope.vocabset    = {id: 1};

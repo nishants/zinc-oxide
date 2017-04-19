@@ -1,8 +1,8 @@
 .game-header
   .vocabset
     .picture
-      img(ng-src='{{deck.set_image_url}}')
-    .title(ng-bind='deck.set_title')
+      img(ng-src='{{gamePlay.image}}')
+    .title(ng-bind='gamePlay.title')
   button.outline.exit-game
     a.undo-link(ui-sref="vocab.view({id: vocabset.id})") Exit
       .fa.fa-sign-out
