@@ -13,19 +13,27 @@
         width: 100%;
         background-color: $game_progress_color;
         @include transformOrigin(0 0);
-      }
-      .progress:not(.playing){
-        @include transform(scaleX(1) !important) ;
+        @include transform(scaleX(0));
       }
     }
 
-    > li:not(.current){
+    > li.done{
       .progress{
-        display: none;
+        @include transition(transform $slow_time $transition_function);
+        @include transform(none);
       }
     }
-    > li.done{
-      background-color: $game_progress_color;
+    > li.current{
+      .progress{
+        @include transform(none);
+        @include animationName(expand);
+        @include animationFunction(linear);
+      }
+    }
+    > li.skipped{
+      .progress{
+        @include transform(scaleX(0));
+      }
     }
     > li:first-child{
       border-top-left-radius: $game_progress_roundness;

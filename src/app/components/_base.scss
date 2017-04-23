@@ -75,6 +75,13 @@ input{
   animation-timing-function: $value;
 }
 
+@mixin animationName($value){
+  -webkit-animation-name: $value;
+  -moz-animation-name: $value;
+  -o-animation-name: $value;
+  animation-name: $value;
+}
+
 @mixin gradient($value){
   background: -moz-linear-gradient($value); /* FF3.6-15 */
   background: -webkit-linear-gradient($value); /* Chrome10-25,Safari5.1-6 */

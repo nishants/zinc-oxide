@@ -25,8 +25,6 @@ angular.module("zinc").service("GamePlayService", ["$http", function ($http) {
 	return {
 		create: function(data){
 			var toggleMode = 0;
-			var
-			_current_index = -1,
 			gamePlay = {
 				vocabset: {
 					id: 2,
@@ -42,18 +40,21 @@ angular.module("zinc").service("GamePlayService", ["$http", function ($http) {
 							image  : (toggleMode%2 == 1),
 							synonym: (toggleMode%2 == 0)
 						},
-						word: word
+						word: word,
+						skipped: false,
+						current: false,
 					}
 				}),
 				current: null,
-				_current_index: null,
+				_current_index: -1,
 				next: function(){
-					gamePlay.current = gamePlay.challenges[++_current_index];
+					gamePlay.current = gamePlay.challenges[++gamePlay._current_index];
 				},
 				hasNext: function(){
-					return _current_index < gamePlay.challenges.length - 1;
+					return gamePlay._current_index < gamePlay.challenges.length - 1;
 				},
 				skip: function () {
+					gamePlay.current.skipped = true;
 					gamePlay.next();
 				}
 			};
