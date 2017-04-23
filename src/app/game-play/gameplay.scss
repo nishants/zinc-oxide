@@ -8,6 +8,21 @@ $gamelpay_padding: $padding*2;
   height: 100%;
   width: 100%;
   background-color: $gameplay_bg;
+  .game-body{
+    height: $gameplay_body_height;
+    ul.challenges{
+      @extend .undo-list;
+      display: block;
+      height: 100%;
+      @include transition(transform $slow_time $transition_function);
+      > li {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
   .skip{
     position: absolute;
     bottom: 0;

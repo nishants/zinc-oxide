@@ -2,4 +2,7 @@
   include game-header/game-header
   include game-progress/game-progress
   include game-controls/game-control
-  include modes/game-mode
+  .game-body
+    ul.challenges(style='width: {{gamePlay.challenges.length*100}}%; transform: translateX(-{{gamePlay._current_index * 100/gamePlay.challenges.length}}%)')
+      li(ng-class='{"current": gamePlay._current_index == $index }',ng-repeat='challenge in gamePlay.challenges', style='width: {{100/gamePlay.challenges.length}}%')
+        include modes/game-mode

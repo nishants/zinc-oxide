@@ -1,12 +1,12 @@
-.game-mode.sentence(ng-if='gamePlay.current.mode.sentence')
+.game-mode.sentence(ng-if='challenge.mode.sentence')
   include sentence-game
-.game-mode.definition(ng-if='gamePlay.current.mode.definition')
+.game-mode.definition(ng-if='challenge.mode.definition')
   include definition-game
-.game-mode.synonym-game.drop-squares(ng-controller='DropSquaresController', ng-if='gamePlay.current.mode.synonym')
+.game-mode.synonym-game.drop-squares(ng-controller='DropSquaresController', ng-if='challenge.mode.synonym')
   include synonym-game/synonym-game
-.game-mode.image-game.drop-squares(ng-controller='DropSquaresController', ng-if='gamePlay.current.mode.image')
+.game-mode.image-game.drop-squares(ng-controller='DropSquaresController', ng-if='challenge.mode.image')
   include image-game/image-game
-.skip(ng-show='gamePlay.current')
+.skip
   button.outline(ng-click='gamePlay.skip()')
     a
       span Skip

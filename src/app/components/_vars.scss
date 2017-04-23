@@ -22,6 +22,10 @@ $logo_height_on_mobile: 70px;
 
 
 $game_header_image_size: 60px;
-$gameplay_inner_height: calc(100% - #{$game_header_image_size*4});
 $game_progress_height: 5px;
 $game_progress_roundness: 5px;
+$skip_game_height: 65px;
+$game_header_height: $game_progress_height + 170px;
+
+$gameplay_body_height: calc(100% - #{$game_header_height});
+$gameplay_inner_height: calc(100% - #{$skip_game_height});
