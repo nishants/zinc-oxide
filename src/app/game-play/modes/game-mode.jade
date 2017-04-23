@@ -1,12 +1,12 @@
-.game-mode.sentence(ng-if='mode.sentence')
+.game-mode.sentence(ng-if='current.mode.sentence')
   include sentence-game
-.game-mode.definition(ng-if='mode.definition')
+.game-mode.definition(ng-if='current.mode.definition')
   include definition-game
-.game-mode.synonym(ng-if='mode.synonym')
+.game-mode.synonym(ng-if='current.mode.synonym')
   include synonym-game
-.game-mode.image(ng-controller='ImageGameController', ng-if='mode.image')
+.game-mode.drop-squares.image(ng-controller='ImageGameController', ng-if='current.mode.image')
   include image-game/image-game
-.skip(ng-show='mode')
+.skip(ng-show='current')
   button.outline
     a
       span Skip

@@ -9,5 +9,6 @@ angular.module('zinc').controller('GamePlayController', ["$scope", "deckParticip
 				points: 100,
 				timer : "00:19",
 			}
+			$scope.current = {mode: {sentence: false, definition: false,synonym: false,image: true}};
 		}]
 );

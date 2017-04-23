@@ -5,7 +5,7 @@ $target_width : 50%;
 
 $drag_delay: 100ms;
 
-.game-mode.image{
+.game-mode.drop-squares{
   text-align: center;
   font-size: $sub_giant_font;
 
@@ -40,6 +40,7 @@ $drag_delay: 100ms;
     width: 100%;
     >label{
       padding: 0px 4*$padding;
+      border-radius: $border_radius;
       @include transition(background $slow_time $transition_function transfrom $drag_delay $transition_function);
       @include userSelect(none);
     }
@@ -75,6 +76,8 @@ $drag_delay: 100ms;
 
 
   [ng-drag].dragging {
+    box-shadow: $card_elevated_shadow;
+
     .moving{
       display: inline-block;
     }
