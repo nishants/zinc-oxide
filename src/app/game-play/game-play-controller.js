@@ -8,6 +8,7 @@ angular.module('zinc').controller('GamePlayController', ["$scope", "deckParticip
 			$scope.user     = {
 				points: 100,
 				timer : "00:19",
-			}
+			};
+			$scope.gamePlay.next();
 		}]
 );
