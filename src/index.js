@@ -5,6 +5,6 @@ require("./app/routes");
 require("./app/components/forms/drop-down");
 require("./app/components/state-loader/state-loader");
 require("./app/vocabulary/vocab-service");
-require("./app/game-play/modes/drop-squares/image-game-controller");
+require("./app/game-play/modes/drop-squares/drop-squares-controller");
 require("./app/game-play/game-play-service");
 require("./app/game-play/game-play-controller");

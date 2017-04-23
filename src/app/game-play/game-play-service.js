@@ -12,9 +12,26 @@ angular.module("zinc").service("GamePlayService", ["$http", function ($http) {
 	return {
 		create: function(data){
 			return {
-				title: data.deck.set_title,
-				image: data.deck.set_image_url,
-				words: data.deck.words.map(toWord)
+				vocabset: {
+					id: 2,
+					title: data.deck.set_title,
+					image: data.deck.set_image_url
+				},
+				words: data.deck.words.map(toWord),
+				current : {
+					mode: {sentence: false, definition: false,synonym: false,image: true},
+					word: {name: "accept"},
+					options: [{name: "dearth"}, {name: "receive"}, {name: "aegis"}, {name: "banal"}]
+				},
+				submit: function(){
+
+				},
+				next: function(){
+
+				},
+				exit: function(){
+
+				}
 			};
 		}
 	}

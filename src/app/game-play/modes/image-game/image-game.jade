@@ -1,13 +1,13 @@
 .targets
-  .target(ng-repeat='target in current.options.slice(0,2)', ng-drop='true', ng-drop-success='onDrop(target)')
+  .target(ng-repeat='target in gamePlay.current.options.slice(0,2)', ng-drop='true', ng-drop-success='onDrop(target)')
     label {{target.name}}
 
 .word
-  label(ng-drag='true', data-allow-transform='true', draggable='false')
+  label(ng-drag='true', data-allow-transform='true', draggable='true')
     span.moving.fa.fa-arrows
     span.can-drop.fa.fa-thumb-tack
-    span {{current.word.name}}
+    span {{gamePlay.current.word.name}}
 
 .targets
-  .target(ng-repeat='target in current.options.slice(2,4)', ng-drop='true', ng-drop-success='onDrop(target)')
+  .target(ng-repeat='target in gamePlay.current.options.slice(2,4)', ng-drop='true', ng-drop-success='onDrop(target)')
     label {{target.name}}
