@@ -1,0 +1,21 @@
+.image-game{
+  .targets{
+    @extend .resize-container;
+    .target{
+      color: $very_light_text;
+      padding: $padding;
+      img{
+        border: $padding/2 solid transparent;
+        display: block;
+        margin: auto;
+        height: 100%;
+        opacity: 0.5;
+        @include transition($transition);
+      }
+    }
+  }
+  [ng-drop].drag-enter > img {
+    border: $padding/2 solid $logo_green;
+    opacity: 1;
+  }
+}

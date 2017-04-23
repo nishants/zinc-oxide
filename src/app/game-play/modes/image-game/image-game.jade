@@ -1,6 +1,6 @@
 .targets
-  .target(ng-repeat='target in gamePlay.current.word.synonym.options.slice(0,2)', ng-drop='true', ng-drop-success='onDrop(target)')
-    label {{target.name}}
+  .target(ng-repeat='target in gamePlay.current.word.image.options.slice(0,2)', ng-drop='true', ng-drop-success='onDrop(target)')
+    img(ng-src='{{target.url}}')
 
 .word
   label(ng-drag='true', data-allow-transform='true', draggable='true')
@@ -9,5 +9,5 @@
     span {{gamePlay.current.word.name}}
 
 .targets
-  .target(ng-repeat='target in gamePlay.current.word.synonym.options.slice(2,4)', ng-drop='true', ng-drop-success='onDrop(target)')
-    label {{target.name}}
+  .target(ng-repeat='target in gamePlay.current.word.image.options.slice(2,4)', ng-drop='true', ng-drop-success='onDrop(target)')
+    img(ng-src='{{target.url}}')

@@ -5,9 +5,20 @@ angular.module("zinc").service("GamePlayService", ["$http", function ($http) {
 			audio: data.pronunciation_audio,
 			synonym: {
 				options: data.synonym_option_names.map(function (name) {
-					return {name: name};
+					return {
+						name: name,
+						correct :name ==  data.correct_synonym,
+					};
 				}),
-				correct : data.correct_synonym
+			},
+			image: {
+				options: data.image_options.map(function (option) {
+					return {
+						name: option.word,
+						url : option.image_medium_url,
+						correct: data.image_medium_url == option.image_medium_url
+					};
+				}),
 			}
 		};
 	};
@@ -25,7 +36,7 @@ angular.module("zinc").service("GamePlayService", ["$http", function ($http) {
 				challenges: data.deck.words.map(function (word) {
 					var word = toWord(word);
 					return {
-						mode: {synonym: true},
+						mode: {image: true},
 						word: word
 					}
 				}),

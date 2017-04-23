@@ -18,17 +18,6 @@ $drag_delay: 100ms;
       height: 100%;
       width : $target_width;
       overflow: hidden;
-      color: $very_light_text;
-      label{
-        position: absolute;
-        top: calc(50% - #{$sub_giant_font/2 + $padding*7});
-        left: $padding*2;
-        width: calc(100% - #{$padding*4});
-        background-color: $input_dull_bg;
-        padding: $padding*7 0px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
     }
   }
   .word{
@@ -44,9 +33,7 @@ $drag_delay: 100ms;
       @include transition(background $slow_time $transition_function transfrom $drag_delay $transition_function);
       @include userSelect(none);
     }
-    .moves{
 
-    }
     >label:hover{
       background-color: $black_tint;
       color: $white;
@@ -67,13 +54,6 @@ $drag_delay: 100ms;
     cursor: move;
     display: inline-block;
   }
-
-  [ng-drop].drag-enter > label {
-    color: $white;
-    background-color: $game_play_hightlight_color;
-  }
-
-
 
   [ng-drag].dragging {
     box-shadow: $card_elevated_shadow;

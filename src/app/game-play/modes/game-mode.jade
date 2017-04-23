@@ -2,9 +2,9 @@
   include sentence-game
 .game-mode.definition(ng-if='gamePlay.current.mode.definition')
   include definition-game
-.game-mode.synonym.drop-squares(ng-if='gamePlay.current.mode.synonym')
+.game-mode.synonym-game.drop-squares(ng-if='gamePlay.current.mode.synonym')
   include synonym-game/synonym-game
-.game-mode.image.drop-squares(ng-controller='DropSquaresController', ng-if='gamePlay.current.mode.image')
+.game-mode.image-game.drop-squares(ng-controller='DropSquaresController', ng-if='gamePlay.current.mode.image')
   include image-game/image-game
 .skip(ng-show='gamePlay.current')
   button.outline(ng-click='gamePlay.skip()')
