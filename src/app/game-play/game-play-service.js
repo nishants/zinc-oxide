@@ -4,7 +4,9 @@ angular.module("zinc").service("GamePlayService", ["$http", function ($http) {
 			name: data.word,
 			audio: data.pronunciation_audio,
 			synonym: {
-				options: data.synonym_option_names,
+				options: data.synonym_option_names.map(function (name) {
+					return {name: name};
+				}),
 				correct : data.correct_synonym
 			}
 		};
@@ -21,10 +23,10 @@ angular.module("zinc").service("GamePlayService", ["$http", function ($http) {
 				},
 				words: data.deck.words.map(toWord),
 				challenges: data.deck.words.map(function (word) {
+					var word = toWord(word);
 					return {
-						mode: {sentence: false, definition: false, synonym: false, image: true},
-						word: toWord(word),
-						options: [{name: "dearth"}, {name: "receive"}, {name: "aegis"}, {name: "banal"}]
+						mode: {synonym: true},
+						word: word
 					}
 				}),
 				current: null,
@@ -36,6 +38,7 @@ angular.module("zinc").service("GamePlayService", ["$http", function ($http) {
 					return _current_index < gamePlay.challenges.length - 1;
 				},
 				skip: function () {
+					gamePlay.next();
 				}
 			};
 			return gamePlay;
