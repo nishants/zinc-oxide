@@ -24,6 +24,7 @@ angular.module("zinc").service("GamePlayService", ["$http", function ($http) {
 	};
 	return {
 		create: function(data){
+			var toggleMode = 0;
 			var
 			_current_index = -1,
 			gamePlay = {
@@ -35,8 +36,12 @@ angular.module("zinc").service("GamePlayService", ["$http", function ($http) {
 				words: data.deck.words.map(toWord),
 				challenges: data.deck.words.map(function (word) {
 					var word = toWord(word);
+					toggleMode++;
 					return {
-						mode: {image: true},
+						mode: {
+							image  : (toggleMode%2 == 1),
+							synonym: (toggleMode%2 == 0)
+						},
 						word: word
 					}
 				}),
