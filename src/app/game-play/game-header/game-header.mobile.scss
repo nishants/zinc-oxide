@@ -1,9 +1,13 @@
+$exit_button_width: 110px;
 
 .game-header{
+  .vocabset{
+    max-width: calc(100% - #{$exit_button_width});
+  }
   .exit-game{
     border: none;
     width: auto;
     padding: 0px $padding*2;
-    margin: $padding*2 0px;
+    margin-left: 0px;
   }
 }

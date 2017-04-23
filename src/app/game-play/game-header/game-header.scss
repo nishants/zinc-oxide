@@ -1,6 +1,5 @@
 $game_header_padding: $padding;
 $header_height:  $game_header_image_size + 2*$game_header_padding;
-$exit_button_width: 75px;
 $vocab_head_heigth: 80px;
 
 .game-header{
@@ -9,7 +8,6 @@ $vocab_head_heigth: 80px;
     @extend .resize-container;
     padding: $game_header_padding;
     float: left;
-    max-width: calc(100% - #{$exit_button_width});
     .title, .picture{
       float: left;
     }
@@ -40,6 +38,6 @@ $vocab_head_heigth: 80px;
     display: block;
     float: right;
     width: $button_width;
-    margin: $padding*2;
+    margin: $padding*2 $padding*2 $padding*2 0px;
   }
 }
