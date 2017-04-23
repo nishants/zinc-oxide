@@ -3,6 +3,7 @@ $word_label_width: 300px;
 $target_height: calc(50% - #{$word_height/2});
 $target_width : 50%;
 
+$drag_delay: 100ms;
 
 .game-mode.image{
   text-align: center;
@@ -38,13 +39,24 @@ $target_width : 50%;
     font-size: $giant_font ;
     width: 100%;
     >label{
+      padding: 0px 4*$padding;
+      @include transition(background $slow_time $transition_function transfrom $drag_delay $transition_function);
       @include userSelect(none);
     }
-    .can-drop, .moving{
+    .moves{
+
+    }
+    >label:hover{
+      background-color: $black_tint;
+      color: $white;
+    }
+    .can-drop, .moving, .moves{
       font-size: $larger_font;
       position: relative;
       vertical-align: super;
-      color: $light_text;
+      color: $white;
+    }
+    .can-drop{
       display: none;
     }
   }
