@@ -10,8 +10,7 @@
         width: calc(100% - #{$padding*4});
         background-color: $input_dull_bg;
         padding: $padding*7 0px;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        @extend .overflow-text;
       }
     }
   }

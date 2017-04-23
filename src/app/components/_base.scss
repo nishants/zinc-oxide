@@ -20,6 +20,12 @@ input{
   clear:both;
 }
 
+.overflow-text{
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @mixin transform( $property) {
   -webkit-transform: $property;
   -moz-transform: $property;

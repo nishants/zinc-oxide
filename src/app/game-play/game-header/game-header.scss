@@ -21,9 +21,7 @@ $vocab_head_heigth: 80px;
       text-transform: capitalize;
       max-width: calc(100% - #{$game_header_image_size});
       max-height: $vocab_head_heigth;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space:nowrap
+      @extend .overflow-text;
     }
 
     .picture{
