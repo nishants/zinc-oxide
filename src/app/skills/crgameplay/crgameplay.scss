@@ -7,5 +7,5 @@ $col_two_width: calc(100% - #{$col_one_width + $col_three_width});
 }
 
 @import 'crgameplay-navigation.state';
-@import 'crg-header';
+@import 'header/crg-header';
 @import 'crg-options';

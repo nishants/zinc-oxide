@@ -1,0 +1,35 @@
+$circle_size: $extra_large_font;
+$connector_width: 1px;
+
+#crgameplay{
+  .crgame-progress{
+    padding-top: $padding;
+    position: relative;
+    > ul {
+      position: relative;
+      z-index: 1;
+      @extend .undo-list;
+      @extend .resize-container;
+      > li {
+        float:left;
+        width: 25%;
+      }
+      > li:before{
+        content: " ";
+        display: block;
+        height: $circle_size;
+        width: $circle_size;
+        background-color: $crgame_highlight_color;
+        border-radius: 50%;
+      }
+    }
+    .connector{
+      position: absolute;
+      top: ($circle_size + 2*$padding)/2 ;
+      left: 0;
+      width: 75%;
+      height: $connector_width;
+      background-color: $crgame_connector_color;
+    }
+  }
+}

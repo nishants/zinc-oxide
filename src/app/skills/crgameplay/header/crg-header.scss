@@ -3,7 +3,7 @@ $header_height: 60px;
 #crgameplay{
   .header{
     @extend .resize-container;
-    .logo, .game-progress, .skill-progress{
+    .logo, .crgame-progress, .skill-progress{
       float: left;
       height: $header_height;
     }
@@ -17,7 +17,7 @@ $header_height: 60px;
         height: 100%;
       }
     }
-    .game-progress{
+    .crgame-progress{
       line-height: $header_height;
       width: $col_two_width;
     }
@@ -26,3 +26,5 @@ $header_height: 60px;
     }
   }
 }
+
+@import 'crgame-progress';
