@@ -1,0 +1,25 @@
+$header_height: 60px;
+
+#crgameplay{
+  @extend .resize-container;
+  text-align: center;
+
+  .options, .pasage, .transcript{
+    float: left;
+  }
+  .options{
+    width: $col_one_width;
+    .sound, .exit{
+      button{
+        border-radius: 50%;
+        padding: $padding*2;
+      }
+    }
+  }
+  .pasage{
+    width: $col_two_width
+  }
+  .transcript{
+    width: $col_three_width
+  }
+}
