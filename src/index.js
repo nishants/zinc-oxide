@@ -9,3 +9,4 @@ require("./app/game-play/modes/drop-squares/drop-squares-controller");
 require("./app/game-play/game-play-service");
 require("./app/game-play/game-play-controller");
 require("./app/skills/crgameplay/crg-controller");
+require("./app/skills/crgameplay/phrase-selector");

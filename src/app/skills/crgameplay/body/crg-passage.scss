@@ -23,15 +23,22 @@ $line_height  : $extra_large_font;
     .text{
       @extend .resize-container;
       padding-top: $padding*2;
-      span{
+      .word{
         display: inline-block;
         height: $line_height;
         line-height: $line_height;
         padding-right: $word_spacing;
       }
-      span.line-break{
+      .word.line-break{
         display: block;
         height: $padding;
+        @include userSelect(none);
+      }
+      .word.selected-word{
+        background-color: $crgame_highlight_text_color;
+      }
+      ::selection{
+        background-color: $crgame_highlight_text_color;
       }
     }
   }

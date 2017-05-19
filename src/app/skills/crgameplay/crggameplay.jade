@@ -31,8 +31,8 @@
       .author
         span By&nbsp;
         span.by(ng-bind='game.by')
-      .text
-        span(ng-repeat='word in game.passage', ng-class='{"line-break" : word.linebreak}') {{word.text}}
+      .text.phrase-selector
+        .word(ng-repeat='word in game.passage', ng-class='{"line-break" : word.linebreak}', data-word-number='{{$index}}') {{word.text}}
     .transcript
       h1 transcript
 
