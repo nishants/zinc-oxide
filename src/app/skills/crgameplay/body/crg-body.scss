@@ -1,0 +1,26 @@
+#crgameplay{
+  .body{
+    @extend .resize-container;
+    padding-top: $padding*4;
+    text-align: center;
+    position: relative;
+
+    .options, .passage, .transcript{
+      float: left;
+    }
+    .passage{
+      width: $col_two_width;
+      text-align: left;
+      font-size: $larger_font;
+      line-height: $larger_font+$padding;
+    }
+    .transcript{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: $col_three_width;
+    }
+  }
+}
+
+@import 'crg-options';

@@ -1,0 +1,30 @@
+#crgameplay{
+  .body{
+    .options{
+      width: $col_one_width;
+      .points, .sound, .exit{
+        padding-top: $padding*2;
+      }
+      .points{
+        padding-bottom: $padding*2;
+        label{
+          font-size: $large_font;
+          line-height: $large_font + $padding/2;
+        }
+        .value{
+          font-size: $sub_giant_font;
+          line-height: $sub_giant_font + $padding;
+        }
+      }
+      .sound, .exit{
+        button{
+          border-radius: 50%;
+          padding: $padding;
+          background-color: $crgame_button_color;
+          outline: none;
+          border: $very_light_border;
+        }
+      }
+    }
+  }
+}
