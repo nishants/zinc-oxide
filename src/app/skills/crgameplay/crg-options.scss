@@ -9,15 +9,34 @@ $header_height: 60px;
   }
   .options{
     width: $col_one_width;
+    .points, .sound, .exit{
+      padding-top: $padding*2;
+    }
+    .points{
+      label{
+        font-size: $extra_small_font;
+        line-height: $extra_small_font + $padding/2;
+      }
+      .value{
+        font-size: $extra_large_font;
+        line-height: $extra_large_font + $padding/2;
+      }
+    }
     .sound, .exit{
       button{
         border-radius: 50%;
-        padding: $padding*2;
+        padding: $padding;
+        background-color: $crgame_button_color;
+        outline: none;
+        border: $very_light_border;
       }
     }
   }
   .pasage{
-    width: $col_two_width
+    width: $col_two_width;
+    text-align: left;
+    font-size: $larger_font;
+    line-height: $larger_font+$padding;
   }
   .transcript{
     width: $col_three_width
