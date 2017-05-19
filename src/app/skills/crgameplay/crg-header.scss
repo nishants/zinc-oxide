@@ -1,0 +1,27 @@
+$header_height: 60px;
+
+#crgameplay{
+  .header{
+    @extend .resize-container;
+    .logo, .game-progress, .skill-progress{
+      float: left;
+      height: $header_height;
+    }
+    .logo{
+      width: $col_one_width;
+      overflow: hidden;
+      img{
+        display: block;
+        margin: auto;
+        height: 100%;
+      }
+    }
+    .game-progress{
+      line-height: $header_height;
+      width: $col_two_width;
+    }
+    .skill-progress{
+      width: $col_three_width;
+    }
+  }
+}
