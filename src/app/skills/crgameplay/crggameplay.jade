@@ -25,10 +25,14 @@
       .exit
         button.fa.fa-sign-out
     .passage
-      h1 Their Eyes Were Watching God
-      h3 Their Eyes Were Watching God
-      p Ships at distance have every man's wish on board. For some they come in with the tide. For others they sail forever onthe horizon, never out of sight, never landing until the watcher turn his eyes away in resignation, his dreams mocked to death by time. That is the life of men.
-      p Now, women forget all those things they don't  want to remember, and remember everything they don't want to forget. The dream is the truth. Then they act and do things accordingly.
+      .title
+        span From:&nbsp;
+        span.from(ng-bind='game.from')
+      .author
+        span By&nbsp;
+        span.by(ng-bind='game.by')
+      .text
+        span(ng-repeat='word in game.passage', ng-class='{"line-break" : word.linebreak}') {{word.text}}
     .transcript
       h1 transcript
 

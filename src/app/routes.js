@@ -20,7 +20,8 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 			})
 			.state('skills.gameplay', {
 				url: '/gameplay',
-				templateUrl: 'assets/templates/skills-gameplay-template.html'
+				templateUrl: 'assets/templates/skills-gameplay-template.html',
+        controller: 'CRGameplayController'
 			})
 			.state('vocab', {
 				url: '/vocab',

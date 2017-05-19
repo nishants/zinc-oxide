@@ -1,0 +1,38 @@
+$word_spacing: $padding/2;
+$line_height  : $extra_large_font;
+
+#crgameplay{
+  .body{
+    .passage{
+      .title{
+        font-size: $sub_giant_font;
+        line-height: $sub_giant_font  + $padding;
+        .from{
+          font-weight: $weight_bold;
+        }
+        :not(.from){
+          color: $light_text;
+          font-weight: $weight_light;
+        }
+      }
+      .author{
+        font-size: $normal_font;
+        line-height: $normal_font  + $padding/2;
+      }
+    }
+    .text{
+      @extend .resize-container;
+      padding-top: $padding*2;
+      span{
+        display: inline-block;
+        height: $line_height;
+        line-height: $line_height;
+        padding-right: $word_spacing;
+      }
+      span.line-break{
+        display: block;
+        height: $padding;
+      }
+    }
+  }
+}
