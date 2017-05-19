@@ -10,6 +10,7 @@ $header_height: 60px;
     .logo{
       width: $col_one_width;
       overflow: hidden;
+      padding: $padding;
       img{
         display: block;
         margin: auto;

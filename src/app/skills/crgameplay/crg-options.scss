@@ -1,44 +1,50 @@
 $header_height: 60px;
 
 #crgameplay{
-  @extend .resize-container;
-  text-align: center;
+  .body{
+    @extend .resize-container;
+    text-align: center;
+    position: relative;
 
-  .options, .pasage, .transcript{
-    float: left;
-  }
-  .options{
-    width: $col_one_width;
-    .points, .sound, .exit{
-      padding-top: $padding*2;
+    .options, .passage, .transcript{
+      float: left;
     }
-    .points{
-      label{
-        font-size: $extra_small_font;
-        line-height: $extra_small_font + $padding/2;
+    .options{
+      width: $col_one_width;
+      .points, .sound, .exit{
+        padding-top: $padding*2;
       }
-      .value{
-        font-size: $extra_large_font;
-        line-height: $extra_large_font + $padding/2;
+      .points{
+        label{
+          font-size: $extra_small_font;
+          line-height: $extra_small_font + $padding/2;
+        }
+        .value{
+          font-size: $extra_large_font;
+          line-height: $extra_large_font + $padding/2;
+        }
+      }
+      .sound, .exit{
+        button{
+          border-radius: 50%;
+          padding: $padding;
+          background-color: $crgame_button_color;
+          outline: none;
+          border: $very_light_border;
+        }
       }
     }
-    .sound, .exit{
-      button{
-        border-radius: 50%;
-        padding: $padding;
-        background-color: $crgame_button_color;
-        outline: none;
-        border: $very_light_border;
-      }
+    .passage{
+      width: $col_two_width;
+      text-align: left;
+      font-size: $larger_font;
+      line-height: $larger_font+$padding;
     }
-  }
-  .pasage{
-    width: $col_two_width;
-    text-align: left;
-    font-size: $larger_font;
-    line-height: $larger_font+$padding;
-  }
-  .transcript{
-    width: $col_three_width
+    .transcript{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: $col_three_width;
+    }
   }
 }
