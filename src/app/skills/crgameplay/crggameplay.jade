@@ -31,8 +31,9 @@
       .author
         span By&nbsp;
         span.by(ng-bind='game.by')
-      .text.phrase-selector
+      .text.phrase-selector(on-text-select='game.onSelect($selection.indices)')
         .word(ng-repeat='word in game.passage', ng-class='{"line-break" : word.linebreak}', data-word-number='{{$index}}') {{word.text}}
     .transcript
       h1 transcript
 
+h1(ng-bind='game.selectedText')

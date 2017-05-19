@@ -27,10 +27,12 @@ app.directive("phraseSelector", [function () {
         selections.forEach(function(dataWordNumber){
           var selector = "[data-word-number='<number>']".replace('<number>', dataWordNumber);
           $(selector).addClass("selected-word");
-        })
-
+        });
+        scope.$selection.indices = selections;
+        scope.$eval(attrs.onTextSelect);
       };
-      element.on("mouseup touchend", highlightSelected)
+      document.addEventListener("selectionchange", highlightSelected, false);
+      scope.$selection = {indices: []};
     }
   };
 }]);
