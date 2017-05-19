@@ -1,0 +1,9 @@
+.state.skills-gameplay{
+  #navigation{
+    @include transform(translateY(calc(-100% - #{$padding})));
+  }
+  #content{
+    margin-top: 0px;
+    padding-top: $padding*2;
+  }
+}
