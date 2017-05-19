@@ -19,8 +19,11 @@ $connector_width: 2px;
         display: block;
         height: $circle_size;
         width: $circle_size;
-        background-color: $crgame_highlight_color;
+        background-color: $crgame_button_color;
         border-radius: 50%;
+      }
+      >li.current:before{
+        background-color: $crgame_highlight_color;
       }
     }
     .connector{
