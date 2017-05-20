@@ -20,7 +20,8 @@ app.controller('CRGameplayController', ['$scope', '$timeout', 'CRGPlayer', funct
       zincing: {
         visualize: [
           {phrase: [0, 1,2,3,4]},
-          {phrase: [34,35,36,37,38,39]}
+          {phrase: [34,35,36,37,38,39]},
+          {phrase: [57,58,59,60,61,62,63,64,65]}
         ]
       }
     },

@@ -3,6 +3,7 @@ app.factory("VisualizePhraseState", [function () {
     var state = {
       showInput: true,
       buttons: [],
+      transcript: {text: "VisualizePhraseState"},
       highlightPhrase: game.plan.zincing.visualize.shift().phrase,
       submitInput: function (userInput) {
         console.log("user visualized : " + userInput);

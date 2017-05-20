@@ -3,6 +3,7 @@ app.factory("ReadingPassageState", ["DoneReadingPassageState", function (DoneRea
     return {
       showInput: false,
       highlightPhrase: [],
+      transcript: {text: "ReadingPassageState"},
       buttons: [
         {
           label: "I am done!",

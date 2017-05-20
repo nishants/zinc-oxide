@@ -7,6 +7,7 @@ app.factory("DoneReadingPassageState", ["EnterMainIdeaState", function (EnterMai
     var state = {
       showInput: false,
       highlightPhrase: [],
+      transcript: {text: "DoneReadingPassageState"},
       buttons: [
         {
           label: "I am done!",

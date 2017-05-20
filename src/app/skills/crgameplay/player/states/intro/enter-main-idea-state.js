@@ -4,6 +4,7 @@ app.factory("EnterMainIdeaState", ["VisualizePhraseState",function (VisualizePhr
       showInput   : true,
       buttons     : [],
       highlightPhrase: [],
+      transcript: {text: "EnterMainIdeaState"},
       submitInput : function(userInput){
         console.log("user says : " + userInput);
         game.player.transitTo(VisualizePhraseState(game));
