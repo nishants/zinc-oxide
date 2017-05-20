@@ -22,7 +22,9 @@ app.controller('CRGameplayController', ['$scope', '$timeout', function ($scope, 
     selectedText: null,
     onSelect: function(indexes){
       $timeout(function(){
-        game.selectedText = indexes.map(function(index){return game.passage[index].text;}).join(" ");
+        game.selectedText = indexes.map(function (index) {
+          return game.passage[index].text;
+        }).join(" ");
       });
     }
   };

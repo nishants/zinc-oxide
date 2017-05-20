@@ -14,7 +14,7 @@ app.directive("phraseSelector", [function () {
     for(var i = 0; i < elements.length; i++){
       node.push(angular.element(elements[i]).attr('data-word-number'))
     }
-    return node;
+    return node.filter(function(index){return index !=undefined ;});
   };
 
   return {
