@@ -35,5 +35,6 @@
         .word(ng-repeat='word in game.passage', ng-class='{"line-break" : word.linebreak}', data-word-number='{{$index}}') {{word.text}}
     .transcript
       h1 transcript
+      button(ng-repeat='button in game.player.state.buttons') {{button.label}}
 
 h1(ng-bind='game.selectedText')
