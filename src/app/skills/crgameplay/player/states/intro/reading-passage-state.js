@@ -1,12 +1,13 @@
 app.factory("ReadingPassageState", ["DoneReadingPassageState", function (DoneReadingPassageState) {
-  return function(player){
+  return function(game){
     return {
       showInput: false,
+      highlightPhrase: [],
       buttons: [
         {
           label: "I am done!",
           onClick: function () {
-            player.transitTo(DoneReadingPassageState(player))
+            game.player.transitTo(DoneReadingPassageState(game))
           }
         }
       ]

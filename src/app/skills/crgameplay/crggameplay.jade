@@ -32,12 +32,12 @@
         span By&nbsp;
         span.by(ng-bind='game.by')
       .text.phrase-selector(on-text-select='game.onSelect($selection.indices)')
-        .word(ng-repeat='word in game.passage', ng-class='{"line-break" : word.linebreak}', data-word-number='{{$index}}') {{word.text}}
+        .word(ng-repeat='word in game.passage', ng-class='{"line-break" : word.linebreak, "highlight": word.highlight}', data-word-number='{{$index}}') {{word.text}}
     .transcript
       h1 transcript
       button(ng-repeat='button in game.player.state.buttons',ng-click='button.onClick()') {{button.label}}
 
     .user-input(ng-if='game.player.state.showInput')
-      textarea
-      button.button-outline.submit(ng-click='game.player.state.submitInput(__userInput)', ng-model='__userInput')
+      textarea(ng-model='game.player.input')
+      button.button-outline.submit(ng-click='game.player.state.submitInput(game.player.input)')
 h1(ng-bind='game.selectedText')

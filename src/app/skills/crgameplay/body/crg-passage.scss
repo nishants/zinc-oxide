@@ -40,6 +40,10 @@ $line_height  : $extra_large_font;
       ::selection{
         background-color: $crgame_highlight_text_color;
       }
+      .word.highlight{
+        background-color: $crgame_highlight_color;
+        color: white;
+      }
     }
   }
 }

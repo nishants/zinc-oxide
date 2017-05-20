@@ -1,11 +1,12 @@
 app.factory("DoneReadingPassageState", ["EnterMainIdeaState", function (EnterMainIdeaState) {
-  return function(player){
+  return function(game){
     var showInput = function(){
-      player.transitTo(EnterMainIdeaState(player));
+      game.player.transitTo(EnterMainIdeaState(game));
     };
 
     var state = {
       showInput: false,
+      highlightPhrase: [],
       buttons: [
         {
           label: "I am done!",

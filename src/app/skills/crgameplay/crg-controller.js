@@ -16,18 +16,33 @@ app.controller('CRGameplayController', ['$scope', '$timeout', 'CRGPlayer', funct
       };
 
   var game = {
+    plan: {
+      zincing: {
+        visualize: [
+          {phrase: [0, 1,2,3,4]},
+          {phrase: [34,35,36,37,38,39]}
+        ]
+      }
+    },
     from: "Their Eyes Were Watching God",
     by: "Zora Neal Hurston",
     passage: toSelectableNodes(paragraphs),
     selectedText: null,
-    player: CRGPlayer.create(),
+    player: null,
     onSelect: function(indexes){
       $timeout(function(){
         game.selectedText = indexes.map(function (index) {
           return game.passage[index].text;
         }).join(" ");
       });
+    },
+    highlightText: function(indices){
+      angular.forEach(game.passage, function(word, index){
+        word.highlight = indices.indexOf(index) > -1;
+      })
     }
   };
+
+  game.player = CRGPlayer.create(game);
   $scope.game = game;
 }]);
