@@ -1,4 +1,4 @@
-app.factory("CRGPlayer", ['GameIntroState', function (GameIntroState) {
+app.factory("CRGPlayer", ['ReadingPassageState', function (ReadingPassageState) {
   var service = {
     create: function(){
       var player = {
@@ -13,7 +13,7 @@ app.factory("CRGPlayer", ['GameIntroState', function (GameIntroState) {
         },
 
       };
-      player.state = GameIntroState(player);
+      player.state = ReadingPassageState(player);
       return player;
     }
   };

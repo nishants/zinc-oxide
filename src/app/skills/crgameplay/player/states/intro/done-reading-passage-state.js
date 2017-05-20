@@ -1,12 +1,7 @@
-app.factory("GameIntroState", [function () {
+app.factory("DoneReadingPassageState", ["EnterMainIdeaState", function (EnterMainIdeaState) {
   return function(player){
-    var showInput = function(state){
-      state.showInput = true;
-      state.buttons   = [];
-      state.submitInput = function(userInput){
-        console.log("user says : " + userInput);
-        player.transitTo({});
-      }
+    var showInput = function(){
+      player.transitTo(EnterMainIdeaState(player));
     };
 
     var state = {
