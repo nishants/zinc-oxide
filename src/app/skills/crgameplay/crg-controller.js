@@ -21,7 +21,30 @@ app.controller('CRGameplayController', ['$scope', '$timeout', 'CRGPlayer', funct
         visualize: [
           {phrase: [0, 1,2,3,4]},
           {phrase: [34,35,36,37,38,39]},
-          {phrase: [57,58,59,60,61,62,63,64,65]}
+        ],
+        imagine: [
+          {
+            phrase: [57,58,59,60,61,62,63,64,65],
+            existsInPassage: false,
+            usages: [
+              {
+                label: 'A cow eating grass.',
+                correct: false,
+              },
+              {
+                label: 'A baby being dropped.',
+                correct: true,
+              },
+              {
+                label: 'Getting fired from job.',
+                correct: true,
+              },
+              {
+                label: 'A scary nightmare.',
+                correct: true,
+              },
+            ]
+          }
         ]
       }
     },

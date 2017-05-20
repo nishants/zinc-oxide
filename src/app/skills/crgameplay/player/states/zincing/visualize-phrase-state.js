@@ -1,4 +1,4 @@
-app.factory("VisualizePhraseState", [function () {
+app.factory("VisualizePhraseState", ['ImaginePhraseState', function (ImaginePhraseState) {
   var VisualizePhraseState = function (game) {
     var state = {
       showInput: true,
@@ -7,7 +7,7 @@ app.factory("VisualizePhraseState", [function () {
       highlightPhrase: game.plan.zincing.visualize.shift().phrase,
       submitInput: function (userInput) {
         console.log("user visualized : " + userInput);
-        var nextState = game.plan.zincing.visualize.length ? VisualizePhraseState(game) : {};
+        var nextState = game.plan.zincing.visualize.length ? VisualizePhraseState(game) : ImaginePhraseState(game);
         game.player.transitTo(nextState);
       }
     };

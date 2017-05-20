@@ -34,7 +34,7 @@
       .text.phrase-selector(on-text-select='game.onSelect($selection.indices)')
         .word(ng-repeat='word in game.passage', ng-class='{"line-break" : word.linebreak, "highlight": word.highlight}', data-word-number='{{$index}}') {{word.text}}
     .transcript
-      h1(ng-bind='game.player.state.transcript.text')
+      label(ng-bind='game.player.state.transcript.text')
       button(ng-repeat='button in game.player.state.buttons',ng-click='button.onClick()') {{button.label}}
 
     .user-input(ng-if='game.player.state.showInput')
