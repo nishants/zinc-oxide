@@ -1,9 +1,11 @@
 app.directive("phraseSelector", [function () {
   var getSelectionText = function (){
-    if(!window.getSelection()){
-      return;
+
+    var selection = window.getSelection();
+    if(!selection || selection.type == 'None'){
+      return [];
     }
-    var selection =  window.getSelection(),
+    var
         range     = selection.getRangeAt(0),
         elements  = range.cloneContents().children ,
         node      = [];
