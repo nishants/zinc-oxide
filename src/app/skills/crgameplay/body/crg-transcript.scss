@@ -14,6 +14,11 @@ $button_color: $crgame_highlight_color;
         }
       }
       .transcript-dialog{
+        margin-bottom: $padding;
+        padding: $padding*2 $padding;
+        background: $crg_dialog_bg;
+        text-align: left;
+
         .transcript-message{
 
         }
@@ -27,7 +32,16 @@ $button_color: $crgame_highlight_color;
               padding: $padding 5*$padding;
               color: $white_shade;
               border: $very_light_border;
+              width: 100%;
             }
+          }
+        }
+        ul.select-options{
+          @extend .undo-list;
+          > li {
+            display: block;
+            padding: $padding 0px;
+            margin-bottom: $padding;
           }
         }
       }

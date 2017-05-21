@@ -1,5 +1,6 @@
 #crgameplay{
   .body{
+    min-height: calc(100vh - #{$crg_header_height});
     @extend .resize-container;
     padding-top: $padding*4;
     text-align: center;

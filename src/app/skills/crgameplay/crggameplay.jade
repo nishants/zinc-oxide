@@ -36,6 +36,11 @@
     .transcript
       .transcript-dialog
         .transcript-message(ng-bind='game.player.state.transcript.text')
+        ul.select-options
+          li(ng-repeat='option in game.player.state.options',ng-init='_selected=false', ng-click='_selected = !_selected')
+            .check-box.fa.fa-check-square(ng-show='_selected')
+            .check-box.fa.fa-square-o(ng-hide='_selected')
+            label {{option.label}}
         ul.buttons
           li(ng-repeat='button in game.player.state.buttons')
             button(ng-click='button.onClick()') {{button.label}}
