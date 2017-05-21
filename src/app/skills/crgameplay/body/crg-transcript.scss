@@ -1,10 +1,20 @@
 $button_border_radius: 15px;
 $button_color: $crgame_highlight_color;
+$input_area_height: 180px;
 
 #crgameplay{
   .body{
     .transcript{
       padding: $padding;
+      button{
+        margin-top: $padding;
+        padding: $padding 5*$padding;
+        border-radius: $button_border_radius;
+        background-color: $button_color;
+        color: $white_shade;
+        border: $very_light_border;
+        width: 100%;
+      }
       .transcript-window{
         overflow: hidden;
         img{
@@ -18,6 +28,7 @@ $button_color: $crgame_highlight_color;
         padding: $padding*2 $padding;
         background: $crg_dialog_bg;
         text-align: left;
+        border: $very_light_border;
 
         .transcript-message{
           font-size: $large_font;
@@ -28,15 +39,6 @@ $button_color: $crgame_highlight_color;
           @extend .undo-list;
           li > {
             display: block;
-            button{
-              margin-top: $padding;
-              padding: $padding 5*$padding;
-              border-radius: $button_border_radius;
-              background-color: $button_color;
-              color: $white_shade;
-              border: $very_light_border;
-              width: 100%;
-            }
           }
         }
         ul.select-options{
@@ -45,6 +47,15 @@ $button_color: $crgame_highlight_color;
             display: block;
             padding: $padding 0px;
             margin-bottom: $padding;
+          }
+        }
+        .user-input{
+          textarea{
+            display: block;
+            width: 100%;
+            height: $input_area_height;
+            border: $very_light_border;
+            border-radius: $border_radius;
           }
         }
       }

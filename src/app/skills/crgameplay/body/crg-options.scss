@@ -2,11 +2,8 @@
   .body{
     .options{
       width: $col_one_width;
-      .points, .sound, .exit{
-        padding-top: $padding*2;
-      }
       .points{
-        padding-bottom: $padding*2;
+        padding-bottom: $padding*4;
         label{
           font-size: $large_font;
           line-height: $large_font + $padding/2;
@@ -17,9 +14,11 @@
         }
       }
       .sound, .exit{
+        margin-bottom: $padding*4;
+
         button{
           border-radius: 50%;
-          padding: $padding;
+          padding: 2*$padding;
           background-color: $crgame_button_color;
           outline: none;
           border: $very_light_border;

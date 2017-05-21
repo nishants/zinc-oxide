@@ -2,6 +2,7 @@ $header_height: $crg_header_height;
 
 #crgameplay{
   .header{
+    padding-top: $padding*2;
     @extend .resize-container;
     .logo, .crgame-progress, .skill-progress{
       float: left;

@@ -44,10 +44,9 @@
         ul.buttons
           li(ng-repeat='button in game.player.state.buttons')
             button(ng-click='button.onClick()') {{button.label}}
+        .user-input(ng-if='game.player.state.showInput')
+          textarea(ng-model='game.player.input')
+          button.button-outline.submit(ng-click='game.player.state.submitInput(game.player.input)') Submit
       .transcript-window
         img(src='assets/images/transcript-speaker.png')
-
-    .user-input(ng-if='game.player.state.showInput')
-      textarea(ng-model='game.player.input')
-      button.button-outline.submit(ng-click='game.player.state.submitInput(game.player.input)')
 h1(ng-bind='game.selectedText')

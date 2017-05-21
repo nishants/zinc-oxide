@@ -1,6 +1,6 @@
 #crgameplay{
   .body{
-    min-height: calc(100vh - #{$crg_header_height});
+    min-height: calc(100vh - #{$crg_header_height + $padding*2});
     @extend .resize-container;
     padding-top: $padding*4;
     text-align: center;
@@ -21,10 +21,6 @@
       right: 0;
       bottom: 0;
       width: $col_three_width;
-    }
-    .user-input{
-      height: 500px;
-      width: 100%;
     }
   }
 }
