@@ -11,6 +11,7 @@
     }
     .passage{
       width: $col_two_width;
+      max-width: $crg_passage_max_width;
       text-align: left;
       font-size: $larger_font;
       line-height: $larger_font+$padding;

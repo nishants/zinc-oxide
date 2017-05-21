@@ -29,3 +29,6 @@ $game_header_height: $game_progress_height + 170px;
 
 $gameplay_body_height: calc(100% - #{$game_header_height});
 $gameplay_inner_height: calc(100% - #{$skip_game_height});
+
+$crg_max_width: 1200px;
+$crg_passage_max_width: 750px;

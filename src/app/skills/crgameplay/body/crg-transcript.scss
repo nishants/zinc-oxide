@@ -20,8 +20,8 @@ $button_color: $crgame_highlight_color;
         text-align: left;
 
         .transcript-message{
-          font-size: $larger_font;
-          line-height: $larger_font + $padding/2;
+          font-size: $large_font;
+          line-height: $large_font + $padding/2;
           padding: $padding;
         }
         ul.buttons{

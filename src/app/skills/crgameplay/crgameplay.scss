@@ -4,6 +4,8 @@ $col_three_width: 300px;
 $col_two_width: calc(100% - #{$col_one_width + $col_three_width});
 
 #crgameplay{
+  max-width: $crg_max_width;
+  margin: auto;
   background-color: $gameplay_bg;
 }
 
