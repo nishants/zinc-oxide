@@ -20,16 +20,19 @@ $button_color: $crgame_highlight_color;
         text-align: left;
 
         .transcript-message{
-
+          font-size: $larger_font;
+          line-height: $larger_font + $padding/2;
+          padding: $padding;
         }
         ul.buttons{
           @extend .undo-list;
           li > {
             display: block;
             button{
+              margin-top: $padding;
+              padding: $padding 5*$padding;
               border-radius: $button_border_radius;
               background-color: $button_color;
-              padding: $padding 5*$padding;
               color: $white_shade;
               border: $very_light_border;
               width: 100%;
