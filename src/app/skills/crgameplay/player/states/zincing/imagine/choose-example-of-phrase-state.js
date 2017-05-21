@@ -15,7 +15,7 @@ app.factory("ChooseExampleOfPhraseState", [function () {
           correct: usage.correct,
         }
       }),
-      transcript: {text: "Which one of following is not a good example of highlighted phrase ?"},
+      transcript: {text: imagine.transcript || "Which one of following is not a good example of highlighted phrase ?"},
       highlightPhrase: imagine.phrase,
       submitInput: function (userInput) {
         console.log("user imagined : " + userInput);

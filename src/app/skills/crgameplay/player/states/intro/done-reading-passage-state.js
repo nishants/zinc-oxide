@@ -7,31 +7,21 @@ app.factory("DoneReadingPassageState", ["EnterMainIdeaState", function (EnterMai
     var state = {
       showInput: false,
       highlightPhrase: [],
-      transcript: {text: "DoneReadingPassageState"},
+      transcript: {text: "Did the passage make sense ?"},
       buttons: [
         {
-          label: "I am done!",
+          label: "Definitely",
           onClick: function () {
-            state.buttons = [
-              {
-                label: "Definitely",
-                onClick: function () {
-                  console.log("Definitely");
-                  showInput(state);
-                }}, {
-                label: "Sort of",
-                onClick: function () {
-                  console.log("Sort of");
-                  showInput(state);
-                }}, {
-                label: "Not Really",
-                onClick: function () {
-                  console.log("Not Really");
-                  showInput(state);
-                }}]
-          }
-        }
-      ]
+            showInput(state);
+          }}, {
+          label: "Sort of",
+          onClick: function () {
+            showInput(state);
+          }}, {
+          label: "Not Really",
+          onClick: function () {
+            showInput(state);
+          }}]
     };
     return state;
   };

@@ -1,4 +1,4 @@
-app.factory("CRGPlayer", ['ImaginePhraseState', function (ImaginePhraseState) {
+app.factory("CRGPlayer", ['ReadingPassageState', function (ReadingPassageState) {
   var service = {
     create: function(game){
       var player = {
@@ -17,7 +17,7 @@ app.factory("CRGPlayer", ['ImaginePhraseState', function (ImaginePhraseState) {
           game.highlightText(indices);
         }
       };
-      player.transitTo(ImaginePhraseState(game));
+      player.transitTo(ReadingPassageState(game));
       return player;
     }
   };
