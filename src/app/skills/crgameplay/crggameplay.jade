@@ -34,8 +34,13 @@
       .text.phrase-selector(on-text-select='game.onSelect($selection.indices)')
         .word(ng-repeat='word in game.passage', ng-class='{"line-break" : word.linebreak, "highlight": word.highlight}', data-word-number='{{$index}}') {{word.text}}
     .transcript
-      label(ng-bind='game.player.state.transcript.text')
-      button(ng-repeat='button in game.player.state.buttons',ng-click='button.onClick()') {{button.label}}
+      .transcript-dialog
+        .transcript-message(ng-bind='game.player.state.transcript.text')
+        ul.buttons
+          li(ng-repeat='button in game.player.state.buttons')
+            button(ng-click='button.onClick()') {{button.label}}
+      .transcript-window
+        img(src='assets/images/transcript-speaker.png')
 
     .user-input(ng-if='game.player.state.showInput')
       textarea(ng-model='game.player.input')
