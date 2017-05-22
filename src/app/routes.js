@@ -14,15 +14,20 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 				url: '/reports',
 				templateUrl: 'assets/templates/reports-template.html'
 			})
-			.state('skills', {
-				url: '/skills',
-				templateUrl: 'assets/templates/skills-template.html'
+			.state('crg', {
+				url: '/crg',
+				templateUrl: 'assets/templates/crg-template.html'
 			})
-			.state('skills.gameplay', {
+			.state('crg.gameplay', {
 				url: '/gameplay',
-				templateUrl: 'assets/templates/skills-gameplay-template.html',
+				templateUrl: 'assets/templates/crg-gameplay-template.html',
         controller: 'CRGameplayController'
 			})
+      .state('crg.editor', {
+        url: '/editor',
+        templateUrl: 'assets/templates/crg-gameplay-template.html',
+        controller: 'CRGameplayController'
+      })
 			.state('vocab', {
 				url: '/vocab',
 				templateUrl: 'assets/templates/vocab-list-template.html',
