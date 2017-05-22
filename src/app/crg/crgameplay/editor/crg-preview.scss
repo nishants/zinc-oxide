@@ -1,0 +1,18 @@
+
+.crg-preview-modal{
+  position: fixed;
+  top     : 0;
+  left    : 0;
+  height  : 100vh;
+  width   : 100vw;
+  .crg-editor-preview-bar{
+    @extend .resize-container;
+    background-color: $crg_dialog_bg;
+    border-bottom   : $very_light_border;
+    button{
+      float: left;
+      margin: $padding;
+      padding: 0px 5*$padding;
+    }
+  }
+}

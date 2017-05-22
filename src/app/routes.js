@@ -25,7 +25,12 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 			})
       .state('crg.editor', {
         url: '/editor',
-        templateUrl: 'assets/templates/crg-gameplay-template.html',
+        templateUrl: 'assets/templates/crg-editor-template.html',
+        controller: 'CRGameplayController'
+      })
+      .state('crg.editor.preview', {
+        url: '/preview',
+        templateUrl: 'assets/templates/crg-preview-template.html',
         controller: 'CRGameplayController'
       })
 			.state('vocab', {
