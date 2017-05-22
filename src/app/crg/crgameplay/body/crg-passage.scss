@@ -23,6 +23,16 @@ $line_height  : $extra_large_font;
     .text{
       @extend .resize-container;
       padding-top: $padding*2;
+      position: relative;
+      .draggable-surface{
+        position: absolute;
+        top: 0;
+        left:0;
+        height: $line_height;
+        line-height: $line_height;
+        padding-right: $word_spacing;
+        background-color: $crgame_highlight_text_color;
+      }
       .word{
         display: inline-block;
         height: $line_height;
