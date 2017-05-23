@@ -28,13 +28,14 @@
       include body/passage
     .transcript
       .transcript-dialog
-        .transcript-message(ng-bind='game.player.state.transcript.text')
+        .transcript-message
+          .typewriter.text(text='game.player.state.transcript.text',typing-speed='35',before-typing='game.player.state._typing = true;',after-typing='game.player.state._typing = false;')
         ul.select-options
           li(ng-repeat='option in game.player.state.options',ng-init='_selected=false', ng-click='_selected = !_selected')
             .check-box.fa.fa-check-square(ng-show='_selected')
             .check-box.fa.fa-square-o(ng-hide='_selected')
             label {{option.label}}
-        ul.buttons
+        ul.buttons(ng-class='{"slide-out": game.player.state._typing}')
           li(ng-repeat='button in game.player.state.buttons')
             button(ng-click='button.onClick()') {{button.label}}
         .user-input(ng-if='game.player.state.showInput')
