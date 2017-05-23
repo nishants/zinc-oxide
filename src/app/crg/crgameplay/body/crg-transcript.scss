@@ -5,6 +5,12 @@ $input_area_height: 180px;
 #crgameplay{
   .body{
     .transcript{
+      button{
+        @include transition(opacity $transition_time $transition_function);
+      }
+      button.focus-out{
+        //opacity: 0;
+      }
       padding: $padding;
       button{
         margin-top: $padding;

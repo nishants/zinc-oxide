@@ -1,4 +1,4 @@
-app.directive("typewriter",[function(){
+app.directive("typewriter",["$timeout", function($timeout){
   return {
     restrict: "C",
     scope: false,
@@ -9,6 +9,18 @@ app.directive("typewriter",[function(){
             speed = parseInt(attrs.typingSpeed) || 100,
             done  = true,
             lastTimeout,
+            beforeTyping = function(){
+              $timeout(function(){
+                done = false;
+                attrs.beforeTyping && scope.$eval(attrs.beforeTyping);
+              });
+            },
+            afterTyping = function(){
+              $timeout(function(){
+                done = true;
+                attrs.afterTyping && scope.$eval(attrs.afterTyping);
+              });
+            },
             clear = function(){
               $e.html('');
             },
@@ -17,13 +29,11 @@ app.directive("typewriter",[function(){
               if(chars.length > 0){
                 $e.append(chars.shift());
                 if(done){
-                  done = false;
-                  attrs.beforeTyping && scope.$eval(attrs.beforeTyping);
+                  beforeTyping();
                 }
               }else{
                 if(!done){
-                  done = true;
-                  attrs.afterTyping && scope.$eval(attrs.afterTyping);
+                  afterTyping();
                 }
               }
               lastTimeout = setTimeout(type, speed);
@@ -31,6 +41,7 @@ app.directive("typewriter",[function(){
         scope.$watch(attrs.text, function(text){
           clear();
           chars = text.split('');
+          clearTimeout(lastTimeout);
           lastTimeout = setTimeout(type, speed);
         });
       }

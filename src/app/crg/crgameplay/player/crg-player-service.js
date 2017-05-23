@@ -5,6 +5,7 @@ app.factory("CRGPlayer", ['ReadingPassageState', function (ReadingPassageState) 
         points: 10,
         sound: true,
         input: '',
+        typing: true,
         transitTo: function(state){
           player.state = state;
           player.setHighlightText(state.highlightPhrase);
