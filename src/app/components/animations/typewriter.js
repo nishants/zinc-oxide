@@ -8,10 +8,12 @@ app.directive("typewriter",[function(){
             $e    = $(element),
             speed = parseInt(attrs.typingSpeed) || 100,
             done  = true,
+            lastTimeout,
             clear = function(){
               $e.html('');
             },
             type = function(){
+              clearTimeout(lastTimeout);
               if(chars.length > 0){
                 $e.append(chars.shift());
                 if(done){
@@ -24,11 +26,12 @@ app.directive("typewriter",[function(){
                   attrs.afterTyping && scope.$eval(attrs.afterTyping);
                 }
               }
+              lastTimeout = setTimeout(type, speed);
             };
         scope.$watch(attrs.text, function(text){
           clear();
           chars = text.split('');
-          setInterval(type, speed)
+          lastTimeout = setTimeout(type, speed);
         });
       }
     }
