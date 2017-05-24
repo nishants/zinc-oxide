@@ -3,6 +3,9 @@ app.controller('ZincVisualizeEditorController', ['$scope', '$timeout', 'CRGEdito
   var defaultTranscript = 'What do you imagine when you read the phrase "<phrase>"?',
       zincVisualizeEditor = {
       list: [],
+      remove: function(index){
+        zincVisualizeEditor.list.splice(index, 1);
+      },
       add: function(){
         var focus = {
               text: "Ships at a distance have every man's wish on board.",
