@@ -1,20 +1,33 @@
 $label_width: 200px;
 
-.crg-skills-form{
-  .skill{
-    .skill-form{
-      padding: $padding;
-      .skill-param{
-        @extend .resize-container;
-        .param-label{
-          width: $label_width;
-          float: left;
-        }
-        .param-input{
-          float: left;
-          width: calc(100% - #{$label_width});
+.crg-editor-form{
+  > ul {
+    @extend .undo-list;
+    >li.skill-group{
+      background-color: $white_shade;
+      border: $very_light_border;
+
+      .skill{
+        margin: $padding*2;
+        border: $very_light_border;
+
+        .skill-form{
+          padding: 2*$padding $padding;
+          border-bottom: $very_light_border;
+          .skill-param{
+            @extend .resize-container;
+            .param-label{
+              width: $label_width;
+              float: left;
+            }
+            .param-input{
+              float: left;
+              width: calc(100% - #{$label_width});
+            }
+          }
         }
       }
     }
   }
+
 }

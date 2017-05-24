@@ -4,7 +4,8 @@ $crg_editor_color: #4990E2;
 $crg_form_bg: $white_shade;
 $crg_editor_bar_bg: $white_shade;
 $editor_button_height: $crg_editor_bar_height - $padding*2;
-#crg{
+
+.crg-editor{
   padding: $padding*2;
   max-width: $editor_passage_max_width;
   margin: auto;
