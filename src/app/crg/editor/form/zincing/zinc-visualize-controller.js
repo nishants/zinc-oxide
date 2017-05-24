@@ -20,6 +20,5 @@ app.controller('ZincVisualizeEditorController', ['$scope', '$timeout', 'CRGEdito
         });
       }
   };
-  zincVisualizeEditor.add();
   $scope.zincVisualizeEditor = zincVisualizeEditor;
 }]);

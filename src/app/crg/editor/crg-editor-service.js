@@ -21,6 +21,7 @@ app.factory("CRGEditorService", [function () {
       selecting: false,
       lastScrollOffset: 0,
       selection: {
+        current : {text: '',indices: []},
         selectingFocus: false,
         selectingPhrase: false,
         focus : {text: '',indices: []},
@@ -33,13 +34,27 @@ app.factory("CRGEditorService", [function () {
           editorService.passageSelector.selection.selectingFocus  = false;
           editorService.passageSelector.selection.selectingPhrase = true;
         },
-        setFocus: function(indices){
-          editorService.passageSelector.selection.focus.indices  = indices;
+        setFocus: function(){
+          editorService.passageSelector.selection.focus  = editorService.passageSelector.selection.getTextSelection();
           editorService.passageSelector.selection.selectPhrase();
         },
-        setPhrase: function(indices){
-          editorService.passageSelector.selection.phrase.indices  = indices;
+        setPhrase: function(){
+          editorService.passageSelector.selection.phrase  = editorService.passageSelector.selection.getTextSelection();
+          editorService.passageSelector.doneSelecting(
+              editorService.passageSelector.selection.focus,
+              editorService.passageSelector.selection.phrase
+          );
         },
+        onTextSelect: function(indices, text){
+          editorService.passageSelector.selection.current.indices = indices;
+          editorService.passageSelector.selection.current.text = text;
+        },
+        getTextSelection: function(){
+          return {
+            indices: editorService.passageSelector.selection.current.indices,
+            text: editorService.passageSelector.selection.current.text
+          };
+        }
       },
       whenDone : function(){},
       reset    : function(){
@@ -59,16 +74,7 @@ app.factory("CRGEditorService", [function () {
         editorService.passageSelector.selection.selectFocus();
       },
 
-      doneSelecting: function () {
-        var focus = {
-              text: "Ships at a distance have every man's wish on board.",
-              indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-            },
-            phrase = {
-              text: "Ships at a distance",
-              indices: [0, 1, 2, 3, 4],
-            };
-
+      doneSelecting: function (focus, phrase) {
         editorService.passageSelector.whenDone({
           focus: focus,
           phrase: phrase
