@@ -21,6 +21,8 @@ app.factory("CRGEditorService", [function () {
       selecting: false,
       lastScrollOffset: 0,
       selection: {
+        selectingFocus: false,
+        selectingPhrase: false,
         focus : {text: '',indices: []},
         phrase: {text: '',indices: []},
       },
@@ -31,12 +33,18 @@ app.factory("CRGEditorService", [function () {
         editorService.passageSelector.whenDone = function(){};
         editorService.passageSelector.selection.focus  = {text: '',indices: []};
         editorService.passageSelector.selection.phrase = {text: '',indices: []};
+        editorService.passageSelector.selection.selectingFocus  = false;
+        editorService.passageSelector.selection.selectingPhrase = false;
       },
       selectFromPassage: function (params) {
         editorService.passageSelector.lastScrollOffset = currentScrollPosition();
         scrollTo(0);
         editorService.passageSelector.selecting = true;
         editorService.passageSelector.whenDone = params.whenDone;
+        editorService.passageSelector.selectFocus();
+      },
+      selectFocus: function(){
+        editorService.passageSelector.selection.selectingFocus  = true;
       },
       doneSelecting: function () {
         var focus = {

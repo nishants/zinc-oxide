@@ -18,11 +18,8 @@ app.controller('ZincVisualizeEditorController', ['$scope', '$timeout', 'CRGEdito
             });
           }
         });
-        $timeout(function(){
-          CRGEditorService.passageSelector.doneSelecting();
-        },3000);
-
       }
   };
+  zincVisualizeEditor.add();
   $scope.zincVisualizeEditor = zincVisualizeEditor;
 }]);
