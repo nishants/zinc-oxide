@@ -1,6 +1,8 @@
 $label_width: 200px;
 
 .crg-editor-form{
+  position: relative;
+
   > ul {
     @extend .undo-list;
     >li.skill-group{

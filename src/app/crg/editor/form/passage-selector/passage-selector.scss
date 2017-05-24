@@ -1,0 +1,26 @@
+.crg-editor-form{
+  .passage-selector{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    @include transform(scale(0));
+    opacity: 0;
+
+    @include transition(opacity $transition_time $transition_function);
+  }
+}
+
+.crg-editor.selecting-from-passage{
+  .editor-bar.crg-bar{
+    opacity: 0;
+  }
+   .crg-editor-form{
+     .passage-selector{
+       @include transform(scale(1));
+       opacity: 1;
+     }
+   }
+ }

@@ -10,6 +10,9 @@ $editor_button_height: $crg_editor_bar_height - $padding*2;
   max-width: $editor_passage_max_width;
   margin: auto;
 
+  .editor-bar{
+    @include transition(opacity $transition_time $transition_function);
+  }
   ul.skills-accordion{
     @extend .undo-list;
     > li{
@@ -24,3 +27,4 @@ $editor_button_height: $crg_editor_bar_height - $padding*2;
 @import 'form/crg-skills-form';
 @import 'form/skill-bar';
 @import 'editor-bar/editor-bar';
+@import 'form/passage-selector/passage-selector';
