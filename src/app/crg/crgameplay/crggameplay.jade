@@ -24,7 +24,7 @@
         button.fa.fa-volume-up
       .exit(ng-click='game.player.exit()')
         button.fa.fa-sign-out
-    .passage
+    .passage(ng-init='passage = game.passage')
       include ../passage/passage
     .transcript
       .transcript-dialog
