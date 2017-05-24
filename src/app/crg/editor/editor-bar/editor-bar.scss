@@ -1,0 +1,20 @@
+#crg{
+  .crg-bar{
+    height: $crg_editor_bar_height;
+    background-color: $crg_editor_bar_bg;
+    button{
+      height: $editor_button_height;
+      line-height: $editor_button_height;
+      float: left;
+      margin: $padding $padding 0px 0px;
+      padding: 0px $padding*4;
+      border-radius: $border_radius;
+      border: $very_light_border;
+      background-color: transparent;
+    }
+    button.primary{
+      background-color: $crg_editor_color;
+      color: $white;
+    }
+  }
+}
