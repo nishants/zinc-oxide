@@ -1,6 +1,15 @@
-.skill-param
-  label.param-label Phrase
-  input.param-input(type='text', disbaled='true', value='Ships at distance')
-.skill-param
-  label.param-label Transcript
-  textarea.param-input
+.zinc-visualize(ng-controller='ZincVisualizeEditorController')
+  .crg-bar
+    label Visualize
+    button(ng-click='zincVisualizeEditor.add()') Add
+  ul.undo-list
+    li.skill-form(ng-repeat='visualize in zincVisualizeEditor.list')
+      .skill-param
+        label.param-label Focus
+        input.param-input(type='text', disbaled='true', ng-model='visualize.focus.text')
+      .skill-param
+        label.param-label Phrase
+        input.param-input(type='text', disbaled='true', ng-model='visualize.phrase.text')
+      .skill-param
+        label.param-label Transcript
+        textarea(ng-model='visualize.transcript.text').param-input
