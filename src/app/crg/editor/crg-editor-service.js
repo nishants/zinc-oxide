@@ -1,5 +1,13 @@
 app.factory("CRGEditorService", [function () {
-  var editorService = {
+  var scrollTime = 500,
+      scrollBackOffset = 200,
+      scrollTo = function(position, then){
+        $("html, body").stop().animate({scrollTop:position}, scrollTime, 'swing', then || function(){});
+      },
+      currentScrollPosition = function(){
+        return $(window).scrollTop();
+      },
+      editorService = {
     zincing: {
       visualize: {
         list: [],
@@ -12,8 +20,21 @@ app.factory("CRGEditorService", [function () {
     passageSelector: {
       selecting: false,
       lastScrollOffset: 0,
+      selection: {
+        focus : {text: '',indices: []},
+        phrase: {text: '',indices: []},
+      },
       whenDone : function(){},
+      reset    : function(){
+        editorService.passageSelector.lastScrollOffset = 0;
+        editorService.passageSelector.selecting = false;
+        editorService.passageSelector.whenDone = function(){};
+        editorService.passageSelector.selection.focus  = {text: '',indices: []};
+        editorService.passageSelector.selection.phrase = {text: '',indices: []};
+      },
       selectFromPassage: function (params) {
+        editorService.passageSelector.lastScrollOffset = currentScrollPosition();
+        scrollTo(0);
         editorService.passageSelector.selecting = true;
         editorService.passageSelector.whenDone = params.whenDone;
       },
@@ -27,11 +48,12 @@ app.factory("CRGEditorService", [function () {
               indices: [0, 1, 2, 3, 4],
             };
 
-        editorService.passageSelector.selecting = false;
         editorService.passageSelector.whenDone({
           focus: focus,
           phrase: phrase
         });
+        scrollTo(editorService.passageSelector.lastScrollOffset + scrollBackOffset);
+        editorService.passageSelector.reset();
       }
     }
   };

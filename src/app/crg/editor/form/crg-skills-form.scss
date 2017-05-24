@@ -2,6 +2,7 @@ $label_width: 200px;
 
 .crg-editor-form{
   position: relative;
+  padding-top: 60vh;
 
   > ul {
     @extend .undo-list;
