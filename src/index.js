@@ -11,3 +11,4 @@ require("./app/game-play/game-play-service");
 require("./app/game-play/game-play-controller");
 require("./app/crg/crgameplay/crgameplay");
 require("./app/crg/editor/crg-editor");
+require("./app/crg/crg");

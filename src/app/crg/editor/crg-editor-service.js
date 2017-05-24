@@ -1,4 +1,4 @@
-app.factory("CRGEditorService", [function () {
+app.factory("CRGEditorService", ["Passage", function (Passage) {
   var scrollTime = 500,
       scrollBackOffset = 200,
       scrollTo = function(position, then){
@@ -8,6 +8,7 @@ app.factory("CRGEditorService", [function () {
         return $(window).scrollTop();
       },
       editorService = {
+        passage: Passage("p1 \n p2"),
     zincing: {
       visualize: {
         list: [],

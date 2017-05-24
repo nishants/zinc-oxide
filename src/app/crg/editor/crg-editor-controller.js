@@ -1,13 +1,10 @@
 app.controller('CRGEditorController', ['$scope', '$timeout', 'CRGEditorService', function ($scope, $timeout, CRGEditorService) {
-
-
-
   var editor  = CRGEditorService;
 
   $scope.onTextSelect = function(indexes){
     $timeout(function(){
       var selectedText = indexes.map(function (index) {
-        return $scope.game.passage[index].text;
+        return editor.passage[index].text;
       }).join(" ")
 
       editor.passageSelector.selection.onTextSelect(indexes, selectedText);
