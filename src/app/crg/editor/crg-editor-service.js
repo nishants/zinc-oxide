@@ -25,6 +25,21 @@ app.factory("CRGEditorService", [function () {
         selectingPhrase: false,
         focus : {text: '',indices: []},
         phrase: {text: '',indices: []},
+        selectFocus: function(){
+          editorService.passageSelector.selection.selectingFocus  = true;
+          editorService.passageSelector.selection.selectingPhrase = false;
+        },
+        selectPhrase: function(){
+          editorService.passageSelector.selection.selectingFocus  = false;
+          editorService.passageSelector.selection.selectingPhrase = true;
+        },
+        setFocus: function(indices){
+          editorService.passageSelector.selection.focus.indices  = indices;
+          editorService.passageSelector.selection.selectPhrase();
+        },
+        setPhrase: function(indices){
+          editorService.passageSelector.selection.phrase.indices  = indices;
+        },
       },
       whenDone : function(){},
       reset    : function(){
@@ -41,11 +56,9 @@ app.factory("CRGEditorService", [function () {
         scrollTo(0);
         editorService.passageSelector.selecting = true;
         editorService.passageSelector.whenDone = params.whenDone;
-        editorService.passageSelector.selectFocus();
+        editorService.passageSelector.selection.selectFocus();
       },
-      selectFocus: function(){
-        editorService.passageSelector.selection.selectingFocus  = true;
-      },
+
       doneSelecting: function () {
         var focus = {
               text: "Ships at a distance have every man's wish on board.",
