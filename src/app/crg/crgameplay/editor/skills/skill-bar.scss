@@ -1,0 +1,20 @@
+#crg{
+  .crg-skills-form{
+    .crg-bar{
+      background-color: $crg_editor_color;
+      label{
+        float: left;
+        display: block;
+        line-height: $crg_editor_bar_height;
+        margin-left: $padding;
+        color: $white;
+        text-transform: capitalize;
+      }
+      button{
+        float: right;
+        color: $white;
+        border-color: $white;
+      }
+    }
+  }
+}

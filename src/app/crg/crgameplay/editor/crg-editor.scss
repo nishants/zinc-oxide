@@ -1,14 +1,15 @@
 $editor_passage_max_width: 700px;
-$editor_bar_height: 60px;
+$crg_editor_bar_height: 60px;
 $crg_editor_color: #4990E2;
+$crg_form_bg: $white_shade;
 $crg_editor_bar_bg: $white_shade;
-$editor_button_height: $editor_bar_height - $padding*2;
+$editor_button_height: $crg_editor_bar_height - $padding*2;
 #crg{
   padding: $padding*2;
   max-width: $editor_passage_max_width;
   margin: auto;
   .crg-bar{
-    height: $editor_bar_height;
+    height: $crg_editor_bar_height;
     background-color: $crg_editor_bar_bg;
     button{
       height: $editor_button_height;
@@ -25,6 +26,16 @@ $editor_button_height: $editor_bar_height - $padding*2;
       color: $white;
     }
   }
+  ul.skills-accordion{
+    @extend .undo-list;
+    > li{
+      background-color: $crg_form_bg;
+      .skill{
+        padding: $padding*2;
+      }
+    }
+  }
 }
 
 @import 'skills/crg-skills-form';
+@import 'skills/skill-bar';
