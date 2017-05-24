@@ -1,59 +1,57 @@
 $word_spacing: $padding/2;
 $line_height  : $extra_large_font;
 
-#crgameplay{
-  .body{
-    .passage{
-      .title{
-        font-size: $sub_giant_font;
-        line-height: $sub_giant_font  + $padding;
-        .from{
-          font-weight: $weight_bold;
-        }
-        :not(.from){
-          color: $light_text;
-          font-weight: $weight_light;
-        }
+#crgameplay, #crg{
+  .passage{
+    .title{
+      font-size: $sub_giant_font;
+      line-height: $sub_giant_font  + $padding;
+      .from{
+        font-weight: $weight_bold;
       }
-      .author{
-        font-size: $normal_font;
-        line-height: $normal_font  + $padding/2;
+      :not(.from){
+        color: $light_text;
+        font-weight: $weight_light;
       }
     }
-    .text{
-      @extend .resize-container;
-      padding-top: $padding*2;
-      position: relative;
-      .draggable-surface{
-        position: absolute;
-        top: 0;
-        left:0;
-        height: $line_height;
-        line-height: $line_height;
-        padding-right: $word_spacing;
-        background-color: $crgame_highlight_text_color;
-      }
-      .word{
-        display: inline-block;
-        height: $line_height;
-        line-height: $line_height;
-        padding-right: $word_spacing;
-      }
-      .word.line-break{
-        display: block;
-        height: $padding;
-        @include userSelect(none);
-      }
-      .word.selected-word{
-        background-color: $crgame_highlight_text_color;
-      }
-      ::selection{
-        background-color: $crgame_highlight_text_color;
-      }
-      .word.highlight{
-        background-color: $crgame_highlight_color;
-        color: white;
-      }
+    .author{
+      font-size: $normal_font;
+      line-height: $normal_font  + $padding/2;
+    }
+  }
+  .text{
+    @extend .resize-container;
+    padding-top: $padding*2;
+    position: relative;
+    .draggable-surface{
+      position: absolute;
+      top: 0;
+      left:0;
+      height: $line_height;
+      line-height: $line_height;
+      padding-right: $word_spacing;
+      background-color: $crgame_highlight_text_color;
+    }
+    .word{
+      display: inline-block;
+      height: $line_height;
+      line-height: $line_height;
+      padding-right: $word_spacing;
+    }
+    .word.line-break{
+      display: block;
+      height: $padding;
+      @include userSelect(none);
+    }
+    .word.selected-word{
+      background-color: $crgame_highlight_text_color;
+    }
+    ::selection{
+      background-color: $crgame_highlight_text_color;
+    }
+    .word.highlight{
+      background-color: $crgame_highlight_color;
+      color: white;
     }
   }
 }
