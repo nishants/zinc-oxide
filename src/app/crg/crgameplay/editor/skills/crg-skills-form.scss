@@ -1,0 +1,20 @@
+$label_width: 200px;
+
+.crg-skills-form{
+  .skill{
+    .skill-form{
+      padding: $padding;
+      .skill-param{
+        @extend .resize-container;
+        .param-label{
+          width: $label_width;
+          float: left;
+        }
+        .param-input{
+          float: left;
+          width: calc(100% - #{$label_width});
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
 $editor_passage_max_width: 700px;
 
 #crg{
-  .editor-bar, .crg-passage{
-    padding: $padding*2;
-    max-width: $editor_passage_max_width;
-    margin: auto;
-  }
+  padding: $padding*2;
+  max-width: $editor_passage_max_width;
+  margin: auto;
 }
+
+@import 'skills/crg-skills-form';
