@@ -7,20 +7,21 @@ app.controller('ZincVisualizeEditorController', ['$scope', '$timeout', 'CRGEdito
         zincVisualizeEditor.list.splice(index, 1);
       },
       add: function(){
-        var focus = {
-              text: "Ships at a distance have every man's wish on board.",
-              indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-            },
-            phrase = {
-              text: "Ships at a distance",
-              indices: [0, 1, 2, 3, 4],
-            };
-
-        zincVisualizeEditor.list.push({
-          focus: focus,
-          phrase: phrase,
-          transcript: {text: defaultTranscript.replace("<phrase>", phrase.text)},
+        CRGEditorService.passageSelector.selectFromPassage({
+          focus: true,
+          phrase: true,
+          whenDone: function(selection){
+            zincVisualizeEditor.list.push({
+              focus: selection.focus,
+              phrase: selection.phrase,
+              transcript: {text: defaultTranscript.replace("<phrase>", selection.phrase.text)},
+            });
+          }
         });
+        $timeout(function(){
+          CRGEditorService.passageSelector.doneSelecting();
+        },3000);
+
       }
   };
   $scope.zincVisualizeEditor = zincVisualizeEditor;

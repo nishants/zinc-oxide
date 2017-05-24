@@ -23,7 +23,7 @@ $line_height  : $extra_large_font;
     @extend .resize-container;
     padding-top: $padding*2;
     position: relative;
-    .draggable-surface{
+    .selection-options{
       position: absolute;
       top: 0;
       left:0;

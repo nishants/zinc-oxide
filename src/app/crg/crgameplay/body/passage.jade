@@ -4,6 +4,6 @@
 .author
   span By&nbsp;
   span.by(ng-bind='game.by')
-.text.phrase-selector.phrase-draggable(on-text-select='onTextSelect($selection.indices)')
-  .draggable-surface Drag Me
+.text.phrase-selector.selection-pointer(on-text-select='onTextSelect($selection.indices)')
+  .selection-options Options
   .word(ng-repeat='word in game.passage', ng-class='{"line-break" : word.linebreak, "highlight": word.highlight}', data-word-number='{{$index}}') {{word.text}}
