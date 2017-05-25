@@ -1,4 +1,4 @@
-app.controller('CRGEditorController', ['$scope', '$timeout', 'CRGEditorService', function ($scope, $timeout, CRGEditorService) {
+app.controller('CRGEditorController', ['$scope', '$timeout', 'CRGEditorService', 'ZincVisualizeEditorService', function ($scope, $timeout, CRGEditorService, ZincVisualizeEditorService) {
   var editor  = CRGEditorService;
 
   $scope.onTextSelect = function(indexes){
@@ -12,4 +12,5 @@ app.controller('CRGEditorController', ['$scope', '$timeout', 'CRGEditorService',
   };
 
   $scope.editor = editor;
+  $scope.zincVisualizeEditor = ZincVisualizeEditorService;
 }]);
