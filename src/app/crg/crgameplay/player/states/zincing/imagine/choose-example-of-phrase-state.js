@@ -6,7 +6,7 @@ app.factory("ChooseExampleOfPhraseState", ["CRGGameService", function (game) {
         {
           label: 'Proceed',
           onClick: function(){
-
+            game.player.toNextScene();
           }
         }],
       options: imagine.usages.map(function(usage){
@@ -15,12 +15,8 @@ app.factory("ChooseExampleOfPhraseState", ["CRGGameService", function (game) {
           correct: usage.correct,
         }
       }),
-      transcript: {text: imagine.transcript || "Which one of following is not a good example of highlighted phrase ?"},
-      highlightPhrase: imagine.phrase,
-      submitInput: function (userInput) {
-        console.log("user imagined : " + userInput);
-        game.player.transitTo({});
-      }
+      transcript: {text: imagine.transcript.text || "Which one of following is not a good example of highlighted phrase ?"},
+      highlightPhrase: imagine.phrase
     };
     return state;
   };

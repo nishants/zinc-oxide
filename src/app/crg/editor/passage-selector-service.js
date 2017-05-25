@@ -36,7 +36,7 @@ app.factory("PassageSelector", ["Passage", function (Passage) {
             );
           },
           onTextSelect: function (indices, text) {
-            passageSelector.selection.current.indices = indices;
+            passageSelector.selection.current.indices = indices.map(function(index){return parseInt(index);});
             passageSelector.selection.current.text = text;
           },
           getTextSelection: function () {

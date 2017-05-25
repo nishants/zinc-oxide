@@ -3,7 +3,7 @@ app.factory("VisualizePhraseState", ['ImaginePhraseState', "CRGGameService", fun
     var state = {
       showInput: true,
       buttons: [],
-      transcript: {text: visualize.transcript || "What do you imagine when you read the highlighted text ?"},
+      transcript: {text: visualize.transcript.text || "What do you imagine when you read the highlighted text ?"},
       highlightPhrase: visualize.phrase,
       submitInput: function (userInput) {
         console.log("user visualized : " + userInput);
