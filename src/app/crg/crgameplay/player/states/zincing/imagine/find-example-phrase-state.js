@@ -6,13 +6,13 @@ app.factory("FindExamplePhraseState", ['NoExampleOfPhraseState', 'ChooseExampleO
             {
               label: 'Yes',
               onClick: function(){
-                imagine.existsInPassage ? function(){alert("Good the text exists")} : game.player.transitTo(NoExampleOfPhraseState(imagine)) ;
+                game.player.transitTo(NoExampleOfPhraseState(imagine))
               }
             },
             {
               label: 'No',
               onClick: function(){
-                imagine.existsInPassage ? function(){alert("Oops ! it does exist in passage")} : game.player.transitTo(ChooseExampleOfPhraseState(imagine)) ;
+                game.player.transitTo(ChooseExampleOfPhraseState(imagine))
               }
             }
           ],

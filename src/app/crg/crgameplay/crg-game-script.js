@@ -28,7 +28,7 @@ app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "Im
 
   ];
   var script = {
-    currentScent : scenes[0],
+    currentScene : scenes[0],
     scenes: scenes,
     nextDefinedScene: function(){
       return script.scenes.filter(function (scene) {
@@ -36,7 +36,7 @@ app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "Im
       })[0];
     },
     next: function(){
-      var currentScene = script.currentScent,
+      var currentScene = script.currentScene,
           hasMoreSteps = currentScene.data.length > 0,
           nextScene    = hasMoreSteps ? currentScene : script.nextDefinedScene();
 
@@ -48,7 +48,7 @@ app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "Im
       })[0];
     },
     load: function(gamePlan){
-      script.currentScent = scenes[0];
+      script.currentScene = scenes[0];
       script.getScene("intro").data          = [{}];
       script.getScene("exit" ).data          = [{}];
       script.getScene("zinc-visualize").data = gamePlan.zincing.visualize;
