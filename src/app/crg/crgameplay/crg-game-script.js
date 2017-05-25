@@ -22,12 +22,17 @@ app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "Im
         data     : []
       }
     ],
+    nextDefinedScene: function(){
+      return script.scenes.filter(function (scene) {
+        return scene.data.length > 0;
+      })[0];
+    },
     next: function(){
       var currentScene = script.scenes[script.index],
           hasMoreSteps = currentScene.data.length > 0,
-          nextScene    = hasMoreSteps ? currentScene : script.scenes[++script.index];
+          nextScene    = hasMoreSteps ? currentScene : script.nextDefinedScene();
 
-      return nextScene.entry(nextScene.data.shift());
+      return nextScene ? nextScene.entry(nextScene.data.shift()): alert("End of game");
     },
     getScene: function(name){
       return script.scenes.filter(function(scene){
