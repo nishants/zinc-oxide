@@ -1,4 +1,4 @@
-app.factory("CRGService", [function () {
+app.factory("CRGGameService", [function () {
   var paragraphs = [
         "Ships at a distance have every man's wish on board. For some they come in with the tide. For others they sail forever on the horizon, never out of sight, never landing until the watcher turn his eyes away in resignation, his dreams mocked to death by time. That is the life of men.",
         "Now, women forget all those things they don't  want to remember, and remember everything they don't want to forget. The dream is the truth. Then they act and do things accordingly."
@@ -15,23 +15,17 @@ app.factory("CRGService", [function () {
         return nodes;
       };
 
-  var service = {
-    create: function(gamePlan){
-      var game = {
-        plan: gamePlan,
-        from: "Their Eyes Were Watching God",
-        by: "Zora Neal Hurston",
-        passage: toSelectableNodes(paragraphs),
-        selectedText: null,
-        player: null,
-        highlightText: function(indices){
-          angular.forEach(game.passage, function(word, index){
-            word.highlight = indices.indexOf(index) > -1;
-          })
-        }
-      };
-      return game;
+  var game = {
+    from: "Their Eyes Were Watching God",
+    by: "Zora Neal Hurston",
+    passage: toSelectableNodes(paragraphs),
+    selectedText: null,
+    player: null,
+    highlightText: function(indices){
+      angular.forEach(game.passage, function(word, index){
+        word.highlight = indices.indexOf(index) > -1;
+      })
     }
   };
-  return service;
+  return game;
 }]);

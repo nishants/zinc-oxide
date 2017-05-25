@@ -1,4 +1,4 @@
-app.factory("CRGPlayer", [function () {
+app.factory("CRGPlayer", ["ReadingPassageState",function (ReadingPassageState) {
   var service = {
     create: function(game, script){
       var player = {

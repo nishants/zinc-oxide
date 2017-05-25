@@ -1,8 +1,9 @@
-app.controller('CRGameplayController', ['$scope', '$timeout', 'CRGPlayer', 'CRGService', 'gamePlan', 'CRGGameScript', function ($scope, $timeout, CRGPlayer, CRGService, gamePlan, CRGGameScript) {
+app.controller('CRGameplayController', ['$scope', '$timeout', 'CRGPlayer', 'CRGGameService', 'gamePlan', 'CRGGameScript', function ($scope, $timeout, CRGPlayer, CRGGameService, gamePlan, CRGGameScript) {
 
   var script  = CRGGameScript(gamePlan),
-      game    = CRGService.create(gamePlan);
+      game    = CRGGameService;
 
+  game.plan = gamePlan;
   game.player = CRGPlayer.create(game, script);
 
   $scope.onTextSelect = function(indexes){
