@@ -3,7 +3,7 @@
     label Visualize
     button(ng-click='zincVisualizeEditor.add()') Add
   ul.undo-list
-    li.skill-form(ng-repeat='visualize in zincVisualizeEditor.list')
+    li.skill-form(ng-repeat='visualize in editor.game.zincing.visualize')
       .skill-param
         label.param-label Focus
         input.param-input(type='text', disbaled='true', ng-model='visualize.focus.text')
