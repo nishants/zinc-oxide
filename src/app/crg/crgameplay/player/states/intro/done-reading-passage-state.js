@@ -6,7 +6,7 @@ app.factory("DoneReadingPassageState", ["EnterMainIdeaState", "CRGGameService", 
 
     var state = {
       showInput: false,
-      highlightPhrase: [],
+      highlightPhrase: {indices: []},
       transcript: {text: "Did the passage make sense ?"},
       buttons: [
         {

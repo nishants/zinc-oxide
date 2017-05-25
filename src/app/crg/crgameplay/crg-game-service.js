@@ -21,9 +21,9 @@ app.factory("CRGGameService", [function () {
     passage: toSelectableNodes(paragraphs),
     selectedText: null,
     player: null,
-    highlightText: function(indices){
+    highlightText: function(phrase){
       angular.forEach(game.passage, function(word, index){
-        word.highlight = indices.indexOf(index) > -1;
+        word.highlight = phrase.indices.indexOf(index) > -1;
       })
     }
   };
