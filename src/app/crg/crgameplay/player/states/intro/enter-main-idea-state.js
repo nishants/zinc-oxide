@@ -7,7 +7,7 @@ app.factory("EnterMainIdeaState", ["VisualizePhraseState", "CRGGameService",func
       transcript: {text: "Describe the main idea in 120 characters or less."},
       submitInput : function(userInput){
         console.log("user says : " + userInput);
-        game.player.transitTo(VisualizePhraseState(game));
+        game.player.toNextScene();
       }
     };
   };

@@ -1,6 +1,6 @@
-app.factory("CRGPlayer", ["ReadingPassageState",function (ReadingPassageState) {
+app.factory("CRGPlayer", ["CRGGameScript",function (CRGGameScript) {
   var service = {
-    create: function(game, script){
+    create: function(game){
       var player = {
         points: 10,
         sound: true,
@@ -16,9 +16,14 @@ app.factory("CRGPlayer", ["ReadingPassageState",function (ReadingPassageState) {
         },
         setHighlightText: function(indices){
           game.highlightText(indices);
+        },
+        toNextScene: function(){
+          player.transitTo(CRGGameScript.next());
+        },
+        start: function(){
+          player.toNextScene();
         }
       };
-      player.transitTo(ReadingPassageState(game));
       return player;
     }
   };

@@ -6,6 +6,7 @@ app.controller('CRGameplayController', ['$scope', '$timeout', 'CRGPlayer', 'CRGG
   script.load(gamePlan);
   game.plan = gamePlan;
   game.player = CRGPlayer.create(game, script);
+  game.player.start();
 
   $scope.onTextSelect = function(indexes){
     $timeout(function(){

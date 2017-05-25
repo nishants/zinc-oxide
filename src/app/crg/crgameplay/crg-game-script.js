@@ -1,4 +1,4 @@
-app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", function (ReadingPassageState, VisualizePhraseState) {
+app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "ImaginePhraseState", function (ReadingPassageState, VisualizePhraseState, ImaginePhraseState) {
 
   var script = {
     index : 0,
@@ -13,6 +13,12 @@ app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", fun
         groupName: "zincing",
         name     : "zinc-visualize",
         entry    : VisualizePhraseState,
+        data     : []
+      },
+      {
+        groupName: "zincing",
+        name     : "zinc-imagine",
+        entry    : ImaginePhraseState,
         data     : []
       }
     ],
@@ -32,6 +38,7 @@ app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", fun
       script.index=0;
       script.getScene("intro").data          = [{}];
       script.getScene("zinc-visualize").data = gamePlan.zincing.visualize;
+      script.getScene("zinc-imagine").data   = gamePlan.zincing.imagine;
     }
   };
   return script;

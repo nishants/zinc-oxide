@@ -1,7 +1,6 @@
 app.factory("ImaginePhraseState", ['FindExamplePhraseState',"CRGGameService", function (FindExamplePhraseState, game) {
-  return function () {
-    var imagine = game.plan.zincing.imagine[0],
-        state   = {
+  return function (imagine) {
+    var state   = {
           showInput       : true,
           buttons         : [],
           transcript      : {text: "List three things you imagine when you read the highlighted phrase."},
