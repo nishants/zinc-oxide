@@ -6,3 +6,4 @@ require('./zincing/imagine/imagine-phrase-state');
 require('./zincing/imagine/find-example-phrase-state');
 require('./zincing/imagine/no-example-of-phrase-state');
 require('./zincing/imagine/choose-example-of-phrase-state');
+require('./exit-game-state');

@@ -1,34 +1,42 @@
-app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "ImaginePhraseState", function (ReadingPassageState, VisualizePhraseState, ImaginePhraseState) {
+app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "ImaginePhraseState", "ExitGameState", function (ReadingPassageState, VisualizePhraseState, ImaginePhraseState, ExitGameState) {
 
+  var scenes = [
+    {
+      groupName: "intro",
+      name: "intro",
+      entry: ReadingPassageState,
+      data: [{}]
+    },
+    {
+      groupName: "zincing",
+      name: "zinc-visualize",
+      entry: VisualizePhraseState,
+      data: []
+    },
+    {
+      groupName: "zincing",
+      name: "zinc-imagine",
+      entry: ImaginePhraseState,
+      data: []
+    },
+    {
+      groupName: "exit",
+      name: "exit",
+      entry: ExitGameState,
+      data: [{}]
+    }
+
+  ];
   var script = {
-    index : 0,
-    scenes: [
-      {
-        groupName: "intro",
-        name     : "intro",
-        entry    : ReadingPassageState,
-        data     : [{}]
-      },
-      {
-        groupName: "zincing",
-        name     : "zinc-visualize",
-        entry    : VisualizePhraseState,
-        data     : []
-      },
-      {
-        groupName: "zincing",
-        name     : "zinc-imagine",
-        entry    : ImaginePhraseState,
-        data     : []
-      }
-    ],
+    currentScent : scenes[0],
+    scenes: scenes,
     nextDefinedScene: function(){
       return script.scenes.filter(function (scene) {
         return scene.data.length > 0;
       })[0];
     },
     next: function(){
-      var currentScene = script.scenes[script.index],
+      var currentScene = script.currentScent,
           hasMoreSteps = currentScene.data.length > 0,
           nextScene    = hasMoreSteps ? currentScene : script.nextDefinedScene();
 
@@ -40,8 +48,9 @@ app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "Im
       })[0];
     },
     load: function(gamePlan){
-      script.index=0;
+      script.currentScent = scenes[0];
       script.getScene("intro").data          = [{}];
+      script.getScene("exit" ).data          = [{}];
       script.getScene("zinc-visualize").data = gamePlan.zincing.visualize;
       script.getScene("zinc-imagine").data   = gamePlan.zincing.imagine;
     }

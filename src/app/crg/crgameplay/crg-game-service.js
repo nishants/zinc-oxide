@@ -25,6 +25,9 @@ app.factory("CRGGameService", [function () {
       angular.forEach(game.passage, function(word, index){
         word.highlight = phrase.indices.indexOf(index) > -1;
       })
+    },
+    exit: function(){
+      window.history.back();
     }
   };
   return game;
