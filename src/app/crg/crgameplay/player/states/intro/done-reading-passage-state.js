@@ -1,5 +1,5 @@
-app.factory("DoneReadingPassageState", ["EnterMainIdeaState", function (EnterMainIdeaState) {
-  return function(game){
+app.factory("DoneReadingPassageState", ["EnterMainIdeaState", "CRGGameService", function (EnterMainIdeaState, game) {
+  return function(){
     var showInput = function(){
       game.player.transitTo(EnterMainIdeaState(game));
     };

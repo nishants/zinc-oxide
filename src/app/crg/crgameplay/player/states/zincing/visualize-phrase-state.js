@@ -1,5 +1,5 @@
-app.factory("VisualizePhraseState", ['ImaginePhraseState', function (ImaginePhraseState) {
-  var VisualizePhraseState = function (game) {
+app.factory("VisualizePhraseState", ['ImaginePhraseState', "CRGGameService", function (ImaginePhraseState, game) {
+  var VisualizePhraseState = function () {
     var visualize = game.plan.zincing.visualize.shift();
     var state = {
       showInput: true,

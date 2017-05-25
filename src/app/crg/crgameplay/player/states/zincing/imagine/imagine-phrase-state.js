@@ -1,5 +1,5 @@
-app.factory("ImaginePhraseState", ['FindExamplePhraseState', function (FindExamplePhraseState) {
-  return function (game) {
+app.factory("ImaginePhraseState", ['FindExamplePhraseState',"CRGGameService", function (FindExamplePhraseState, game) {
+  return function () {
     var imagine = game.plan.zincing.imagine[0],
         state   = {
           showInput       : true,
@@ -7,7 +7,7 @@ app.factory("ImaginePhraseState", ['FindExamplePhraseState', function (FindExamp
           transcript      : {text: "List three things you imagine when you read the highlighted phrase."},
           highlightPhrase : imagine.phrase,
           submitInput: function (userInput) {
-            game.player.transitTo(FindExamplePhraseState(game, imagine));
+            game.player.transitTo(FindExamplePhraseState(imagine));
           }
         };
     return state;

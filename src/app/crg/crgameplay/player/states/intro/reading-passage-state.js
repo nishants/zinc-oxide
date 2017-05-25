@@ -1,5 +1,5 @@
-app.factory("ReadingPassageState", ["DoneReadingPassageState", function (DoneReadingPassageState) {
-  return function(game){
+app.factory("ReadingPassageState", ["DoneReadingPassageState", "CRGGameService", function (DoneReadingPassageState, game) {
+  return function(){
     return {
       showInput: false,
       highlightPhrase: [],

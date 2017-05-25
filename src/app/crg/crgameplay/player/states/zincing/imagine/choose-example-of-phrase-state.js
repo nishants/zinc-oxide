@@ -1,5 +1,5 @@
-app.factory("ChooseExampleOfPhraseState", [function () {
-  return function (game, imagine) {
+app.factory("ChooseExampleOfPhraseState", ["CRGGameService", function (game) {
+  return function (imagine) {
     var state = {
       showInput: false,
       buttons: [
