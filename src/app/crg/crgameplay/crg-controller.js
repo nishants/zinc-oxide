@@ -1,8 +1,9 @@
 app.controller('CRGameplayController', ['$scope', '$timeout', 'CRGPlayer', 'CRGGameService', 'gamePlan', 'CRGGameScript', function ($scope, $timeout, CRGPlayer, CRGGameService, gamePlan, CRGGameScript) {
 
-  var script  = CRGGameScript(gamePlan),
+  var script  = CRGGameScript,
       game    = CRGGameService;
 
+  script.load(gamePlan);
   game.plan = gamePlan;
   game.player = CRGPlayer.create(game, script);
 
