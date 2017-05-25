@@ -11,6 +11,10 @@ app.controller('CRGEditorController', ['$scope', '$timeout', 'CRGEditorService',
     });
   };
 
+  $scope.game = {
+    from: "Their Eyes Were Watching God",
+    by: "Zora Neal Hurston",
+  };
   $scope.editor = editor;
   $scope.zincVisualizeEditor = ZincVisualizeEditorService;
 }]);
