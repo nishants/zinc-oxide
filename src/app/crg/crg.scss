@@ -1,15 +1,7 @@
 $demo_width : 200px;
 $demo_height: 100px;
-#crg{
-  button.demo{
-    padding: 0px;
-    width: $demo_width;
-    height: $demo_height;
-    line-height: $demo_height;
-    float: left;
-    margin: $padding;
-  }
-}
+
 @import 'crgameplay/crgameplay';
 @import 'editor/crg-editor';
 @import 'passage/crg-passage';
+@import 'proto/crg-proto';
