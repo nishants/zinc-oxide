@@ -1,0 +1,9 @@
+$diqus_brand_height: 55px;
+#disqus_thread{
+  padding: $padding*2;
+  background-color: black;
+  overflow: hidden;
+  iframe{
+    @include transform(translateY($diqus_brand_height));
+  }
+}
