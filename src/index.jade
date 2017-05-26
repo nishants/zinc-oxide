@@ -13,5 +13,8 @@ html
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
     script(src='index.js')
     include app/components/google/header
+    script
+      include app/components/disqus/discus.js
 body
   include app/app.jade
+  #disqus_thread
