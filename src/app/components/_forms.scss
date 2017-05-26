@@ -42,6 +42,8 @@ button.outline{
   border-radius: $border_radius;
   a{
     @extend .undo-link;
+    height: 100%;
+    width: 100%;
   }
 }
 

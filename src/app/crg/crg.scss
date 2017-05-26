@@ -1,6 +1,13 @@
+$demo_width : 200px;
+$demo_height: 100px;
 #crg{
-  button.play-game{
-    padding: 0px $padding*4;
+  button.demo{
+    padding: 0px;
+    width: $demo_width;
+    height: $demo_height;
+    line-height: $demo_height;
+    float: left;
+    margin: $padding;
   }
 }
 @import 'crgameplay/crgameplay';
