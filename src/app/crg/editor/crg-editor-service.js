@@ -1,29 +1,20 @@
-app.factory("CRGEditorService", ["Passage", "PassageSelector", "SampleCRGData", function (Passage, PassageSelector, gameData) {
+app.factory("CRGEditorService", ["Passage", "PassageSelector", function (Passage, PassageSelector) {
   var editorService = {
-        game: {
-          zincing: {
-            visualize: [
-              {
-                phrase: {
-                  indices: [0, 1,2,3,4],
-                  text : 'Ships at a distance',
-                },
-                focus: {
-                  indices: [0, 1,2,3,4,5,6,7,8,9],
-                  text :"Ships at a distance have every man's wish on board",
-                },
-                transcript: {
-                  text: 'What do you imagine when you read the text "Ships at a distance"  in first sentence ?'
-                }
-              }
-            ],
-            imagine: []
-          }
+        game: null,
+        setGameToEdit: function(gameData){
+          editorService.game = gameData;
+          editorService.passageSelector =  PassageSelector(Passage(gameData.passage));
         },
         prepareGamePlan : function(){
-          return JSON.parse(JSON.stringify(editorService.game));
+          var gameData = JSON.parse(JSON.stringify(editorService.game));
+          gameData.passge ={
+            from: "from book",
+            by  : "by author",
+            text: "this is the text",
+          };
+          return gameData;
         },
-    passageSelector: PassageSelector(Passage(gameData.passage))
+    passageSelector: null
   };
   return editorService;
 }]);

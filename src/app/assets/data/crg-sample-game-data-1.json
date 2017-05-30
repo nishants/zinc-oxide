@@ -9,12 +9,12 @@
       {
         "phrase": {"indices": [0, 1,2,3,4]},
         "focus": {"indices": [0, 1,2,3,4,5,6,7,8,9]},
-        "transcript": {"text": "What do you imagine when you read the text \"Ships at a distance\"  in first sentence ?"}
+        "transcript": {"text": "What do you imagine when you read \"Ships at a distance\"  in first sentence ?"}
       },
       {"phrase": {"indices": [34,35,36,37,38,39]} ,
         "focus": {"indices": [34,35,36,37,38,39,40,41,42,43]},
 
-        "transcript": {"text": "What do you imagine when you read the text \"looks aways in resignation\"  in first sentence ?"}
+        "transcript": {"text": "What do you imagine when you read \"looks aways in resignation\"  in first sentence ?"}
       }
     ],
     "imagine": [

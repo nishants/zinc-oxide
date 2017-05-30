@@ -23,23 +23,35 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 				templateUrl: 'assets/templates/crg-gameplay-template.html',
         controller: 'CRGameplayController',
         resolve : {
-          gamePlan: ['SampleCRGData', function(SampleCRGData){
-            return SampleCRGData;
+          gamePlan: ['CRGDataService', 'CRGGameService', function(CRGDataService, CRGGameService){
+            return CRGDataService.getGame(1).then(function(gameData){
+              CRGGameService.setPassage(gameData);
+              return gameData;
+            });
           }]
         }
 			})
       .state('crg.editor', {
-        url: '/editor',
+        url: '/editor/:id',
         templateUrl: 'assets/templates/crg-editor-template.html',
-        controller: 'CRGEditorController'
+        controller: 'CRGEditorController',
+        resolve : {
+          gamePlan: ['CRGDataService', 'CRGEditorService', function(CRGDataService, CRGEditorService){
+            return CRGDataService.getGame(1).then(function(gameData){
+              CRGEditorService.setGameToEdit(gameData);
+            });
+          }]
+        }
       })
       .state('crg.editor.preview', {
         url: '/preview',
         templateUrl: 'assets/templates/crg-preview-template.html',
         controller: 'CRGameplayController',
         resolve : {
-          gamePlan: ['CRGEditorService', function(CRGEditorService){
-            return CRGEditorService.prepareGamePlan();
+          gamePlan: ['CRGEditorService', 'CRGGameService', function(CRGEditorService, CRGGameService){
+            var gameData = CRGEditorService.prepareGamePlan();
+            CRGGameService.setPassage(gameData);
+            return gameData;
           }]
         }
 
