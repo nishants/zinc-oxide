@@ -12,5 +12,4 @@ app.controller('CRGEditorController', ['$scope', '$timeout', 'CRGEditorService',
   };
 
   $scope.editor = editor;
-  $scope.zincVisualizeEditor = ZincVisualizeEditorService;
 }]);

@@ -1,5 +1,6 @@
 app.factory("CRGEditorService", ["Passage", "PassageSelector", function (Passage, PassageSelector) {
   var editorService = {
+        sceneEditors: {},
         game: null,
         setGameToEdit: function(gameData){
           editorService.game = gameData;
@@ -14,7 +15,10 @@ app.factory("CRGEditorService", ["Passage", "PassageSelector", function (Passage
           };
           return gameData;
         },
-    passageSelector: null
+        registerSceneEditor: function(name, editor){
+          editorService.sceneEditors[name] = editor;
+        },
+       passageSelector: null
   };
   return editorService;
 }]);

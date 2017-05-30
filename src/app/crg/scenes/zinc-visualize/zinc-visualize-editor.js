@@ -20,5 +20,6 @@ app.service("ZincVisualizeEditorService", ['$timeout', 'CRGEditorService', funct
           });
         }
       };
+  CRGEditorService.registerSceneEditor("zincVisualize", zincVisualizeEditor);
   return zincVisualizeEditor;
 }]);
