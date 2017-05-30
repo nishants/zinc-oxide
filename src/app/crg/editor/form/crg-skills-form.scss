@@ -18,13 +18,21 @@ $label_width: 200px;
           padding: 2*$padding $padding;
           border-bottom: $very_light_border;
           .skill-param{
+            margin-bottom: $padding;
+            line-height: $extra_large_font;
             @extend .resize-container;
+            .param-label, .param-input{
+              padding: $padding;
+            }
             .param-label{
               width: $label_width;
               float: left;
+              text-align: right;
+              padding-right: $padding*2;
             }
             .param-input{
               float: left;
+              border: $very_light_border;
               width: calc(100% - #{$label_width});
             }
           }
