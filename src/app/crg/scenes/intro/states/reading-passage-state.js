@@ -3,6 +3,7 @@ app.factory("ReadingPassageState", ["DoneReadingPassageState", "CRGGameService",
     return {
       showInput: false,
       highlightPhrase: {indices: []},
+      focusPhrase    : {indices: []},
       transcript: {text: "Before Attempting any skills, read the passage to the left."},
       buttons: [
         {

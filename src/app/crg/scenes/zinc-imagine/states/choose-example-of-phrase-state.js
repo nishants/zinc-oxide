@@ -16,7 +16,8 @@ app.factory("ChooseExampleOfPhraseState", ["CRGGameService", function (game) {
         }
       }),
       transcript: {text: imagine.transcript.text || "Which one of following is not a good example of highlighted phrase ?"},
-      highlightPhrase: imagine.phrase
+      highlightPhrase: imagine.phrase,
+      focusPhrase    : {indices: []},
     };
     return state;
   };

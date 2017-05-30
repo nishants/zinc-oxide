@@ -11,6 +11,7 @@ app.factory("NoExampleOfPhraseState", ['ChooseExampleOfPhraseState',"CRGGameServ
         }],
       transcript: {text: "Stop trying too hard. There was no example."},
       highlightPhrase: imagine.phrase,
+      focusPhrase    : {indices: []},
       submitInput: function (userInput) {
         game.player.transitTo({});
       }

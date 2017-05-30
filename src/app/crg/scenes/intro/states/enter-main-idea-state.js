@@ -4,6 +4,7 @@ app.factory("EnterMainIdeaState", ["VisualizePhraseState", "CRGGameService",func
       showInput   : true,
       buttons     : [],
       highlightPhrase: {indices: []},
+      focusPhrase    : {indices: []},
       transcript: {text: "Describe the main idea in 120 characters or less."},
       submitInput : function(userInput){
         console.log("user says : " + userInput);

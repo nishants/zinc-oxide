@@ -7,7 +7,8 @@ app.factory("ExitGameState", ["CRGGameService", function (game) {
         onClick: game.exit,
       }],
       transcript: {text: "End of game."},
-      highlightPhrase: {indices: []}
+      highlightPhrase: {indices: []},
+      focusPhrase    : {indices: []},
     };
 
     return state;
