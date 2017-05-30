@@ -14,6 +14,7 @@ app.service("ZincImagineEditorService", ['$timeout', 'CRGEditorService', functio
               CRGEditorService.game.zincing.imagine.push({
                 focus: selection.focus,
                 phrase: selection.phrase,
+                usages: [],
                 transcript: {text: defaultTranscript.replace("<phrase>", selection.phrase.text)},
               });
             }

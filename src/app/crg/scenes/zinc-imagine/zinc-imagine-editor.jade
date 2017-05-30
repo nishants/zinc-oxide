@@ -13,6 +13,14 @@
       .skill-param
         label.param-label Transcript
         textarea(ng-model='imagine.transcript.text').param-input
+      .skill-param
+        label.param-label Correct Usage
+        .param-input
+          .input-options(ng-repeat='usage in imagine.usages')
+            input.correct(type='checkbox', ng-model='usage.correct')
+            input.usage-label(ng-model='usage.label')
+          button(ng-click='imagine.usages.push({label: "", correct: false})') Add Usage
 
-      button(ng-click='editor.game.zincing.imagine.splice($index,1)').remove Remove
-      button(ng-click='').remove Preview
+      .scene-options
+        button(ng-click='').remove Preview
+        button(ng-click='editor.game.zincing.imagine.splice($index,1)').remove Remove

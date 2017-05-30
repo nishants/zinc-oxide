@@ -17,6 +17,7 @@ $label_width: 200px;
         .skill-form{
           padding: 2*$padding $padding;
           border-bottom: $very_light_border;
+
           .skill-param{
             margin-bottom: $padding;
             line-height: $extra_large_font;
@@ -33,7 +34,32 @@ $label_width: 200px;
             .param-input{
               float: left;
               border: $very_light_border;
+              border-radius: $border_radius;
               width: calc(100% - #{$label_width});
+              .input-options{
+                $checkbox_width: 20px;
+                @extend .resize-container;
+                margin-bottom: $padding;
+
+                input{
+                  float: left;
+                  margin-right: $padding;
+                  display: inline-block;
+                }
+                input.correct{
+                  width: $checkbox_width;
+                }
+                input.usage-label{
+                  width: calc(100% - #{$checkbox_width + $padding*2});
+                }
+              }
+            }
+
+          }
+          .scene-options{
+            @extend .resize-container;
+            button{
+              float: right;
             }
           }
         }
