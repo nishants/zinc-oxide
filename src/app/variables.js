@@ -24,15 +24,19 @@ app.value("SampleCRGData", {
     visualize: [
       {
         phrase: {indices: [0, 1,2,3,4]},
+        focus: {indices: [0, 1,2,3,4,5,6,7,8,9]},
         transcript: {text: 'What do you imagine when you read the text "Ships at a distance"  in first sentence ?'}
       },
       {phrase: {indices: [34,35,36,37,38,39]} ,
+        focus: {indices: [34,35,36,37,38,39,40,41,42,43]},
+
         transcript: {text: 'What do you imagine when you read the text "looks aways in resignation"  in first sentence ?'}
       },
     ],
     imagine: [
       {
         phrase: {indices: [57,58,59,60,61,62,63,64,65]},
+        focus: {indices: [57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76]},
         existsInPassage: false,
         transcript: {text: 'Which one of following is not a good example of "all those things they don\'t want to remember" ?'},
         usages: [

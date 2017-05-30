@@ -5,7 +5,7 @@ app.factory("VisualizePhraseState", ['ImaginePhraseState', "CRGGameService", fun
       buttons: [],
       transcript: {text: visualize.transcript.text || "What do you imagine when you read the highlighted text ?"},
       highlightPhrase: visualize.phrase,
-      focusPhrase    : {indices: []},
+      focusPhrase    : visualize.focus,
       submitInput: function (userInput) {
         console.log("user visualized : " + userInput);
         game.player.toNextScene();

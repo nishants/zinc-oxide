@@ -18,7 +18,7 @@ app.factory("FindExamplePhraseState", ['NoExampleOfPhraseState', 'ChooseExampleO
           ],
           transcript: {text: "Well done! \n Lets try something more challenging now. \n Does the author give any specific examples of highlighted phrase"},
           highlightPhrase: imagine.phrase,
-          focusPhrase    : {indices: []},
+          focusPhrase    : imagine.focus,
           submitInput: function (userInput) {
             console.log("user imagined : " + userInput);
             game.player.transitTo({});

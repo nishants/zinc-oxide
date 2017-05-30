@@ -9,7 +9,7 @@ app.factory("CRGPlayer", ["CRGGameScript",function (CRGGameScript) {
         transitTo: function(state){
           player.state = state;
           player.setHighlightText(state.highlightPhrase);
-          player.setFocusText(state.highlightPhrase);
+          player.setFocusText(state.focusPhrase);
         },
         state: null,
         exit: function () {

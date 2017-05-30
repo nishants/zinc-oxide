@@ -4,7 +4,7 @@
 .author
   span By&nbsp;
   span.by(ng-bind='passage.by')
-.text.phrase-selector.selection-pointer(on-text-select='onTextSelect($selection.indices)', ng-class='{"focusing" : player.state.focusPhrase.length || editor.passageSelector.selection.focus.indices.length}')
+.text.phrase-selector.selection-pointer(on-text-select='onTextSelect($selection.indices)', ng-class='{"focusing" : game.player.state.focusPhrase.indices.length || editor.passageSelector.selection.focus.indices.length}')
   .selection-options
     .passage-selection
       button.selectFocus(ng-click='editor.passageSelector.selection.setFocus($selection.indices)', ng-show='editor.passageSelector.selection.selectingFocus') Set Focus
