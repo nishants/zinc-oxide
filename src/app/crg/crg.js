@@ -1,1 +1,1 @@
-require("./passage/passage");
+require("./components/passage/passage");
