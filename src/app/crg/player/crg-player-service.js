@@ -10,8 +10,9 @@ app.service("CRGPlayer", ["CRGGameScript", "Passage",function (CRGGameScript, Pa
       window.history.back();
     },
     load: function(gameData){
-      CRGGameScript.load(gameData);
       player.passage = Passage(gameData.passage);
+      CRGGameScript.load(gameData);
+      player.start();
     },
     transitTo: function(state){
       player.state = state;
