@@ -11,7 +11,7 @@ app.controller('CRGameplayController', ['$scope', '$timeout', 'CRGPlayer', 'CRGG
   $scope.onTextSelect = function(indexes){
     $timeout(function(){
       game.selectedText = indexes.map(function (index) {
-        return game.passage[index].text;
+        return game.passage.words[index].text;
       }).join(" ");
     });
   };

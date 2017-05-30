@@ -23,8 +23,8 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 				templateUrl: 'assets/templates/crg-gameplay-template.html',
         controller: 'CRGameplayController',
         resolve : {
-          gamePlan: ['SampleCRGGamePlan', function(SampleCRGGamePlan){
-            return SampleCRGGamePlan;
+          gamePlan: ['SampleCRGData', function(SampleCRGData){
+            return SampleCRGData;
           }]
         }
 			})

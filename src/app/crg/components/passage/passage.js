@@ -11,7 +11,11 @@ app.factory("Passage", [function () {
         return nodes;
       };
 
-  return function(text){
-    return toSelectableNodes(text.split("\n"));
+  return function(passage){
+    return {
+      from  : passage.from,
+      by    : passage.by,
+      words : toSelectableNodes(passage.text.split("\n"))
+    };
   };
 }]);
