@@ -1,6 +1,6 @@
 app.factory("CRGEditorService", ["Passage", "PassageSelector", function (Passage, PassageSelector) {
   var editorService = {
-        passage: Passage("p1 \n p2"),
+        passage: Passage("Ships at a distance have every man's wish on board. For some they come in with the tide. For others they sail forever on the horizon, never out of sight, never landing until the watcher turn his eyes away in resignation, his dreams mocked to death by time. That is the life of men. \n Now, women forget all those things they don't  want to remember, and remember everything they don't want to forget. The dream is the truth. Then they act and do things accordingly."),
         game: {
           zincing: {
             visualize: [

@@ -9,4 +9,4 @@
     .passage-selection
       button.selectFocus(ng-click='editor.passageSelector.selection.setFocus($selection.indices)', ng-show='editor.passageSelector.selection.selectingFocus') Set Focus
       button.selectPhrase(ng-click='editor.passageSelector.selection.setPhrase($selection.indices)',ng-show='editor.passageSelector.selection.selectingPhrase') Set Phrase
-  .word(ng-repeat='word in passage', ng-class='{"line-break" : word.linebreak, "highlight": word.highlight}', data-word-number='{{$index}}') {{word.text}}
+  .word(ng-repeat='word in passage', ng-class='{"line-break" : word.linebreak, "highlight": word.highlight, "focus": word.focus}', data-word-number='{{$index}}') {{word.text}}
