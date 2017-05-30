@@ -1,4 +1,5 @@
 require('./zinc-visualize/zinc-visualize-editor');
+require('./zinc-imagine/zinc-imagine-editor');
 
 require('./intro/states/reading-passage-state');
 require('./intro/states/done-reading-passage-state');

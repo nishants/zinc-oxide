@@ -1,4 +1,4 @@
-app.factory("CRGDataService", ["Passage", "$http",function (Passage, $http) {
+app.factory("CRGDataService", ["$http",function ($http) {
   return {
     getGame: function(id){
       var url = "/assets/data/crg-sample-game-data-<id>.json".replace("<id>", id);

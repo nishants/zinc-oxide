@@ -1,0 +1,18 @@
+.skill.zinc-imagine
+  .crg-bar
+    label Imagine
+    button(ng-click='editor.sceneEditors.zincImagine.add()') Add
+  ul.undo-list
+    li.skill-form(ng-repeat='imagine in editor.game.zincing.imagine')
+      .skill-param
+        label.param-label Focus
+        input.param-input(type='text', disbaled='true', ng-model='imagine.focus.text')
+      .skill-param
+        label.param-label Phrase
+        input.param-input(type='text', disbaled='true', ng-model='imagine.phrase.text')
+      .skill-param
+        label.param-label Transcript
+        textarea(ng-model='imagine.transcript.text').param-input
+
+      button(ng-click='editor.game.zincing.imagine.splice($index,1)').remove Remove
+      button(ng-click='').remove Preview
