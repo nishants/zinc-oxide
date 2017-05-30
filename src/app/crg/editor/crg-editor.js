@@ -1,4 +1,4 @@
 require('./crg-editor-controller');
 require('./crg-editor-service');
-require('./form/zincing/zinc-visualize-editor-service');
+require('../scenes/zinc-visualize/zinc-visualize-editor');
 require('./passage-selector-service');
