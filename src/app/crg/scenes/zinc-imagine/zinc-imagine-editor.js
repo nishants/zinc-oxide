@@ -1,17 +1,17 @@
 app.service("ZincImagineEditorService", ['$timeout', 'CRGEditorService', function ($timeout, CRGEditorService) {
 
-  var defaultTranscript = 'What do you visualize when you read the phrase "<phrase>"?',
-      zincVisualizeEditor = {
+  var defaultTranscript = 'List three things you imagine when you read the highlighted phrase : <phrase>',
+      zincImagineEditor = {
         list: [],
         remove: function(index){
-          zincVisualizeEditor.list.splice(index, 1);
+          zincImagineEditor.list.splice(index, 1);
         },
         add: function(){
           CRGEditorService.passageSelector.selectFromPassage({
-            focus: true,
+            focus: false,
             phrase: true,
             whenDone: function(selection){
-              CRGEditorService.game.zincing.visualize.push({
+              CRGEditorService.game.zincing.imagine.push({
                 focus: selection.focus,
                 phrase: selection.phrase,
                 transcript: {text: defaultTranscript.replace("<phrase>", selection.phrase.text)},
@@ -20,6 +20,5 @@ app.service("ZincImagineEditorService", ['$timeout', 'CRGEditorService', functio
           });
         }
       };
-  CRGEditorService.registerSceneEditor("zincImagine", zincVisualizeEditor);
-  return zincVisualizeEditor;
+  return zincImagineEditor;
 }]);

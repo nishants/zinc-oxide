@@ -1,7 +1,11 @@
 app.factory("CRGEditorService", ["Passage", "PassageSelector", function (Passage, PassageSelector) {
   var editorService = {
-        sceneEditors: {},
-        game: null,
+        game: {
+          zincing: {
+            imagine : [],
+            visualize : [],
+          }
+        },
         setGameToEdit: function(gameData){
           editorService.game = gameData;
           editorService.passageSelector =  PassageSelector(Passage(gameData.passage));
@@ -14,9 +18,6 @@ app.factory("CRGEditorService", ["Passage", "PassageSelector", function (Passage
             text: "this is the text",
           };
           return gameData;
-        },
-        registerSceneEditor: function(name, editor){
-          editorService.sceneEditors[name] = editor;
         },
        passageSelector: null
   };

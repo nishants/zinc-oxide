@@ -1,3 +1,4 @@
+require('./scene-editors');
 require('./zinc-visualize/zinc-visualize-editor');
 require('./zinc-imagine/zinc-imagine-editor');
 
