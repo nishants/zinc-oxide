@@ -6,6 +6,9 @@ app.factory("PassageSelector", ["passageSelectorHeadings", function (passageSele
       },
       currentScrollPosition = function(){
         return $(window).scrollTop();
+      },
+      resetSelection = function(){
+        window.getSelection().empty();
       };
   return function(passage){
     var passageSelector = {
@@ -27,6 +30,7 @@ app.factory("PassageSelector", ["passageSelectorHeadings", function (passageSele
           passageSelector.selection.selectingFocus = false;
           passageSelector.selection.selectingPhrase = true;
           passageSelector.heading = passageSelectorHeadings.highlight;
+          resetSelection();
         },
         setFocus: function () {
           passageSelector.selection.focus = passageSelector.selection.getTextSelection();
@@ -68,6 +72,7 @@ app.factory("PassageSelector", ["passageSelectorHeadings", function (passageSele
           word.focus = false;
           word.highlight = false;
         });
+        resetSelection();
       },
       selectFromPassage: function (params) {
         passageSelector.lastScrollOffset = currentScrollPosition();
