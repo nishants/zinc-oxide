@@ -9,6 +9,7 @@ app.factory("CRGPlayer", ["CRGGameScript",function (CRGGameScript) {
         transitTo: function(state){
           player.state = state;
           player.setHighlightText(state.highlightPhrase);
+          player.setFocusText(state.highlightPhrase);
         },
         state: null,
         exit: function () {
@@ -16,6 +17,9 @@ app.factory("CRGPlayer", ["CRGGameScript",function (CRGGameScript) {
         },
         setHighlightText: function(indices){
           game.highlightText(indices);
+        },
+        setFocusText: function(indices){
+          game.setFocusText(indices);
         },
         toNextScene: function(){
           player.transitTo(CRGGameScript.next());

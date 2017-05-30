@@ -1,5 +1,6 @@
 $word_spacing: $padding/2;
 $line_height  : $extra_large_font;
+$focus_out_opacity: 0.1;
 
 #crgameplay, #crg{
   .passage{
@@ -52,6 +53,12 @@ $line_height  : $extra_large_font;
     .word.highlight{
       background-color: $crgame_highlight_color;
       color: white;
+    }
+  }
+  .text.focusing{
+    .word:not(.focus){
+      @include userSelect(none);
+      opacity: $focus_out_opacity;
     }
   }
 }

@@ -1,6 +1,5 @@
 app.factory("CRGEditorService", ["Passage", "PassageSelector", "SampleCRGData", function (Passage, PassageSelector, gameData) {
   var editorService = {
-        passage: Passage(gameData.passage),
         game: {
           zincing: {
             visualize: [
@@ -24,7 +23,7 @@ app.factory("CRGEditorService", ["Passage", "PassageSelector", "SampleCRGData", 
         prepareGamePlan : function(){
           return JSON.parse(JSON.stringify(editorService.game));
         },
-    passageSelector: PassageSelector
+    passageSelector: PassageSelector(Passage(gameData.passage))
   };
   return editorService;
 }]);

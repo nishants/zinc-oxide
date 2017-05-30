@@ -2,6 +2,6 @@
   .editor-bar.crg-bar
     include editor-bar/editor-bar
   .crg-passage
-    .passage(ng-init='passage = editor.passage')
+    .passage(ng-init='passage = editor.passageSelector.passage')
       include ../components/passage/passage
   include form/crg-editor-form

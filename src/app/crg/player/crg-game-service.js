@@ -3,6 +3,11 @@ app.factory("CRGGameService", ["Passage", "SampleCRGData",function (Passage, gam
     passage: Passage(gameData.passage),
     selectedText: null,
     player: null,
+    setFocusText: function(phrase){
+      angular.forEach(game.passage.words, function(word, index){
+        word.focus = phrase.indices.indexOf(index) > -1;
+      })
+    },
     highlightText: function(phrase){
       angular.forEach(game.passage.words, function(word, index){
         word.highlight = phrase.indices.indexOf(index) > -1;
