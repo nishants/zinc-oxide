@@ -24,7 +24,7 @@
         button.fa.fa-volume-up
       .exit(ng-click='game.player.exit()')
         button.fa.fa-sign-out
-    .passage(ng-init='passage = game.passage')
+    .passage(ng-init='passage = game.player.passage')
       include ../components/passage/passage
     .transcript
       .transcript-dialog
@@ -43,4 +43,4 @@
           button.button-outline.submit(ng-class='{"focus-out": game.player.typing}',ng-click='game.player.state.submitInput(game.player.input)') Submit
       .transcript-window
         img(src='assets/images/transcript-speaker.png')
-h1(ng-bind='game.selectedText')
+h1(ng-bind='player.selectedText')

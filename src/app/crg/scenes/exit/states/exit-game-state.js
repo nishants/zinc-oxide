@@ -1,10 +1,12 @@
-app.factory("ExitGameState", ["CRGGameService", function (game) {
+app.factory("ExitGameState", [function () {
   return function () {
     var state = {
       showInput: false,
       buttons: [{
         label: "Exit",
-        onClick: game.exit,
+        onClick: function(){
+          window.history.back();
+        },
       }],
       transcript: {text: "End of game."},
       highlightPhrase: {indices: []},

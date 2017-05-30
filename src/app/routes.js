@@ -23,9 +23,9 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 				templateUrl: 'assets/templates/crg-gameplay-template.html',
         controller: 'CRGameplayController',
         resolve : {
-          gamePlan: ['CRGDataService', 'CRGGameService', function(CRGDataService, CRGGameService){
+          gamePlan: ['CRGDataService', 'CRGPlayer', function(CRGDataService, CRGPlayer){
             return CRGDataService.getGame(1).then(function(gameData){
-              CRGGameService.setPassage(gameData);
+              CRGPlayer.load(gameData);
               return gameData;
             });
           }]
@@ -48,9 +48,9 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
         templateUrl: 'assets/templates/crg-preview-template.html',
         controller: 'CRGameplayController',
         resolve : {
-          gamePlan: ['CRGEditorService', 'CRGGameService', function(CRGEditorService, CRGGameService){
+          gamePlan: ['CRGEditorService', 'CRGPlayer', function(CRGEditorService, CRGPlayer){
             var gameData = CRGEditorService.prepareGamePlan();
-            CRGGameService.setPassage(gameData);
+            CRGPlayer.load(gameData);
             return gameData;
           }]
         }

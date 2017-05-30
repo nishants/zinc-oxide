@@ -1,17 +1,15 @@
-app.controller('CRGameplayController', ['$scope', '$timeout', 'CRGPlayer', 'CRGGameService', 'gamePlan', 'CRGGameScript', function ($scope, $timeout, CRGPlayer, CRGGameService, gamePlan, CRGGameScript) {
+app.controller('CRGameplayController', ['$scope', '$timeout', 'CRGPlayer', 'CRGGameService', 'gamePlan', function ($scope, $timeout, CRGPlayer, CRGGameService, gamePlan) {
 
-  var script  = CRGGameScript,
-      game    = CRGGameService;
+  var game    = CRGGameService;
 
-  script.load(gamePlan);
   game.plan = gamePlan;
-  game.player = CRGPlayer.create(game, script);
+  game.player = CRGPlayer;
   game.player.start();
 
   $scope.onTextSelect = function(indexes){
     $timeout(function(){
       game.selectedText = indexes.map(function (index) {
-        return game.passage.words[index].text;
+        return game.player.passage.words[index].text;
       }).join(" ");
     });
   };
