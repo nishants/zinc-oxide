@@ -1,3 +1,9 @@
-button.primary Publish
-button
-  a(ui-sref='crg.editor.preview') Preview
+.actions
+  button.primary Publish
+  button
+    a(ui-sref='crg.editor.preview') Preview
+
+.selection-heading
+  .heading(ng-bind='editor.passageSelector.heading.label')
+  .help
+    .tooltip(ng-bind='editor.passageSelector.heading.description')

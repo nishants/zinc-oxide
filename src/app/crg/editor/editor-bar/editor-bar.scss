@@ -16,5 +16,10 @@
       background-color: $crg_editor_color;
       color: $white;
     }
+    .selection-heading{
+      display: none;
+    }
   }
 }
+
+@import 'editor-bar.state';

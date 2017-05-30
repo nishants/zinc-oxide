@@ -1,4 +1,4 @@
-app.factory("PassageSelector", ["Passage", function (Passage) {
+app.factory("PassageSelector", ["passageSelectorHeadings", function (passageSelectorHeadings) {
   var scrollTime = 500,
       scrollBackOffset = 200,
       scrollTo = function(position, then){
@@ -19,10 +19,12 @@ app.factory("PassageSelector", ["Passage", function (Passage) {
           selectFocus: function () {
             passageSelector.selection.selectingFocus = true;
             passageSelector.selection.selectingPhrase = false;
+            passageSelector.heading = passageSelectorHeadings.focus;
           },
           selectPhrase: function () {
             passageSelector.selection.selectingFocus = false;
             passageSelector.selection.selectingPhrase = true;
+            passageSelector.heading = passageSelectorHeadings.highlight;
           },
           setFocus: function () {
             passageSelector.selection.focus = passageSelector.selection.getTextSelection();
@@ -51,12 +53,12 @@ app.factory("PassageSelector", ["Passage", function (Passage) {
         reset: function () {
           passageSelector.lastScrollOffset = 0;
           passageSelector.selecting = false;
-          passageSelector.whenDone = function () {
-          };
+          passageSelector.whenDone = function () {};
           passageSelector.selection.focus = {text: '', indices: []};
           passageSelector.selection.phrase = {text: '', indices: []};
           passageSelector.selection.selectingFocus = false;
           passageSelector.selection.selectingPhrase = false;
+          passageSelector.heading = null;
         },
         selectFromPassage: function (params) {
           passageSelector.lastScrollOffset = currentScrollPosition();
