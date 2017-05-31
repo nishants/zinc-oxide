@@ -6,6 +6,8 @@
   span.by(ng-bind='passage.by')
 .text.phrase-selector.selection-pointer(on-text-select='onTextSelect($selection.indices)', ng-class='{"focusing" : game.player.state.focusPhrase.indices.length || editor.passageSelector.selection.focus.indices.length}')
   .selection-options
+    .close-enough-selection(ng-show='game.player.state.textSelectedIsClose')
+      label Almost there. You need to select complete phrase
     .passage-selection
       button.selectFocus(ng-click='editor.passageSelector.selection.setFocus($selection.indices)', ng-show='editor.passageSelector.selection.selectingFocus') Set Focus
       button.selectPhrase(ng-click='editor.passageSelector.selection.setPhrase($selection.indices)',ng-show='editor.passageSelector.selection.selectingPhrase') Set Phrase

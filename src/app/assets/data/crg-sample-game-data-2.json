@@ -10,7 +10,7 @@
         "transcript" : {"text": null},
         "keyImages": [
           {
-            "phrase": {"indices": [16,17,18,19,20], "text": "His limbs were in proportion"}
+            "phrase": {"indices": [27,28,29,30, 31], "text": "His limbs were in proportion"}
           },
           {
             "phrase": {"indices": [35,36,37,38], "text": "his features as beautiful"}

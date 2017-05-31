@@ -1,5 +1,5 @@
 require('./crg-game-service');
-require('./crg-controller');
+require('./crg-game-controller');
 require('./phrase-selector');
 require('./selection-pointer');
 require('./crg-player-service');
