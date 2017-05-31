@@ -1,13 +1,16 @@
 ui-view
-  .crg-options
-    button.demo.outline
-      a(ui-sref='crg.gameplay') Play Sample Game
 
-    button.demo.outline
-      a(ui-sref='crg.editor') Edit Sample Game
+  h3 Sample Passages
+  ul.crg-options
+    li
+      label From their eyes were watching Gods
+      a(ui-sref='crg.gameplay({id: 1})') Play
+      a(ui-sref='crg.editor({id: 1})') Edit
 
-    button.demo.outline
-      a(ui-sref='crg.editor.new') Create New Game
+    li
+      label Frankenstein
+      a(ui-sref='crg.gameplay({id: 2})') Play
+      a(ui-sref='crg.editor({id: 2})') Edit
 
   .about-crg
     include ../../crg/proto/writeup

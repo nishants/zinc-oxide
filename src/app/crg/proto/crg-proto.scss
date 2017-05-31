@@ -1,12 +1,13 @@
 .crg-options{
   @extend .resize-container;
-  button.demo{
-    padding: 0px;
-    width: $demo_width;
-    height: $demo_height;
-    line-height: $demo_height;
-    float: left;
-    margin: $padding;
+
+  > li {
+    padding-left: $padding;
+    clear: both;
+    padding-bottom: $padding;
+    label, a{
+      padding-right: $padding;
+    }
   }
 }
 

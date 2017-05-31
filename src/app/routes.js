@@ -19,12 +19,12 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
 				templateUrl: 'assets/templates/crg-template.html'
 			})
 			.state('crg.gameplay', {
-				url: '/gameplay',
+				url: '/play/:id',
 				templateUrl: 'assets/templates/crg-gameplay-template.html',
         controller: 'CRGameplayController',
         resolve : {
-          gamePlan: ['CRGDataService', 'CRGPlayer', function(CRGDataService, CRGPlayer){
-            return CRGDataService.getGame(1).then(function(gameData){
+          gamePlan: ['CRGDataService', 'CRGPlayer', '$stateParams', function(CRGDataService, CRGPlayer, $stateParams){
+            return CRGDataService.getGame($stateParams.id).then(function(gameData){
               CRGPlayer.load(gameData);
               return gameData;
             });
@@ -36,8 +36,8 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
         templateUrl: 'assets/templates/crg-editor-template.html',
         controller: 'CRGEditorController',
         resolve : {
-          gamePlan: ['CRGDataService', 'CRGEditorService', function(CRGDataService, CRGEditorService){
-            return CRGDataService.getGame(1).then(function(gameData){
+          gamePlan: ['CRGDataService', 'CRGEditorService', '$stateParams', function(CRGDataService, CRGEditorService, $stateParams){
+            return CRGDataService.getGame($stateParams.id).then(function(gameData){
               CRGEditorService.setGameToEdit(gameData);
             });
           }]
