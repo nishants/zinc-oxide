@@ -32,6 +32,7 @@ app.factory("FindAllKeyImages", ["CRGGameService", function (game) {
       focusPhrase       : {indices: []},
       expectedSelections  : data.keyImages.map(getPhrase),
       textSelectedIsClose : false,
+      expectedCorrectAnswers: data.expectedCorrectAnswers || data.keyImages.length,
       onTextSelection   : function(selectedPhrase){
         var selectedOptionIndex = expectedSelectionIndex(selectedPhrase, state.expectedSelections),
             isCorrect = selectedOptionIndex > -1,
@@ -43,6 +44,13 @@ app.factory("FindAllKeyImages", ["CRGGameService", function (game) {
       onCorrectSelection: function(phrase, selectedOptionIndex){
         state.expectedSelections.splice(selectedOptionIndex, 1);
         game.player.flashHighlight({indices: phrase.indices.map(function(i){return parseInt(i);})}, true);
+        var correctAnsers = data.keyImages.length - state.expectedSelections.length;
+        if(correctAnsers == state.expectedCorrectAnswers){
+          state.allExpectedPhrasesSelected();
+        }
+      },
+      allExpectedPhrasesSelected: function(){
+        game.player.toNextScene();
       }
     };
     return state;
