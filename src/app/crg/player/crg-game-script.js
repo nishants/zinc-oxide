@@ -51,8 +51,8 @@ app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "Im
       script.currentScene = scenes[0];
       script.getScene("intro").data          = [{}];
       script.getScene("exit" ).data          = [{}];
-      script.getScene("zinc-visualize").data = JSON.parse(JSON.stringify(gamePlan.zincing.visualize));
-      script.getScene("zinc-imagine").data   = JSON.parse(JSON.stringify(gamePlan.zincing.imagine));
+      script.getScene("zinc-visualize").data = JSON.parse(JSON.stringify(gamePlan.zincing.visualize || []));
+      script.getScene("zinc-imagine").data   = JSON.parse(JSON.stringify(gamePlan.zincing.imagine || []));
     }
   };
   return script;
