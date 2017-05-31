@@ -1,4 +1,4 @@
-app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "ImaginePhraseState", "ExitGameState", function (ReadingPassageState, VisualizePhraseState, ImaginePhraseState, ExitGameState) {
+app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "ImaginePhraseState", "ExitGameState", "FindAllKeyImages", function (ReadingPassageState, VisualizePhraseState, ImaginePhraseState, ExitGameState, FindAllKeyImages) {
 
   var scenes = [
     {
@@ -17,6 +17,12 @@ app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "Im
       groupName: "zincing",
       name: "zinc-imagine",
       entry: ImaginePhraseState,
+      data: []
+    },
+    {
+      groupName: "zincing",
+      name: "find-all-key-images",
+      entry: FindAllKeyImages,
       data: []
     },
     {
@@ -53,6 +59,7 @@ app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "Im
       script.getScene("exit" ).data          = [{}];
       script.getScene("zinc-visualize").data = JSON.parse(JSON.stringify(gamePlan.zincing.visualize || []));
       script.getScene("zinc-imagine").data   = JSON.parse(JSON.stringify(gamePlan.zincing.imagine || []));
+      script.getScene("find-all-key-images").data   = JSON.parse(JSON.stringify(gamePlan.zincing.findAllKeyImages || []));
     }
   };
   return script;
