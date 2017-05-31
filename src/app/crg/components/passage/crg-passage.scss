@@ -68,6 +68,11 @@ $focus_out_opacity: 0.1;
       background-color: $crgame_highlight_color;
       color: white;
     }
+    .word.flash{
+      @include transition(all $transition_time $transition_function);
+      color: $white_shade;
+      background-color: $logo_green;
+    }
   }
   .text.focusing{
     .word:not(.focus){

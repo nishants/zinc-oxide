@@ -1,4 +1,5 @@
-app.service("CRGPlayer", ["CRGGameScript", "Passage",function (CRGGameScript, Passage) {
+app.service("CRGPlayer", ["CRGGameScript", "Passage", "$timeout",function (CRGGameScript, Passage, $timeout) {
+  var FLASH_TIMEOUT = 3000;
   var player = {
     points: 10,
     sound: true,
@@ -23,7 +24,7 @@ app.service("CRGPlayer", ["CRGGameScript", "Passage",function (CRGGameScript, Pa
     setFocusText: function(phrase){
       angular.forEach(player.passage.words, function(word, index){
         word.focus = phrase.indices.indexOf(index) > -1;
-      })
+      });
     },
     setHighlightText: function(phrase){
       angular.forEach(player.passage.words, function(word, index){
@@ -33,6 +34,22 @@ app.service("CRGPlayer", ["CRGGameScript", "Passage",function (CRGGameScript, Pa
     onTextSelection: function(phrase){
       if(player.state.onTextSelection){
         player.state.onTextSelection(phrase);
+      }
+    },
+    resetSelection: function(){
+      window.getSelection().empty();
+    },
+    flashHighlight: function(phrase, retain){
+      player.resetSelection();
+      angular.forEach(phrase.indices, function(wordIndex){
+        player.passage.words[wordIndex].flash = true;
+      });
+      if(!retain){
+       $timeout(function(){
+         angular.forEach(phrase.indices, function(wordIndex){
+           player.passage.words[wordIndex].flash = false;
+         });
+       },FLASH_TIMEOUT);
       }
     },
     toNextScene: function(){

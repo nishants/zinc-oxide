@@ -12,8 +12,13 @@ app.factory("FindAllKeyImages", ["CRGGameService", function (game) {
         });
         return closeEnough.length;
       },
-      correctSelection = function(selected, options){
-        return false;
+      expectedSelectionIndex = function(selected, options){
+        var foundOptionIndex = -1;
+        options.forEach(function (expected, index) {
+          var isExpected = selected.indices.length == expected.indices.length && selectionDistance(selected, expected) == 1;
+          foundOptionIndex = isExpected ? index: foundOptionIndex;
+        })
+        return foundOptionIndex;
       },
       getPhrase = function(keyImage){
         return keyImage.phrase;
@@ -27,12 +32,17 @@ app.factory("FindAllKeyImages", ["CRGGameService", function (game) {
       focusPhrase       : {indices: []},
       expectedSelections  : data.keyImages.map(getPhrase),
       textSelectedIsClose : false,
-      correctSelections   : [{indices: []}],
       onTextSelection   : function(selectedPhrase){
-        var isCorrect = correctSelection(selectedPhrase, state.expectedSelections),
+        var selectedOptionIndex = expectedSelectionIndex(selectedPhrase, state.expectedSelections),
+            isCorrect = selectedOptionIndex > -1,
             closeEnough = !isCorrect && selectionIsCloseEnough(selectedPhrase, state.expectedSelections);
 
         state.textSelectedIsClose = closeEnough;
+        isCorrect && state.onCorrectSelection(selectedPhrase,selectedOptionIndex);
+      },
+      onCorrectSelection: function(phrase, selectedOptionIndex){
+        state.expectedSelections.splice(selectedOptionIndex, 1);
+        game.player.flashHighlight({indices: phrase.indices.map(function(i){return parseInt(i);})}, true);
       }
     };
     return state;
