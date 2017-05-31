@@ -8,7 +8,7 @@
     "findAllKeyImages": [
       {
         "transcript" : {"text": null},
-        "expectedCorrectAnswers" : 2,
+        "expectedCorrectAnswers" : 1,
         "keyImages": [
           {
             "phrase": {"indices": [27,28,29,30, 31], "text": "His limbs were in proportion"}

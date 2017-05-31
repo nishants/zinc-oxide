@@ -1,4 +1,4 @@
-app.factory("FindAllKeyImages", ["CRGGameService", function (game) {
+app.factory("FindAllKeyImages", ["CRGGameService", "DisplayAllKeyImages", function (game, DisplayAllKeyImages) {
   var MIN_SELECTION_DISTANCE = 0.5,
       selectionDistance = function(selection, expectedPhrase){
         var common = selection.indices.filter(function(index){
@@ -50,7 +50,7 @@ app.factory("FindAllKeyImages", ["CRGGameService", function (game) {
         }
       },
       allExpectedPhrasesSelected: function(){
-        game.player.toNextScene();
+        game.player.transitTo(DisplayAllKeyImages(data));
       }
     };
     return state;
