@@ -8,6 +8,7 @@ app.controller('CRGameplayController', ['$scope', '$timeout', 'CRGPlayer', 'CRGG
       game.selectedText = indexes.map(function (index) {
         return game.player.passage.words[index].text;
       }).join(" ");
+      game.player.onTextSelection({indices: indexes, text: game.selectedText});
     });
   };
 

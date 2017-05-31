@@ -30,6 +30,11 @@ app.service("CRGPlayer", ["CRGGameScript", "Passage",function (CRGGameScript, Pa
         word.highlight = phrase.indices.indexOf(index) > -1;
       })
     },
+    onTextSelection: function(phrase){
+      if(player.state.onTextSelection){
+        player.state.onTextSelection(phrase);
+      }
+    },
     toNextScene: function(){
       player.transitTo(CRGGameScript.next());
     },
