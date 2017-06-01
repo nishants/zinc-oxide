@@ -1,10 +1,12 @@
 .crg-editor-form
   ul
-    li.zincing.skill-group
+    li.skill-group(ng-repeat='scene in editor.script.scenes', ng-init='sceneIndex = $index')
       .accordion-bar.crg-bar
-        label Zincing
-        button
-          span.fa.fa-plus
-      include ../../scenes/zinc-visualize/zinc-visluaize-editor
-      include ../../scenes/zinc-imagine/zinc-imagine-editor
-  include passage-selector/passage-selector
+        label(ng-bind='scene.name')
+      .zinc-visualize(ng-if='scene.name == "zinc-visualize"')
+        include ../../scenes/zinc-visualize/zinc-visluaize-editor
+      .zinc-imagine(ng-if='scene.name == "zinc-imagine"')
+        include ../../scenes/zinc-imagine/zinc-imagine-editor
+      .scene-options
+        button(ng-click='').remove Preview
+        button(ng-click='editor.removeScene(scene)').remove Remove
