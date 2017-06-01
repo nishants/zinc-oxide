@@ -12,7 +12,7 @@ app.service("CRGPlayer", ["CRGGameScript", "Passage", "$timeout",function (CRGGa
     },
     load: function(gameData){
       player.passage = Passage(gameData.passage);
-      CRGGameScript.load(gameData);
+      CRGGameScript.load(gameData.script);
       player.start();
     },
     transitTo: function(state){
