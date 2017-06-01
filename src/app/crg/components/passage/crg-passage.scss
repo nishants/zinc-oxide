@@ -50,7 +50,9 @@ $focus_out_opacity: 0.1;
       display: inline-block;
       height: $line_height;
       line-height: $line_height;
-      padding-right: $word_spacing;
+    }
+    .word:not(:first-child){
+      padding: 0px $word_spacing/2;
     }
     .word.line-break{
       display: block;
