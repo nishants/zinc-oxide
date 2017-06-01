@@ -1,6 +1,6 @@
 angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locationProvider",function($stateProvider, $urlRouterProvider, $locationProvider){
 
-	$urlRouterProvider.otherwise('/vocab');
+	$urlRouterProvider.otherwise('/crg');
 	$stateProvider
 			.state('home', {
 				url: '/home',

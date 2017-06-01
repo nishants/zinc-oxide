@@ -34,6 +34,7 @@ angular.module("zinc").run(["$rootScope", "stateMessages" ,function($rootScope, 
 
 	$rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error){
 		state.failed("Unknown Error");
+    console.log(error);
 	});
 
 	$rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
