@@ -1,9 +1,23 @@
-$label_width: 200px;
+$label_width: 125px;
+$textarea_min_height: 150px;
 
 .crg-editor-form{
   position: relative;
   padding-top: $padding*4;
 
+  textarea, input{
+    padding: $padding;
+    border: $very_light_border;
+  }
+  input{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  textarea{
+    min-height: $textarea_min_height;
+    resize: vertical;
+  }
   .card{
     border: $very_light_border;
     border-radius: 2px;
@@ -43,9 +57,7 @@ $label_width: 200px;
         margin-bottom: $padding;
         line-height: $extra_large_font;
         @extend .resize-container;
-        .param-label, .param-input{
-          padding: $padding;
-        }
+
         .param-label{
           width: $label_width;
           float: left;
@@ -54,7 +66,7 @@ $label_width: 200px;
         }
         .param-input{
           float: left;
-          border: $very_light_border;
+          //border: $very_light_border;
           border-radius: $border_radius;
           width: calc(100% - #{$label_width});
           .input-options{
@@ -63,14 +75,16 @@ $label_width: 200px;
             margin-bottom: $padding;
 
             input{
+              width: 100%;
+            }
+            input.check{
+              float: left;
+              width: $checkbox_width;
+            }
+            input.checked{
               float: left;
               margin-right: $padding;
               display: inline-block;
-            }
-            input.correct{
-              width: $checkbox_width;
-            }
-            input.usage-label{
               width: calc(100% - #{$checkbox_width + $padding*2});
             }
           }

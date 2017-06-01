@@ -11,6 +11,6 @@
   label.param-label Correct Usage
   .param-input
     .input-options(ng-repeat='usage in scene.config.usages')
-      input.correct(type='checkbox', ng-model='usage.correct')
-      input.usage-label(ng-model='usage.label')
+      input.check(type='checkbox', ng-model='usage.correct')
+      input.checked(ng-model='usage.label')
     button(ng-click='scene.config.usages.push({label: "", correct: false})') Add Usage
