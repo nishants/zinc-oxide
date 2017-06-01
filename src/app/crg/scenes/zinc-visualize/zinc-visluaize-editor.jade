@@ -1,12 +1,9 @@
-.skill.zinc-visualize
-  ul.undo-list
-    li.skill-form
-      .skill-param
-        label.param-label Focus
-        input.param-input(type='text', disbaled='true', ng-model='scene.config.focus.text')
-      .skill-param
-        label.param-label Phrase
-        input.param-input(type='text', disbaled='true', ng-model='scene.config.phrase.text')
-      .skill-param
-        label.param-label Transcript
-        textarea(ng-model='scene.config.transcript.text').param-input
+.scene-param
+  label.param-label Focus
+  input.param-input(type='text', disbaled='true', ng-model='scene.config.focus.text')
+.scene-param
+  label.param-label Phrase
+  input.param-input(type='text', disbaled='true', ng-model='scene.config.phrase.text')
+.scene-param
+  label.param-label Transcript
+  textarea(ng-model='scene.config.transcript.text').param-input

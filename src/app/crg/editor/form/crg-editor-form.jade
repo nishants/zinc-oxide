@@ -1,12 +1,11 @@
 .crg-editor-form
-  ul
-    li.skill-group(ng-repeat='scene in editor.script.scenes', ng-init='sceneIndex = $index')
-      .accordion-bar.crg-bar
-        label(ng-bind='scene.name')
+  .scene-editor.card(ng-repeat='scene in editor.script.scenes', ng-init='sceneIndex = $index')
+    .accordion-bar
+      label {{$index +1}}. {{scene.label}}
+      button(ng-click='').remove Preview
+      button(ng-click='editor.removeScene(scene)').remove Remove
+    .scene-config-form
       .zinc-visualize(ng-if='scene.name == "zinc-visualize"')
         include ../../scenes/zinc-visualize/zinc-visluaize-editor
       .zinc-imagine(ng-if='scene.name == "zinc-imagine"')
         include ../../scenes/zinc-imagine/zinc-imagine-editor
-      .scene-options
-        button(ng-click='').remove Preview
-        button(ng-click='editor.removeScene(scene)').remove Remove

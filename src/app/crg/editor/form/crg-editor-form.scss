@@ -1,0 +1,88 @@
+$label_width: 200px;
+
+.crg-editor-form{
+  position: relative;
+  padding-top: $padding*4;
+
+  .card{
+    border: $very_light_border;
+    border-radius: 2px;
+    overflow: hidden;
+    @include transition($shadow_transition);
+  }
+  .card:hover{
+    box-shadow: $card_elevated_shadow;
+  }
+  .scene-editor{
+    margin-bottom: $padding*2;
+    .accordion-bar{
+      @extend .resize-container;
+      background-color: $crg_editor_color;
+      button, label{
+        margin: $padding*2 $padding $padding*2 0px;
+        padding: $padding $padding*2;
+        display: block;
+      }
+      label{
+        float: left;
+        text-transform: capitalize;
+      }
+      button{
+        float: right;
+        color: $light_text;
+        border: $very_light_border;
+        background-color: transparent;
+        border-radius: $border_radius;
+      }
+    }
+    .scene-config-form{
+      padding: 2*$padding $padding;
+      border-bottom: $very_light_border;
+
+      .scene-param{
+        margin-bottom: $padding;
+        line-height: $extra_large_font;
+        @extend .resize-container;
+        .param-label, .param-input{
+          padding: $padding;
+        }
+        .param-label{
+          width: $label_width;
+          float: left;
+          text-align: right;
+          padding-right: $padding*2;
+        }
+        .param-input{
+          float: left;
+          border: $very_light_border;
+          border-radius: $border_radius;
+          width: calc(100% - #{$label_width});
+          .input-options{
+            $checkbox_width: 20px;
+            @extend .resize-container;
+            margin-bottom: $padding;
+
+            input{
+              float: left;
+              margin-right: $padding;
+              display: inline-block;
+            }
+            input.correct{
+              width: $checkbox_width;
+            }
+            input.usage-label{
+              width: calc(100% - #{$checkbox_width + $padding*2});
+            }
+          }
+        }
+
+      }
+      .scene-options{
+        @extend .resize-container;
+        button{
+          float: right;
+        }
+      }
+    }
+  }
+}
