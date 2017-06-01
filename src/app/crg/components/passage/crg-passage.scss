@@ -60,10 +60,10 @@ $focus_out_opacity: 0.1;
       @include userSelect(none);
     }
     .word.selected-word{
-      background-color: $crgame_highlight_text_color;
+      //background-color: $crgame_highlight_text_color;
     }
     ::selection{
-      background-color: $crgame_highlight_text_color;
+      //background-color: $crgame_highlight_text_color;
     }
     .word.highlight{
       background-color: $crgame_highlight_color;
