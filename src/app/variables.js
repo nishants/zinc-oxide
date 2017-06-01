@@ -13,3 +13,13 @@ app.value("passageSelectorHeadings", {
     description   : "This is tha part of text that will be highlighted for student to analyze.",
   }
 });
+
+app.value("SceneLoader", {
+  entries: {
+    "intro"                 : "ReadingPassageState",
+    "zinc-visualize"        : "VisualizePhraseState",
+    "zinc-imagine"          : "ImaginePhraseState",
+    "find-all-key-images"   : "FindAllKeyImages",
+    "exit"                  : "ExitGameState"
+  }
+});

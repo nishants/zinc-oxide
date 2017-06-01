@@ -1,34 +1,34 @@
-app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "ImaginePhraseState", "ExitGameState", "FindAllKeyImages", function (ReadingPassageState, VisualizePhraseState, ImaginePhraseState, ExitGameState, FindAllKeyImages) {
+app.service("CRGGameScript", ["SceneLoader", "$injector", function (SceneLoader, $injector) {
 
   var scenes = [
     {
       groupName: "intro",
       name: "intro",
-      entry: ReadingPassageState,
+      entry: $injector.get(SceneLoader.entries["intro"]),
       data: [{}]
     },
     {
       groupName: "zincing",
       name: "zinc-visualize",
-      entry: VisualizePhraseState,
+      entry: $injector.get(SceneLoader.entries["zinc-visualize"]),
       data: []
     },
     {
       groupName: "zincing",
       name: "zinc-imagine",
-      entry: ImaginePhraseState,
+      entry: $injector.get(SceneLoader.entries["zinc-imagine"]) ,
       data: []
     },
     {
       groupName: "zincing",
       name: "find-all-key-images",
-      entry: FindAllKeyImages,
+      entry:  $injector.get(SceneLoader.entries["find-all-key-images"]),
       data: []
     },
     {
       groupName: "exit",
       name: "exit",
-      entry: ExitGameState,
+      entry: $injector.get(SceneLoader.entries["exit"]),
       data: [{}]
     }
 
@@ -46,7 +46,7 @@ app.service("CRGGameScript", ["ReadingPassageState", "VisualizePhraseState", "Im
           hasMoreSteps = currentScene.data.length > 0,
           nextScene    = hasMoreSteps ? currentScene : script.nextDefinedScene();
 
-      return nextScene ? nextScene.entry(nextScene.data.shift()): alert("End of game");
+      return nextScene.entry(nextScene.data.shift());
     },
     getScene: function(name){
       return script.scenes.filter(function(scene){
