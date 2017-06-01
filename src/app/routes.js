@@ -56,6 +56,18 @@ angular.module("zinc").config(["$stateProvider", "$urlRouterProvider", "$locatio
         }
 
       })
+      .state('crg.editor.preview-scenes', {
+        url: '/preview-scenes',
+        templateUrl: 'assets/templates/crg-preview-template.html',
+        controller: 'CRGameplayController',
+        resolve : {
+          gamePlan: ['CRGEditorService', 'CRGPlayer', function(CRGEditorService, CRGPlayer){
+            var gameData = CRGEditorService.prepareGamePlan(CRGEditorService.previewing);
+            CRGPlayer.load(gameData);
+            return gameData;
+          }]
+        }
+      })
 			.state('vocab', {
 				url: '/vocab',
 				templateUrl: 'assets/templates/vocab-list-template.html',

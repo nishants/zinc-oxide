@@ -1,5 +1,6 @@
-app.factory("CRGEditorService", ["Passage", "PassageSelector", function (Passage, PassageSelector) {
+app.factory("CRGEditorService", ["Passage", "PassageSelector", "$state", function (Passage, PassageSelector, $state) {
   var editorService = {
+        gameId: null,
         script: {
           scenes: []
         },
@@ -8,17 +9,25 @@ app.factory("CRGEditorService", ["Passage", "PassageSelector", function (Passage
           from: null,
           text: null,
         },
+        previewing: [],
         setGameToEdit: function(gameData){
+          editorService.script.gameId   = gameData.id;
           editorService.script.scenes   = gameData.script.scenes;
           editorService.passage         = gameData.passage;
           editorService.passageSelector =  PassageSelector(Passage(editorService.passage));
         },
-        prepareGamePlan : function(){
-          var gameData = JSON.parse(JSON.stringify({
+        prepareGamePlan : function(scenes){
+          var exitScene = editorService.script.scenes[editorService.script.scenes.length - 1];
+          var previewScenes = scenes ? scenes.concat(exitScene) : null,
+              gameData      = JSON.parse(JSON.stringify({
             passage : editorService.passage,
-            script  : editorService.script
+            script  : {scenes: previewScenes || editorService.script.scenes}
           }));
           return gameData;
+        },
+        previewScene: function(scene){
+          editorService.previewing = [scene];
+          $state.go("crg.editor.preview-scenes");
         },
         removeScene: function(sceneToRemove){
           editorService.script.scenes = editorService.script.scenes.filter(function(scene){
