@@ -13,6 +13,18 @@
       {
         "name"  : "find-all-key-images",
         "config":       {
+          "transcript" : {"text": "Other than the title, if you know what Harlem looks like, what’s the first image you can picture in the poem?"},
+          "expectedCorrectAnswers" : 1,
+          "keyImages": [
+            {
+              "phrase": {"indices": [2,3,4,5,6,7,8,9,10], "text": "dry up like a raisin in the sun"}
+            }
+          ]
+        }
+      },
+      {
+        "name"  : "find-all-key-images",
+        "config":       {
           "transcript" : {"text": "Alright, there’s a lot to work with here. Highlight everything you can picture. And remember: when you’re Zincing and handles appear on your highlight, that means there’s more than just that word for you to picture. Picturing that word is great, but check it out: it’s part of a longer phrase. See if you can highlight the whole phrase and picture it"},
           "expectedCorrectAnswers" : 1,
           "keyImages": [
