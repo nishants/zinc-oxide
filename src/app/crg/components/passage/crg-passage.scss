@@ -57,6 +57,7 @@ $focus_out_opacity: 0.1;
     .word.line-break{
       display: block;
       height: $padding;
+      opacity: 0;
       @include userSelect(none);
     }
     .word.selected-word{
