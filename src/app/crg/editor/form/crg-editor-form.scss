@@ -1,5 +1,6 @@
 $label_width: 125px;
 $textarea_min_height: 150px;
+$accordion_height: 60px;
 
 .crg-editor-form{
   position: relative;
@@ -28,30 +29,36 @@ $textarea_min_height: 150px;
     box-shadow: $card_elevated_shadow;
   }
   .scene-editor{
-    margin-bottom: $padding*2;
+    margin-bottom: 1px;
+    border-radius: $border_radius;
+    overflow: hidden;
     .accordion-bar{
       @extend .resize-container;
       background-color: $crg_editor_color;
+      line-height: $accordion_height;
+      height: $accordion_height;
       button, label{
-        margin: $padding*2 $padding $padding*2 0px;
-        padding: $padding $padding*2;
+        margin-right: $padding;
+        padding: 0px $padding*2;
         display: block;
       }
       label{
         float: left;
         text-transform: capitalize;
       }
+      .expand-icon{
+        margin-right: $padding/2;
+      }
       button{
         float: right;
         color: $light_text;
-        border: $very_light_border;
+        border: none;
         background-color: transparent;
         border-radius: $border_radius;
       }
     }
     .scene-config-form{
       padding: 2*$padding $padding;
-      border-bottom: $very_light_border;
 
       .scene-param{
         margin-bottom: $padding;
@@ -96,6 +103,17 @@ $textarea_min_height: 150px;
         button{
           float: right;
         }
+      }
+    }
+  }
+  .scene-editor:not(.expand){
+    height: $accordion_height;
+    .scene-config-form{
+      height: 0px;
+    }
+    .accordion-bar{
+      .expand-icon{
+        @include transform(rotate(-90deg));
       }
     }
   }
