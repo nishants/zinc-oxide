@@ -11,6 +11,7 @@
         "config": {}
       },
       {
+        "skill"       : "zincing",
         "name"        : "zinc-visualize",
         "config"      :       {
           "phrase"    : {"indices": [0, 1,2,3,4], "text": "Ships at a distance"},
@@ -19,6 +20,7 @@
         }
       },
       {
+        "skill"        : "zincing",
         "name"        : "zinc-visualize",
         "config"      :   {"phrase": {"indices": [34,35,36,37,38,39], "text": "looks aways in resignation"} ,
           "focus"     :  {"indices": [34,35,36,37,38,39,40,41,42,43], "text": "For others they sail forever on the horizon, never out of sight, never landing until the watcher turn his eyes away in resignation, his dreams mocked to death by time."},
@@ -26,7 +28,8 @@
         }
       },
       {
-        "name": "zinc-imagine",
+        "skill"       : "zincing",
+        "name"        : "multi-choice",
         "config"      : {
           "phrase"    : {
             "indices" : [57, 58, 59, 60, 61, 62, 63, 64, 65],

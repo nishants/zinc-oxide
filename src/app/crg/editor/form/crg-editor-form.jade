@@ -7,8 +7,8 @@
     .scene-config-form
       .zinc-visualize(ng-if='scene.name == "zinc-visualize"')
         include ../../scenes/zinc-visualize/zinc-visluaize-editor
-      .zinc-imagine(ng-if='scene.name == "zinc-imagine"')
-        include ../../scenes/zinc-imagine/zinc-imagine-editor
+      .multi-choice(ng-if='scene.name == "multi-choice"')
+        include ../../scenes/multi-choice/multi-choice-editor
       .find-all-key-images(ng-if='scene.name == "find-all-key-images"')
         include ../../scenes/zinc-key-images/find-all-key-images
       button(ng-click='editor.removeScene(scene)').remove Remove

@@ -18,7 +18,7 @@ app.value("SceneLoader", {
   entries: {
     "intro"                 : "ReadingPassageState",
     "zinc-visualize"        : "VisualizePhraseState",
-    "zinc-imagine"          : "ImaginePhraseState",
+    "multi-choice"          : "ImaginePhraseState",
     "find-all-key-images"   : "FindAllKeyImages",
     "exit"                  : "ExitGameState"
   }
