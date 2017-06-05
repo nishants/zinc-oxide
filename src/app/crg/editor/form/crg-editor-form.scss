@@ -28,10 +28,8 @@ $accordion_height: 60px;
   .card:hover{
     box-shadow: $card_elevated_shadow;
   }
-  .scene-editor{
-    margin-bottom: 1px;
-    border-radius: $border_radius;
-    overflow: hidden;
+  .scene-group{
+    border: $very_light_border;
     .accordion-bar{
       @extend .resize-container;
       background-color: $crg_editor_color;
@@ -57,64 +55,82 @@ $accordion_height: 60px;
         border-radius: $border_radius;
       }
     }
-    .scene-config-form{
-      padding: 2*$padding $padding;
+    ul.scenes{
+      @extend .undo-list;
+      padding: 2*$padding;
+      background-color: $white_shade;
 
-      .scene-param{
-        margin-bottom: $padding;
-        line-height: $extra_large_font;
-        @extend .resize-container;
-
-        .param-label{
-          width: $label_width;
-          float: left;
-          text-align: right;
-          padding-right: $padding*2;
+      .scene-editor{
+        margin-bottom: $padding*2;
+        border-radius: $border_radius;
+        overflow: hidden;
+        width: 100%;
+        background-color: white;
+        .scene-title{
+          padding: $padding;
+          text-transform: capitalize;
+          background-color: $contrast_color;
         }
-        .param-input{
-          float: left;
-          //border: $very_light_border;
-          border-radius: $border_radius;
-          width: calc(100% - #{$label_width});
-          .input-options{
-            $checkbox_width: 20px;
-            @extend .resize-container;
-            margin-bottom: $padding;
+        .scene-config-form{
+          padding: 2*$padding $padding;
 
-            input{
-              width: 100%;
-            }
-            input.check{
+          .scene-param{
+            margin-bottom: $padding;
+            line-height: $extra_large_font;
+            @extend .resize-container;
+
+            .param-label{
+              width: $label_width;
               float: left;
-              width: $checkbox_width;
+              text-align: right;
+              padding-right: $padding*2;
             }
-            input.checked{
+            .param-input{
               float: left;
-              margin-right: $padding;
-              display: inline-block;
-              width: calc(100% - #{$checkbox_width + $padding*2});
+              //border: $very_light_border;
+              border-radius: $border_radius;
+              width: calc(100% - #{$label_width});
+              .input-options{
+                $checkbox_width: 20px;
+                @extend .resize-container;
+                margin-bottom: $padding;
+
+                input{
+                  width: 100%;
+                }
+                input.check{
+                  float: left;
+                  width: $checkbox_width;
+                }
+                input.checked{
+                  float: left;
+                  margin-right: $padding;
+                  display: inline-block;
+                  width: calc(100% - #{$checkbox_width + $padding*2});
+                }
+              }
+            }
+
+          }
+          .scene-options{
+            @extend .resize-container;
+            button{
+              float: right;
             }
           }
-        }
-
-      }
-      .scene-options{
-        @extend .resize-container;
-        button{
-          float: right;
         }
       }
     }
   }
-  .scene-editor:not(.expand){
-    height: $accordion_height;
-    .scene-config-form{
-      height: 0px;
-    }
+
+  .scene-group:not(.expand){
     .accordion-bar{
       .expand-icon{
         @include transform(rotate(-90deg));
       }
+    }
+    ul.scenes{
+      display: none;
     }
   }
 }

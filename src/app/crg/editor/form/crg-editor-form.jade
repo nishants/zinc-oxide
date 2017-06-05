@@ -1,15 +1,21 @@
 .crg-editor-form
-  .scene-editor.card(ng-repeat='scene in editor.script.scenes', ng-init='sceneIndex = $index; _expand = false;', ng-class='{"expand" : _expand}')
+  .scene-group(ng-init='_expand = true;', ng-class='{"expand" : _expand}')
     .accordion-bar(ng-click='_expand = !_expand')
       label
         span.expand-icon.fa.fa-caret-down
-        span {{$index +1}}. {{scene.label}}
-    .scene-config-form
-      .zinc-visualize(ng-if='scene.name == "zinc-visualize"')
-        include ../../scenes/zinc-visualize/zinc-visluaize-editor
-      .multi-choice(ng-if='scene.name == "multi-choice"')
-        include ../../scenes/multi-choice/multi-choice-editor
-      .find-all-key-images(ng-if='scene.name == "find-all-key-images"')
-        include ../../scenes/zinc-key-images/find-all-key-images
-      button(ng-click='editor.removeScene(scene)').remove Remove
-      button(ng-click='editor.previewScene(scene)').remove Preview
+        span Zincing
+
+    ul.scenes
+      li.scene-editor.card(ng-repeat='scene in editor.script.scenes', ng-init='sceneIndex = $index;', ng-if='scene.group == "zincing"')
+        .scene-title
+          label
+            span {{scene.label}}
+        .scene-config-form
+          .zinc-visualize(ng-if='scene.name == "zinc-visualize"')
+            include ../../scenes/zinc-visualize/zinc-visluaize-editor
+          .multi-choice(ng-if='scene.name == "multi-choice"')
+            include ../../scenes/multi-choice/multi-choice-editor
+          .find-all-key-images(ng-if='scene.name == "find-all-key-images"')
+            include ../../scenes/zinc-key-images/find-all-key-images
+          button(ng-click='editor.removeScene(scene)').remove Remove
+          button(ng-click='editor.previewScene(scene)').remove Preview
