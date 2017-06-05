@@ -11,8 +11,8 @@
           label
             span {{scene.label}}
         .scene-config-form
-          .zinc-visualize(ng-if='scene.name == "zinc-visualize"')
-            include ../../scenes/zinc-visualize/zinc-visluaize-editor
+          .text-input(ng-if='scene.name == "text-input"')
+            include ../../scenes/text-input/text-input-editor
           .multi-choice(ng-if='scene.name == "multi-choice"')
             include ../../scenes/multi-choice/multi-choice-editor
           .find-all-key-images(ng-if='scene.name == "find-all-key-images"')

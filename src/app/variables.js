@@ -17,7 +17,7 @@ app.value("passageSelectorHeadings", {
 app.value("SceneLoader", {
   entries: {
     "intro"                 : "ReadingPassageState",
-    "zinc-visualize"        : "VisualizePhraseState",
+    "text-input"            : "VisualizePhraseState",
     "multi-choice"          : "ImaginePhraseState",
     "find-all-key-images"   : "FindAllKeyImages",
     "exit"                  : "ExitGameState"
