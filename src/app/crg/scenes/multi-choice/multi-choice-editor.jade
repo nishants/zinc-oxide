@@ -2,14 +2,16 @@
   label.param-label Focus
   .param-input
     input(type='text', disbaled='true', ng-model='scene.config.focus.text')
-    button(ng-click='sceneEditor.add()') Set Focus
     span(set-focus).param-action.fa.fa-pencil
+    span(ng-click='scene.config.focus = {indices: [], text: []}').param-action.fa.fa-trash-o
+
 
 .scene-param
   label.param-label Highlight
   .param-input
     input(type='text', disbaled='true', ng-model='scene.config.phrase.text')
     span(set-highlight).param-action.fa.fa-pencil
+    span(ng-click='scene.config.phrase = {indices: [], text: []}').param-action.fa.fa-trash-o
 
 .scene-param
   label.param-label Transcript
