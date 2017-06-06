@@ -8,5 +8,8 @@
 
     button(ng-click='scene.config.keyImages.push({indices: [], text: ""})') Add Key Image Phrase
 .scene-param
+  label.param-label Minimum Selections
+  input(type='number',ng-model='scene.config.expectedCorrectAnswers').param-input
+.scene-param
   label.param-label Transcript
   textarea(ng-model='scene.config.transcript.text').param-input
