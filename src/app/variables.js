@@ -21,19 +21,23 @@ app.value("SceneLoader", {
   },
   "text-input"            :{
     entry: "VisualizePhraseState",
-    label: "Input Text"
+    label: "Input Text",
+    editor: "TextInputEditor",
   },
   "multi-choice"          :{
     entry: "AskMultiChoiceQuestion",
-    label: "Multiple Choice Question"
+    label: "Multiple Choice Question",
+    editor: "MultiChoiceEditor"
   },
   "yes-no"                :{
     entry: "AskQuestion",
-    label: "Yes/No Question"
+    label: "Yes/No Question",
+    editor: "MultiChoiceEditor"
   },
   "find-all-key-images"   :{
     entry: "FindAllKeyImages",
-    label: "Key Image"
+    label: "Key Image",
+    editor: "MultiChoiceEditor"
   },
   "exit"                  : {
     entry: "ExitGameState",

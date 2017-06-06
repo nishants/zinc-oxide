@@ -1,10 +1,10 @@
-app.service("ZincVisualizeEditorService", ['$timeout', 'CRGEditorService', function ($timeout, CRGEditorService) {
+app.service("TextInputEditor", ['$timeout', 'CRGEditorService', function ($timeout, CRGEditorService) {
 
   var defaultTranscript = 'What do you visualize when you read the phrase "<phrase>"?',
-      zincVisualizeEditor = {
+      textInputEditor = {
         list: [],
         remove: function(index){
-          zincVisualizeEditor.list.splice(index, 1);
+          textInputEditor.list.splice(index, 1);
         },
         add: function(){
           CRGEditorService.passageSelector.selectFromPassage({
@@ -20,5 +20,5 @@ app.service("ZincVisualizeEditorService", ['$timeout', 'CRGEditorService', funct
           });
         }
       };
-  return zincVisualizeEditor;
+  return textInputEditor;
 }]);
