@@ -9,7 +9,7 @@ app.factory("WrongAnswerToYesNo", ["CRGGameService", function ( game) {
             game.player.toNextScene();
           }
         }],
-      transcript: {text: data.wrongAnwserMessage},
+      transcript: {text: data.wrongAnswerMessage},
       highlightPhrase: data.phrase,
       focusPhrase    : data.focus
     };

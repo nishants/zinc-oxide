@@ -1,0 +1,15 @@
+.scene-param
+  label.param-label Focus
+  input.param-input(type='text', disbaled='true', ng-model='scene.config.focus.text')
+.scene-param
+  label.param-label Highlight
+  input.param-input(type='text', disbaled='true', ng-model='scene.config.phrase.text')
+.scene-param
+  label.param-label Question
+  textarea(ng-model='scene.config.question').param-input
+.scene-param
+  label.param-label Correct Answer
+  input.param-input(type='checkbox', ng-model='scene.config.expectedYes')
+.scene-param
+  label.param-label Message on Wrong Answer
+  textarea.param-input(ng-model='scene.config.wrongAnswerMessage')

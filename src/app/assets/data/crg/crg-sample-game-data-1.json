@@ -41,7 +41,7 @@
           },
           "question"  : "Does the author give any specific examples of highlighted phrase",
           "expectedYes"  : true,
-          "wrongAnwserMessage": "Stop trying too hard. There was no example."
+          "wrongAnswerMessage": "Stop trying too hard. There was no example."
         }
       },
       {
