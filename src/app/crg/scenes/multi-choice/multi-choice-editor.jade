@@ -1,6 +1,10 @@
 .scene-param
   label.param-label Focus
-  input.param-input(type='text', disbaled='true', ng-model='scene.config.focus.text')
+  .param-input
+    input(type='text', disbaled='true', ng-model='scene.config.focus.text')
+    span.param-action.fa.fa-pencil(ng-click='scene.config.focus = {indices: [], text: ""}')
+    button(ng-click='editor.add()') Set Focus
+
 .scene-param
   label.param-label Phrase
   input.param-input(type='text', disbaled='true', ng-model='scene.config.phrase.text')
@@ -13,5 +17,5 @@
     .input-options(ng-repeat='option in scene.config.options')
       input.check(type='checkbox', ng-model='option.correct')
       input.checked(ng-model='option.label')
-      span.remove-param.fa.fa-undo(ng-click='scene.config.options.splice($index, 1)')
+      span.param-action.fa.fa-undo(ng-click='scene.config.options.splice($index, 1)')
     button(ng-click='scene.config.options.push({label: "", correct: false})') Add Option

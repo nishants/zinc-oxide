@@ -1,4 +1,4 @@
-app.service("ZincImagineEditorService", ['$timeout', 'CRGEditorService', function ($timeout, CRGEditorService) {
+app.service("MultiChoiceEditor", ['$timeout', 'CRGEditorService', function ($timeout, CRGEditorService) {
 
   var defaultTranscript = 'List three things you imagine when you read the highlighted phrase : <phrase>',
       zincImagineEditor = {

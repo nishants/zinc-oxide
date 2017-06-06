@@ -1,4 +1,4 @@
-require('./scene-editors');
+require('./scene-editor-controller');
 
 require('./intro/states/reading-passage-state');
 require('./intro/states/done-reading-passage-state');

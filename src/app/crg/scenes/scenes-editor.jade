@@ -1,0 +1,16 @@
+ul.scenes(ng-controller='SceneEditorController')
+  li.scene-editor.card(ng-repeat='scene in editor.script.scenes', ng-init='sceneIndex = $index;', ng-if='scene.group == "zincing"')
+    .scene-title
+      label
+        span {{scene.label}}
+    .scene-config-form
+      .text-input(ng-if='scene.name == "text-input"')
+        include text-input/text-input-editor
+      .multi-choice(ng-if='scene.name == "multi-choice"', ng-init='editor = sceneEditors.multiChoice')
+        include multi-choice/multi-choice-editor
+      .find-all-key-images(ng-if='scene.name == "find-all-key-images"')
+        include key-images/find-all-key-images
+      .yes-no(ng-if='scene.name == "yes-no"')
+        include yes-no-choice/yes-no-editor
+      button(ng-click='editor.removeScene(scene)').remove Remove
+      button(ng-click='editor.previewScene(scene)').remove Preview

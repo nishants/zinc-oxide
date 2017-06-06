@@ -1,4 +1,4 @@
-app.controller('CRGEditorController', ['$scope', '$timeout', 'CRGEditorService', 'SceneEditors', function ($scope, $timeout, CRGEditorService, SceneEditors) {
+app.controller('CRGEditorController', ['$scope', '$timeout', 'CRGEditorService', function ($scope, $timeout, CRGEditorService) {
   var editor  = CRGEditorService;
 
   $scope.onTextSelect = function(indexes){
@@ -11,6 +11,5 @@ app.controller('CRGEditorController', ['$scope', '$timeout', 'CRGEditorService',
     });
   };
 
-  editor.sceneEditors = SceneEditors;
   $scope.editor = editor;
 }]);
