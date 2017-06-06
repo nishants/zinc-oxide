@@ -19,7 +19,7 @@ app.value("SceneLoader", {
     "intro"                 : "ReadingPassageState",
     "text-input"            : "VisualizePhraseState",
     "multi-choice"          : "FindExamplePhraseState",
-    "yes-no"                : "YesNoAnswer",
+    "yes-no"                : "AskQuestion",
     "find-all-key-images"   : "FindAllKeyImages",
     "exit"                  : "ExitGameState"
   }
