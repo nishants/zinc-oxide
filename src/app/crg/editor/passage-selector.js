@@ -85,6 +85,14 @@ app.factory("PassageSelector", ["passageSelectorHeadings", function (passageSele
         passageSelector.selection.selectFocus();
       },
 
+      selectHighlightFromPassage: function (params) {
+        passageSelector.lastScrollOffset = currentScrollPosition();
+        scrollTo(0);
+        passageSelector.selecting = true;
+        passageSelector.whenDone = params.whenDone;
+        passageSelector.selection.selectPhrase();
+      },
+
       doneSelecting: function (focus, phrase) {
         passageSelector.whenDone({
           focus: focus,
