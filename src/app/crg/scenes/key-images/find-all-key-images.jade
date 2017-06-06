@@ -3,7 +3,10 @@
   .param-input
     .input-options(ng-repeat='keyImage in scene.config.keyImages')
       input(type='text', disabled='disabled', ng-model='keyImage.phrase.text')
+      span(add-key-image).param-action.fa.fa-pencil
+      span(ng-click='scene.config.keyImages.splice($index, 1)').param-action.fa.fa-trash-o
 
+    button(ng-click='scene.config.keyImages.push({indices: [], text: ""})') Add Key Image Phrase
 .scene-param
   label.param-label Transcript
   textarea(ng-model='scene.config.transcript.text').param-input
