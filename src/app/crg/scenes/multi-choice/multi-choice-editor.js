@@ -1,6 +1,9 @@
 app.service("MultiChoiceEditor", ['$timeout', 'CRGEditorService', function ($timeout, CRGEditorService) {
 
   var multiChoiceEditor = {
+        addTo: function(group){
+          CRGEditorService.addScene(multiChoiceEditor.create(group));
+        },
         create: function(group){
           return             {
             "group"       : group,

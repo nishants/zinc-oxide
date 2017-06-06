@@ -17,7 +17,7 @@ ul.scenes(ng-controller='SceneEditorController')
 
   ul.add-scenes
     li(ng-repeat='config in sceneConfigs')
-      button
+      button(ng-click='config.editor.addTo(group)')
         span Add
         span(ng-bind='config.label')
 
