@@ -40,7 +40,7 @@
             "text"    : "Now, women forget all those things they don't  want to remember, and remember everything they don't want to forget."
           },
           "question"  : "Does the author give any specific examples of highlighted phrase",
-          "expectedYes"  : true,
+          "expectedYes"  : false,
           "wrongAnswerMessage": "Stop trying too hard. There was no example."
         }
       },
