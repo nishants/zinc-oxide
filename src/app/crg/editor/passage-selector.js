@@ -37,7 +37,9 @@ app.factory("PassageSelector", ["passageSelectorHeadings", function (passageSele
           angular.forEach(passageSelector.passage.words,function(word,index){
             word.focus = passageSelector.selection.focus.indices.indexOf(index) > -1;
           });
-          passageSelector.selection.selectPhrase();
+          passageSelector.doneSelecting(
+              passageSelector.selection.focus
+          );
         },
         setPhrase: function () {
           passageSelector.selection.phrase = passageSelector.selection.getTextSelection();
@@ -74,7 +76,8 @@ app.factory("PassageSelector", ["passageSelectorHeadings", function (passageSele
         });
         resetSelection();
       },
-      selectFromPassage: function (params) {
+
+      selectFocusFromPassage: function (params) {
         passageSelector.lastScrollOffset = currentScrollPosition();
         scrollTo(0);
         passageSelector.selecting = true;

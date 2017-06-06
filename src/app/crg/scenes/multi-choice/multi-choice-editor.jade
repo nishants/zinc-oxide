@@ -3,7 +3,7 @@
   .param-input
     input(type='text', disbaled='true', ng-model='scene.config.focus.text')
     button(ng-click='sceneEditor.add()') Set Focus
-    span.param-action.fa.fa-pencil(ng-click='scene.config.focus = {indices: [], text: ""}')
+    span(set-focus).param-action.fa.fa-pencil
 
 .scene-param
   label.param-label Phrase

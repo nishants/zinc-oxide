@@ -1,4 +1,5 @@
 require('./scene-editor-controller');
+require('./components/set-focus-directive');
 
 require('./intro/states/reading-passage-state');
 require('./intro/states/done-reading-passage-state');

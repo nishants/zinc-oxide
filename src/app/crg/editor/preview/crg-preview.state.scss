@@ -1,0 +1,8 @@
+.state.crg-editor-preview-scenes{
+  #navigation{
+    @include transform(translateY(calc(-100% - #{$padding})));
+  }
+  #profile-bar{
+    @include transform(translateX(-100%));
+  }
+}
