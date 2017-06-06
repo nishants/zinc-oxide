@@ -50,7 +50,7 @@ app.factory("FindAllKeyImages", ["CRGGameService", "DisplayAllKeyImages", functi
         }
       },
       allExpectedPhrasesSelected: function(){
-        game.player.transitTo(DisplayAllKeyImages(data));
+        data.keyImages.length > 1 ? game.player.transitTo(DisplayAllKeyImages(data)):game.player.toNextScene();
       }
     };
     return state;
