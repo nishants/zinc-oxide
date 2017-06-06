@@ -12,8 +12,9 @@ ul.scenes(ng-controller='SceneEditorController')
         include key-images/find-all-key-images
       .yes-no(ng-if='scene.name == "yes-no"')
         include yes-no-choice/yes-no-editor
-      button(ng-click='editor.removeScene(scene)').remove Remove
-      button(ng-click='editor.previewScene(scene)').remove Preview
+      .scene-actions
+        button(ng-click='editor.previewScene(scene)').remove Preview
+        button(ng-click='editor.removeScene(scene)').remove Remove
 
   ul.add-scenes
     li(ng-repeat='config in sceneConfigs')

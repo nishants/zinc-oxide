@@ -6,19 +6,6 @@ $accordion_height: 60px;
   position: relative;
   padding-top: $padding*4;
 
-  textarea, input{
-    padding: $padding;
-    border: $very_light_border;
-  }
-  input{
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  textarea{
-    min-height: $textarea_min_height;
-    resize: vertical;
-  }
   .card{
     border: $very_light_border;
     border-radius: 2px;
@@ -72,57 +59,9 @@ $accordion_height: 60px;
           background-color: $contrast_color;
           @include transition($transition);
         }
-        .scene-config-form{
-          padding: 2*$padding $padding;
 
-          .scene-param{
-            margin-bottom: $padding;
-            line-height: $extra_large_font;
-            @extend .resize-container;
-
-            .param-label{
-              width: $label_width;
-              float: left;
-              text-align: right;
-              padding-right: $padding*2;
-            }
-            .param-input{
-              float: left;
-              //border: $very_light_border;
-              border-radius: $border_radius;
-              width: calc(100% - #{$label_width});
-              .input-options{
-                $checkbox_width: 20px;
-                @extend .resize-container;
-                margin-bottom: $padding;
-
-                input{
-                  width: 100%;
-                }
-                input.check{
-                  float: left;
-                  width: $checkbox_width;
-                }
-                input.checked{
-                  float: left;
-                  margin-right: $padding;
-                  display: inline-block;
-                  width: calc(100% - #{$checkbox_width + $padding*2});
-                }
-              }
-            }
-
-          }
-          .scene-options{
-            @extend .resize-container;
-            button{
-              float: right;
-            }
-          }
-        }
       }
       .scene-editor:hover{
-        border: none;
         .scene-title{
           background-color: $crg_editor_color;
           color: white;
