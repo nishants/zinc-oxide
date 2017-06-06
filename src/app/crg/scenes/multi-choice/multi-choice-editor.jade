@@ -10,7 +10,8 @@
 .scene-param
   label.param-label Options
   .param-input
-    .input-options(ng-repeat='usage in scene.config.usages')
-      input.check(type='checkbox', ng-model='usage.correct')
-      input.checked(ng-model='usage.label')
-    button(ng-click='scene.config.usages.push({label: "", correct: false})') Add Usage
+    .input-options(ng-repeat='option in scene.config.options')
+      input.check(type='checkbox', ng-model='option.correct')
+      input.checked(ng-model='option.label')
+      span.remove-param.fa.fa-undo(ng-click='scene.config.options.splice($index, 1)')
+    button(ng-click='scene.config.options.push({label: "", correct: false})') Add Option
