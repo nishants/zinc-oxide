@@ -16,7 +16,7 @@
           .multi-choice(ng-if='scene.name == "multi-choice"')
             include ../../scenes/multi-choice/multi-choice-editor
           .find-all-key-images(ng-if='scene.name == "find-all-key-images"')
-            include ../../scenes/zinc-key-images/find-all-key-images
+            include ../../scenes/key-images/find-all-key-images
           .yes-no(ng-if='scene.name == "yes-no"')
             include ../../scenes/yes-no-choice/yes-no-editor
           button(ng-click='editor.removeScene(scene)').remove Remove

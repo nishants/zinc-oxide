@@ -1,5 +1,5 @@
 app.factory("AskMultiChoiceQuestion", ["CRGGameService", function (game) {
-  return function (imagine) {
+  return function (data) {
     var state = {
       showInput: false,
       buttons: [
@@ -9,15 +9,15 @@ app.factory("AskMultiChoiceQuestion", ["CRGGameService", function (game) {
             game.player.toNextScene();
           }
         }],
-      options: imagine.usages.map(function(usage){
+      options: data.options.map(function(usage){
         return {
           label: usage.label,
           correct: usage.correct,
         }
       }),
-      transcript: {text: imagine.transcript.text || "Which one of following is not a good example of highlighted phrase ?"},
-      highlightPhrase: imagine.phrase,
-      focusPhrase    : imagine.focus,
+      transcript: {text: data.transcript.text || "Which one of following is not a good example of highlighted phrase ?"},
+      highlightPhrase: data.phrase,
+      focusPhrase    : data.focus,
     };
     return state;
   };

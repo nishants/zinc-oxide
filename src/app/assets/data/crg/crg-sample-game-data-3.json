@@ -32,7 +32,7 @@
           "transcript": {
             "text"    : "So, what’s different between a plain raisin and a raisin drying up in the sun?"
           },
-          "usages": [
+          "options": [
             {
               "label"   : "The one in the sun gets really wrinkled, hard, and dry.",
               "correct" : true
