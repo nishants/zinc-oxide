@@ -37,6 +37,9 @@ app.factory("CRGEditorService", ["Passage", "PassageSelector", "$state", functio
             return sceneToRemove !== scene;
           });
         },
+        publish: function(){
+          console.log(JSON.stringify(editorService.script));
+        },
        passageSelector: null
   };
   return editorService;
