@@ -1,7 +1,7 @@
 app.service("CRGGameScript", ["SceneLoader", "$injector", function (SceneLoader, $injector) {
 
   var getSceneLoader = function(name){
-    return $injector.get(SceneLoader.entries[name]);
+    return $injector.get(SceneLoader[name].entry);
   };
 
   var

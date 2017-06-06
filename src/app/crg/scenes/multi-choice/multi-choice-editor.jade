@@ -8,7 +8,7 @@
   label.param-label Transcript
   textarea(ng-model='scene.config.transcript.text').param-input
 .scene-param
-  label.param-label Correct Usage
+  label.param-label Options
   .param-input
     .input-options(ng-repeat='usage in scene.config.usages')
       input.check(type='checkbox', ng-model='usage.correct')

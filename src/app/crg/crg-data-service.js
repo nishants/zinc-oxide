@@ -1,7 +1,7 @@
-app.factory("CRGDataService", ["$http",function ($http) {
+app.factory("CRGDataService", ["$http", "SceneLoader",function ($http, SceneLoader) {
   var
       labelFor = function(scene){
-        return scene.name.replace(/-/g, " ");
+        return SceneLoader[scene.name].label;
       },
       setScene = function(scene){
         scene.label = labelFor(scene)

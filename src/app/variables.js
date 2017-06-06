@@ -15,12 +15,28 @@ app.value("passageSelectorHeadings", {
 });
 
 app.value("SceneLoader", {
-  entries: {
-    "intro"                 : "ReadingPassageState",
-    "text-input"            : "VisualizePhraseState",
-    "multi-choice"          : "AskMultiChoiceQuestion",
-    "yes-no"                : "AskQuestion",
-    "find-all-key-images"   : "FindAllKeyImages",
-    "exit"                  : "ExitGameState"
+  "intro"                 :{
+    entry: "ReadingPassageState",
+    label: "Main Idea"
+  },
+  "text-input"            :{
+    entry: "VisualizePhraseState",
+    label: "Input Text"
+  },
+  "multi-choice"          :{
+    entry: "AskMultiChoiceQuestion",
+    label: "Multiple Choice Question"
+  },
+  "yes-no"                :{
+    entry: "AskQuestion",
+    label: "Yes/No Question"
+  },
+  "find-all-key-images"   :{
+    entry: "FindAllKeyImages",
+    label: "Key Image"
+  },
+  "exit"                  : {
+    entry: "ExitGameState",
+    label: "Exit"
   }
 });
