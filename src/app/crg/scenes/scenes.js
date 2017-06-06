@@ -14,5 +14,4 @@ require('./yes-no-choice/states/ask-question');
 require('./yes-no-choice/states/wrong-answer');
 
 require('./multi-choice/multi-choice-editor');
-require('./multi-choice/states/find-example-phrase-state');
-require('./multi-choice/states/no-example-of-phrase-state');
+require('./multi-choice/states/ask-multi-choice-question-state');

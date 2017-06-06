@@ -18,7 +18,7 @@ app.value("SceneLoader", {
   entries: {
     "intro"                 : "ReadingPassageState",
     "text-input"            : "VisualizePhraseState",
-    "multi-choice"          : "FindExamplePhraseState",
+    "multi-choice"          : "AskMultiChoiceQuestion",
     "yes-no"                : "AskQuestion",
     "find-all-key-images"   : "FindAllKeyImages",
     "exit"                  : "ExitGameState"

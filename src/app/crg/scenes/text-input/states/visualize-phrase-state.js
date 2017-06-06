@@ -1,4 +1,4 @@
-app.factory("VisualizePhraseState", ['ImaginePhraseState', "CRGGameService", function (ImaginePhraseState, game) {
+app.factory("VisualizePhraseState", ["CRGGameService", function ( game) {
   var VisualizePhraseState = function (visualize) {
     var state = {
       showInput: true,
