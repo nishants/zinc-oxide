@@ -6,6 +6,7 @@ app.directive("setHighlight", ['CRGEditorService', function(CRGEditorService){
     link     : function(scope, element, attrs){
       element.on("click", function(){
         CRGEditorService.passageSelector.selectHighlightFromPassage({
+          focus : scope.scene.config.phrase,
           whenDone: function(selection){
             scope.scene.config.phrase = selection.phrase;
           }

@@ -89,6 +89,7 @@ app.factory("PassageSelector", ["passageSelectorHeadings", function (passageSele
         passageSelector.lastScrollOffset = currentScrollPosition();
         scrollTo(0);
         passageSelector.selecting = true;
+        passageSelector.selection.focus = params.focus || passageSelector.selection.focus;
         passageSelector.whenDone = params.whenDone;
         passageSelector.selection.selectPhrase();
       },
