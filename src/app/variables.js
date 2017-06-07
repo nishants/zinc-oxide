@@ -20,7 +20,7 @@ app.value("SceneLoader", {
     label: "Main Idea"
   },
   "text-input"            :{
-    entry: "VisualizePhraseState",
+    entry: "TextInputState",
     label: "Input Text",
     editor: "TextInputEditor",
   },

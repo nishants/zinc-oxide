@@ -1,4 +1,4 @@
-app.factory("EnterMainIdeaState", ["VisualizePhraseState", "CRGGameService",function (VisualizePhraseState, game) {
+app.factory("EnterMainIdeaState", ["CRGGameService",function (game) {
   return function(){
     return {
       showInput   : true,

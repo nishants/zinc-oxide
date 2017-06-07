@@ -11,7 +11,7 @@ require('./key-images/states/display-all-key-images-state');
 require('./exit/states/exit-game-state');
 
 require('./text-input/text-input-editor');
-require('./text-input/states/visualize-phrase-state');
+require('./text-input/states/text-input-state');
 
 require('./yes-no-choice/states/ask-question');
 require('./yes-no-choice/states/wrong-answer');

@@ -1,5 +1,5 @@
-app.factory("VisualizePhraseState", ["CRGGameService", function ( game) {
-  var VisualizePhraseState = function (visualize) {
+app.factory("TextInputState", ["CRGGameService", function ( game) {
+  return function (visualize) {
     var state = {
       showInput: true,
       buttons: [],
@@ -13,5 +13,4 @@ app.factory("VisualizePhraseState", ["CRGGameService", function ( game) {
     };
     return state;
   };
-  return VisualizePhraseState;
 }]);
