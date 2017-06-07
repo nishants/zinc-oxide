@@ -1,4 +1,9 @@
 app.factory("CRGEditorService", ["Passage", "PassageSelector", "$state", function (Passage, PassageSelector, $state) {
+  var findScene = function(name){
+    return function(scene){
+      return scene.name == name;
+    };
+  };
   var editorService = {
         gameId: null,
         script: {
@@ -17,7 +22,7 @@ app.factory("CRGEditorService", ["Passage", "PassageSelector", "$state", functio
           editorService.passageSelector =  PassageSelector(Passage(editorService.passage));
         },
         prepareGamePlan : function(scenes){
-          var exitScene = editorService.script.scenes[editorService.script.scenes.length - 1];
+          var exitScene = editorService.script.scenes.filter(findScene("exit"))[0];
           var previewScenes = scenes ? scenes.concat(exitScene) : null,
               gameData      = JSON.parse(JSON.stringify({
             passage : editorService.passage,
