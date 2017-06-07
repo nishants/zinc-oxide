@@ -1,5 +1,13 @@
 $param_action_width: 30px;
 
+.scenes{
+  .add-scenes{
+    button{
+      width: calc(100% - #{$padding*2});
+      margin: $padding;
+    }
+  }
+}
 .scene-config-form{
   padding: 2*$padding $padding;
 
@@ -17,7 +25,11 @@ $param_action_width: 30px;
     min-height: $textarea_min_height;
     resize: vertical;
   }
-
+  button{
+    float: right;
+    padding: $padding/2 $padding*3;
+    margin-left: $padding;
+  }
   .scene-param{
     margin-bottom: $padding*3;
     line-height: $extra_large_font;
@@ -29,6 +41,7 @@ $param_action_width: 30px;
       text-align: right;
       padding-right: $padding*2;
     }
+
     .param-input{
       float: left;
       @extend .resize-container;
@@ -48,11 +61,11 @@ $param_action_width: 30px;
         float: right;
         margin-right: 2*$param_action_width;
       }
+
       .input-options{
         $checkbox_width: 20px;
         @extend .resize-container;
         margin-bottom: $padding;
-
 
         input.check{
           float: left;
@@ -66,6 +79,11 @@ $param_action_width: 30px;
         }
       }
     }
+    .param-input.no-edit{
+      button{
+        margin-right: 2*$param_action_width + 2*$padding;
+      }
+    }
 
   }
 
@@ -73,10 +91,6 @@ $param_action_width: 30px;
     margin-right: 2*$param_action_width;
     @extend .resize-container;
     padding: $padding 0px;
-    button{
-      float: right;
-      padding: $padding/2 $padding*3;
-      margin-left: $padding;
-    }
+
   }
 }

@@ -19,9 +19,9 @@
     textarea(ng-model='scene.config.transcript.text')
 .scene-param
   label.param-label Options
-  .param-input
+  .param-input.no-edit
     .input-options(ng-repeat='option in scene.config.options')
       input.check(type='checkbox', ng-model='option.correct')
       input.checked(ng-model='option.label')
       span.param-action.fa.fa-times(ng-click='scene.config.options.splice($index, 1)')
-    button(ng-click='scene.config.options.push({label: "", correct: false})') Add Option
+    button(ng-click='scene.config.options.push({label: "", correct: false})') Add

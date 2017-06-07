@@ -32,7 +32,7 @@ app.value("SceneLoader", {
   "yes-no"                :{
     entry: "AskQuestion",
     label: "Yes/No Question",
-    editor: "MultiChoiceEditor"
+    editor: "YesNoEditor"
   },
   "find-all-key-images"   :{
     entry: "FindAllKeyImages",

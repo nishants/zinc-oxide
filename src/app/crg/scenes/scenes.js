@@ -13,6 +13,7 @@ require('./text-input/states/text-input-state');
 
 require('./yes-no-choice/states/ask-question');
 require('./yes-no-choice/states/wrong-answer');
+require('./yes-no-choice/yes-no-editor');
 
 require('./multi-choice/multi-choice-editor');
 require('./multi-choice/states/ask-multi-choice-question-state');

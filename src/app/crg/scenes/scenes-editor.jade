@@ -16,9 +16,11 @@ ul.scenes(ng-controller='SceneEditorController')
         button(ng-click='editor.previewScene(scene)').remove Preview
         button(ng-click='editor.removeScene(scene)').remove Remove
 
-  ul.add-scenes
+  ul.add-scenes.undo-list
     li(ng-repeat='config in sceneConfigs')
-      button(ng-click='editor.addScene(config.editor.createFor(group))')
-        span Add
+      button.outline(ng-click='editor.addScene(config.editor.createFor(group))')
+        span Add &nbsp;
         span(ng-bind='config.label')
+        span &nbsp; Scene
+
 
