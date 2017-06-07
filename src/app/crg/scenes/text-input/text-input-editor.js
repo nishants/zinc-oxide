@@ -1,23 +1,19 @@
-app.service("TextInputEditor", ['$timeout', 'CRGEditorService', function ($timeout, CRGEditorService) {
+app.service("TextInputEditor", ['SceneLoader', function (SceneLoader) {
 
   var defaultTranscript = 'What do you visualize when you read the phrase "<phrase>"?',
       textInputEditor = {
-        list: [],
-        remove: function(index){
-          textInputEditor.list.splice(index, 1);
-        },
-        add: function(){
-          CRGEditorService.passageSelector.selectFromPassage({
-            focus: true,
-            phrase: true,
-            whenDone: function(selection){
-              CRGEditorService.game.zincing.visualize.push({
-                focus: selection.focus,
-                phrase: selection.phrase,
-                transcript: {text: defaultTranscript.replace("<phrase>", selection.phrase.text)},
-              });
+        createFor: function(group){
+          return             {
+            "group"       : group,
+            "name"        : "multi-choice",
+            label         : SceneLoader["text-input"].label,
+            "config"      : {
+              "phrase": {"indices": [], "text"  : ""},
+              "focus": {"indices" : [], "text"  : ""},
+              "transcript": {"text"    : ""},
+              "options": []
             }
-          });
+          };
         }
       };
   return textInputEditor;
