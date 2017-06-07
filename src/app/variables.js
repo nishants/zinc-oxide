@@ -37,7 +37,7 @@ app.value("SceneLoader", {
   "find-all-key-images"   :{
     entry: "FindAllKeyImages",
     label: "Find Phrase",
-    editor: "MultiChoiceEditor"
+    editor: "FindPhraseEditor"
   },
   "exit"                  : {
     entry: "ExitGameState",

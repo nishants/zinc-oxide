@@ -6,8 +6,6 @@ require('./components/set-key-image-directive');
 require('./intro/states/reading-passage-state');
 require('./intro/states/done-reading-passage-state');
 require('./intro/states/enter-main-idea-state');
-require('./key-images/states/find-all-key-images-state');
-require('./key-images/states/display-all-key-images-state');
 require('./exit/states/exit-game-state');
 
 require('./text-input/text-input-editor');
@@ -19,3 +17,7 @@ require('./yes-no-choice/states/wrong-answer');
 require('./multi-choice/multi-choice-editor');
 require('./multi-choice/states/ask-multi-choice-question-state');
 require('./multi-choice/states/multi-choice-result-state');
+
+require('./key-images/states/find-all-key-images-state');
+require('./key-images/states/display-all-key-images-state');
+require('./key-images/find-phrase-editor');
