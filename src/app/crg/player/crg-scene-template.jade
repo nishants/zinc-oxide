@@ -26,10 +26,16 @@
         .transcript-message
           .typewriter.text(text='game.player.state.transcript.text',typing-speed='20',before-typing='game.player.typing = true;',after-typing='game.player.typing = false;')
         ul.select-options
-          li(ng-repeat='option in game.player.state.options',ng-init='_selected=false', ng-click='_selected = !_selected')
-            .check-box.fa.fa-check-square(ng-show='_selected')
-            .check-box.fa.fa-square-o(ng-hide='_selected')
+          li(ng-repeat='option in game.player.state.options',ng-init='option.input=false', ng-click='option.input = !option.input')
+            .check-box.fa.fa-check-square(ng-show='option.input')
+            .check-box.fa.fa-square-o(ng-hide='option.input')
             label {{option.label}}
+        ul.select-options-result
+          li(ng-repeat='option in game.player.state.result', ng-class='{"correct" : option.correct, "wrong": !option.correct}')
+            label
+              span.marker.wrong.fa.fa-times
+              span.marker.correct.fa.fa-check
+              span {{option.label}}
         ul.buttons
           li(ng-repeat='button in game.player.state.buttons')
             button(ng-click='button.onClick()',ng-class='{"focus-out": game.player.typing}') {{button.label}}

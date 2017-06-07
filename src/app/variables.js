@@ -36,7 +36,7 @@ app.value("SceneLoader", {
   },
   "find-all-key-images"   :{
     entry: "FindAllKeyImages",
-    label: "Key Image",
+    label: "Find Phrase",
     editor: "MultiChoiceEditor"
   },
   "exit"                  : {

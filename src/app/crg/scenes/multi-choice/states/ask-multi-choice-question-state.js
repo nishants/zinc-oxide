@@ -1,12 +1,12 @@
-app.factory("AskMultiChoiceQuestion", ["CRGGameService", function (game) {
+app.factory("AskMultiChoiceQuestion", ["MultiChoiceResult", "CRGGameService", function (MultiChoiceResult, game) {
   return function (data) {
     var state = {
       showInput: false,
       buttons: [
         {
-          label: 'Proceed',
+          label: 'Submit',
           onClick: function(){
-            game.player.toNextScene();
+            game.player.transitTo(MultiChoiceResult(data, state.options));
           }
         }],
       options: data.options.map(function(usage){

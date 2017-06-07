@@ -47,14 +47,38 @@ $input_area_height: 180px;
             display: block;
           }
         }
-        ul.select-options{
+        ul.select-options, ul.select-options-result{
           @extend .undo-list;
           > li {
             display: block;
-            padding: $padding 0px;
-            margin-bottom: $padding;
+            padding: $padding;
+            margin: $padding;
+            label{
+              font-weight: $weight_normal;
+            }
           }
         }
+        ul.select-options-result{
+          label{
+            color: $white;
+            .marker {
+              padding-right: $padding;
+            }
+          }
+          > li.correct {
+            background-color: $logo_green;
+            .wrong{
+              display: none;
+            }
+          }
+          > li.wrong {
+            background-color: $error_highlight;
+            .correct{
+              display: none;
+            }
+          }
+        }
+
         .user-input{
           textarea{
             display: block;
