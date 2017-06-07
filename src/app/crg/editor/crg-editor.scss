@@ -19,3 +19,4 @@ $editor_button_height: $crg_editor_bar_height - $padding*2;
 @import 'form/crg-editor-form';
 @import 'editor-bar/editor-bar';
 @import 'form/passage-selector/passage-selector';
+@import 'editor.state';

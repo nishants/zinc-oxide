@@ -18,8 +18,13 @@
     }
     .selection-heading{
       display: none;
+      background: $crg_editor_color;
+      height: 100%;
+      padding: $padding*2 $padding;
+      font-size: $very_large_font;
+      color: $white;
+      text-align: center;
     }
   }
 }
 
-@import 'editor-bar.state';

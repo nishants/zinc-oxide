@@ -5,6 +5,7 @@ $accordion_height: 60px;
 .crg-editor-form{
   position: relative;
   padding-top: $padding*4;
+  @include transition(opacity $slow_time $transition_function);
 
   .card{
     border: $very_light_border;
