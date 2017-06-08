@@ -35,7 +35,8 @@ app.factory("CRGEditorService", ["Passage", "PassageSelector", "$state", functio
           $state.go("crg.editor.preview-scenes");
         },
         addScene: function(scene){
-          editorService.script.scenes.push(scene);
+          var index = editorService.script.scenes.length - 1;
+          editorService.script.scenes.splice(index, 0, scene);
         },
         removeScene: function(sceneToRemove){
           editorService.script.scenes = editorService.script.scenes.filter(function(scene){
